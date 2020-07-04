@@ -1,0 +1,96 @@
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\giaodien.exe.config
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\giaodien.exe
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\giaodien.pdb
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.Properties.Resources.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csproj.GenerateResource.cache
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csproj.CoreCompileInputs.cache
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.exe
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.pdb
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\Bunifu_UI_v1.52.dll
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csproj.CopyComplete
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongTinNCC.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongTinNV.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormDuLieuNV.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.exe.licenses
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormDangNhap.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormTrangChu.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormKiemTraKhachHang.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormKhachHangMoi.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongTinSP.resources
+D:\learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormHDN.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Data.v19.1.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Utils.v19.1.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Data.v19.1.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Utils.v19.1.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormDoiMatKhau.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormHDX.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\bin\Debug\Guna.UI.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormNhapHang.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormLapHoaDon.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csprojAssemblyReference.cache
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongTinKhachHang.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormBackUpDuLieu.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormCauHinhEmail.resources
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\giaodien.exe.config
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\giaodien.exe
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\giaodien.pdb
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Data.v19.1.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Utils.v19.1.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Data.v19.1.xml
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Utils.v19.1.xml
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csprojAssemblyReference.cache
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormHDN.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormDangNhap.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormDoiMatKhau.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormDuLieuNV.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormHDX.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongTinNV.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongTinSP.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.FormTrangChu.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.Properties.Resources.resources
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csproj.GenerateResource.cache
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.exe.licenses
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csproj.CoreCompileInputs.cache
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.csproj.CopyComplete
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.exe
+D:\ttcm\C#\giaodien\giaodien\obj\Debug\giaodien.pdb
