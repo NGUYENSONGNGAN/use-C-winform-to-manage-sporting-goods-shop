@@ -69,10 +69,10 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "giaodien.Report2.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 25);
+            this.reportViewer1.Location = new System.Drawing.Point(0, 26);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1155, 502);
+            this.reportViewer1.Size = new System.Drawing.Size(1098, 755);
             this.reportViewer1.TabIndex = 0;
             // 
             // selectRePortHDXTableAdapter
@@ -90,7 +90,7 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1110, -4);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1053, -4);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -103,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 527);
+            this.ClientSize = new System.Drawing.Size(1098, 781);
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
