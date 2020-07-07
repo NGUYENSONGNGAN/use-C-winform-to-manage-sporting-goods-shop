@@ -510,8 +510,7 @@ namespace giaodien
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
-        {
-            
+        {            
             FormKhachHangMoi.TTKHM.Ma = 0;
             FormKiemTraKhachHang.TTKHC.Ma = 0;
             var CTHDX = dt.selectCTHDX(Convert.ToInt32(lbMaHD.Text)).FirstOrDefault();
@@ -521,9 +520,26 @@ namespace giaodien
             }   
             else if (CTHDX != null)
             {
-                var KH = dt.selectTTKH(MaKH);
-                var HD = dt.selectTTHDX(Convert.ToInt32( lbMaHD.Text));
+                var KH = dt.selectTTKH(MaKH).FirstOrDefault();
+                var HD = dt.selectTTHDX(Convert.ToInt32( lbMaHD.Text)).FirstOrDefault();
+                var LKH = dt.LoaiKHs.Where(s => s.Ma == KH.Ma_LoaiKH).FirstOrDefault();
+                int tongtien = Convert.ToInt32 ( HD.TongTien - HD.TongTien/100 * Convert.ToInt32(LKH.TiLeGiamGia));
+                dt.updateTongTienHDX(Convert.ToInt32(lbMaHD.Text),tongtien);
 
+                if (HD.TongTien >=200000)
+                {
+                    dt.updatediemtichluy(KH.Ma, KH.DiemTichLuy + 10);
+                    var KH1 = dt.selectTTKH(MaKH).FirstOrDefault();
+                    
+                    if (KH1.DiemTichLuy >=200 && KH1.DiemTichLuy < 400)
+                    {
+                        dt.updateLKH(MaKH, 2);
+                    }    
+                    else if (KH1.DiemTichLuy >=400 && KH1.DiemTichLuy < 1000)
+                    {
+                        dt.updateLKH(MaKH, 3);
+                    }                        
+                }    
                 FormThanhToan FTT = new FormThanhToan();
                 FTT.Show();
                 this.Close();

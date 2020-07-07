@@ -54,19 +54,10 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dgvCTHDN = new Guna.UI.WinForms.GunaDataGridView();
-            this.Ma_SP = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.sanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sanPham_FormNhapHang = new giaodien.SanPham_FormNhapHang();
-            this.Ma_Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.size_FormNhapHang = new giaodien.Size_FormNhapHang();
-            this.Ma_MauSac = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.mauSacBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mau_FormNhapHang = new giaodien.Mau_FormNhapHang();
-            this.Soluong12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.sizeTableAdapter = new giaodien.Size_FormNhapHangTableAdapters.SizeTableAdapter();
             this.mauSacTableAdapter = new giaodien.Mau_FormNhapHangTableAdapters.MauSacTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -77,14 +68,23 @@
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemNCC = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.sanPhamTableAdapter = new giaodien.SanPham_FormNhapHangTableAdapters.SanPhamTableAdapter();
+            this.size_FormNhapHang = new giaodien.Size_FormNhapHang();
+            this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sizeTableAdapter = new giaodien.Size_FormNhapHangTableAdapters.SizeTableAdapter();
+            this.Ma_SP = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Ma_Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Ma_MauSac = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Soluong12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPham_FormNhapHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mauSacBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mau_FormNhapHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -392,17 +392,6 @@
             this.dgvCTHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHDN_CellClick);
             this.dgvCTHDN.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHDN_CellContentClick);
             // 
-            // Ma_SP
-            // 
-            this.Ma_SP.DataPropertyName = "Ma_SP";
-            this.Ma_SP.DataSource = this.sanPhamBindingSource;
-            this.Ma_SP.DisplayMember = "Ten";
-            this.Ma_SP.FillWeight = 140.168F;
-            this.Ma_SP.HeaderText = "Sản phẩm";
-            this.Ma_SP.Name = "Ma_SP";
-            this.Ma_SP.ReadOnly = true;
-            this.Ma_SP.ValueMember = "Ma";
-            // 
             // sanPhamBindingSource
             // 
             this.sanPhamBindingSource.DataMember = "SanPham";
@@ -413,38 +402,6 @@
             this.sanPham_FormNhapHang.DataSetName = "SanPham_FormNhapHang";
             this.sanPham_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Ma_Size
-            // 
-            this.Ma_Size.DataPropertyName = "Ma_Size";
-            this.Ma_Size.DataSource = this.sizeBindingSource;
-            this.Ma_Size.DisplayMember = "TenSize";
-            this.Ma_Size.FillWeight = 103.0235F;
-            this.Ma_Size.HeaderText = "Size";
-            this.Ma_Size.Name = "Ma_Size";
-            this.Ma_Size.ReadOnly = true;
-            this.Ma_Size.ValueMember = "Ma";
-            // 
-            // sizeBindingSource
-            // 
-            this.sizeBindingSource.DataMember = "Size";
-            this.sizeBindingSource.DataSource = this.size_FormNhapHang;
-            // 
-            // size_FormNhapHang
-            // 
-            this.size_FormNhapHang.DataSetName = "Size_FormNhapHang";
-            this.size_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Ma_MauSac
-            // 
-            this.Ma_MauSac.DataPropertyName = "Ma_MauSac";
-            this.Ma_MauSac.DataSource = this.mauSacBindingSource;
-            this.Ma_MauSac.DisplayMember = "TenMau";
-            this.Ma_MauSac.FillWeight = 103.0235F;
-            this.Ma_MauSac.HeaderText = "Màu";
-            this.Ma_MauSac.Name = "Ma_MauSac";
-            this.Ma_MauSac.ReadOnly = true;
-            this.Ma_MauSac.ValueMember = "Ma";
-            // 
             // mauSacBindingSource
             // 
             this.mauSacBindingSource.DataMember = "MauSac";
@@ -454,38 +411,6 @@
             // 
             this.mau_FormNhapHang.DataSetName = "Mau_FormNhapHang";
             this.mau_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // Soluong12
-            // 
-            this.Soluong12.DataPropertyName = "SoLuong";
-            this.Soluong12.FillWeight = 103.0235F;
-            this.Soluong12.HeaderText = "Số lượng";
-            this.Soluong12.Name = "Soluong12";
-            this.Soluong12.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            // 
-            // Xoa
-            // 
-            this.Xoa.DataPropertyName = "Xoa";
-            this.Xoa.FillWeight = 50.76142F;
-            this.Xoa.HeaderText = "Xóa";
-            this.Xoa.Name = "Xoa";
-            this.Xoa.ReadOnly = true;
-            this.Xoa.Text = "Xóa";
-            this.Xoa.UseColumnTextForButtonValue = true;
-            // 
-            // sizeTableAdapter
-            // 
-            this.sizeTableAdapter.ClearBeforeFill = true;
             // 
             // mauSacTableAdapter
             // 
@@ -647,6 +572,81 @@
             // 
             this.sanPhamTableAdapter.ClearBeforeFill = true;
             // 
+            // size_FormNhapHang
+            // 
+            this.size_FormNhapHang.DataSetName = "Size_FormNhapHang";
+            this.size_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sizeBindingSource
+            // 
+            this.sizeBindingSource.DataMember = "Size";
+            this.sizeBindingSource.DataSource = this.size_FormNhapHang;
+            // 
+            // sizeTableAdapter
+            // 
+            this.sizeTableAdapter.ClearBeforeFill = true;
+            // 
+            // Ma_SP
+            // 
+            this.Ma_SP.DataPropertyName = "Ma_SP";
+            this.Ma_SP.DataSource = this.sanPhamBindingSource;
+            this.Ma_SP.DisplayMember = "Ten";
+            this.Ma_SP.FillWeight = 140.168F;
+            this.Ma_SP.HeaderText = "Sản phẩm";
+            this.Ma_SP.Name = "Ma_SP";
+            this.Ma_SP.ReadOnly = true;
+            this.Ma_SP.ValueMember = "Ma";
+            // 
+            // Ma_Size
+            // 
+            this.Ma_Size.DataPropertyName = "Ma_Size";
+            this.Ma_Size.DataSource = this.sizeBindingSource;
+            this.Ma_Size.DisplayMember = "TenSize";
+            this.Ma_Size.FillWeight = 103.0235F;
+            this.Ma_Size.HeaderText = "Size";
+            this.Ma_Size.Name = "Ma_Size";
+            this.Ma_Size.ReadOnly = true;
+            this.Ma_Size.ValueMember = "Ma";
+            // 
+            // Ma_MauSac
+            // 
+            this.Ma_MauSac.DataPropertyName = "Ma_MauSac";
+            this.Ma_MauSac.DataSource = this.mauSacBindingSource;
+            this.Ma_MauSac.DisplayMember = "TenMau";
+            this.Ma_MauSac.FillWeight = 103.0235F;
+            this.Ma_MauSac.HeaderText = "Màu";
+            this.Ma_MauSac.Name = "Ma_MauSac";
+            this.Ma_MauSac.ReadOnly = true;
+            this.Ma_MauSac.ValueMember = "Ma";
+            // 
+            // Soluong12
+            // 
+            this.Soluong12.DataPropertyName = "SoLuong";
+            this.Soluong12.FillWeight = 103.0235F;
+            this.Soluong12.HeaderText = "Số lượng";
+            this.Soluong12.Name = "Soluong12";
+            this.Soluong12.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
+            // Xoa
+            // 
+            this.Xoa.DataPropertyName = "Xoa";
+            this.Xoa.FillWeight = 50.76142F;
+            this.Xoa.HeaderText = "Xóa";
+            this.Xoa.Name = "Xoa";
+            this.Xoa.ReadOnly = true;
+            this.Xoa.Text = "Xóa";
+            this.Xoa.UseColumnTextForButtonValue = true;
+            // 
             // FormNhapHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -690,10 +690,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPham_FormNhapHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mauSacBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mau_FormNhapHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -720,9 +720,6 @@
         private System.Windows.Forms.ComboBox cbbNhaCungCap;
         private Guna.UI.WinForms.GunaGradientButton btnQuayLai;
         private Guna.UI.WinForms.GunaDataGridView dgvCTHDN;
-        private Size_FormNhapHang size_FormNhapHang;
-        private System.Windows.Forms.BindingSource sizeBindingSource;
-        private Size_FormNhapHangTableAdapters.SizeTableAdapter sizeTableAdapter;
         private Mau_FormNhapHang mau_FormNhapHang;
         private System.Windows.Forms.BindingSource mauSacBindingSource;
         private Mau_FormNhapHangTableAdapters.MauSacTableAdapter mauSacTableAdapter;
@@ -737,6 +734,9 @@
         private SanPham_FormNhapHang sanPham_FormNhapHang;
         private System.Windows.Forms.BindingSource sanPhamBindingSource;
         private SanPham_FormNhapHangTableAdapters.SanPhamTableAdapter sanPhamTableAdapter;
+        private Size_FormNhapHang size_FormNhapHang;
+        private System.Windows.Forms.BindingSource sizeBindingSource;
+        private Size_FormNhapHangTableAdapters.SizeTableAdapter sizeTableAdapter;
         private System.Windows.Forms.DataGridViewComboBoxColumn Ma_SP;
         private System.Windows.Forms.DataGridViewComboBoxColumn Ma_Size;
         private System.Windows.Forms.DataGridViewComboBoxColumn Ma_MauSac;

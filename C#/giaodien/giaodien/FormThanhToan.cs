@@ -53,11 +53,12 @@ namespace giaodien
                 DialogResult a = MessageBox.Show("Bạn chưa có ghi chú\nBạn có muốn thanh toán luôn không ???", "Thiếu thông tin", MessageBoxButtons.YesNo);
                 if (a== DialogResult.Yes)
                 {
+
                     dt.updateghichu(MaHD, txtGhiChu.Text);
                     MessageBox.Show("Thanh toán thành công", "Thanh công");
+                    TTTT.MoFormRP = 1;
                     FormRPHDX FRPHDX = new FormRPHDX();
                     FRPHDX.Show();
-                    TTTT.Ma = 0;
                     this.Close();
                 }    
             }   
@@ -68,7 +69,6 @@ namespace giaodien
                 TTTT.MoFormRP = 1;
                 FormRPHDX FRPHDX = new FormRPHDX();
                 FRPHDX.Show();
-                TTTT.Ma = 0;
                 this.Close();
             }    
         }

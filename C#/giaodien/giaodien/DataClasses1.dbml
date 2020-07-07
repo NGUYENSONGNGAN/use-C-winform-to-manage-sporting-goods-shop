@@ -758,4 +758,27 @@
       <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.updateLKH" Method="updateLKH">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="loaikh" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updatediemtichluy" Method="updatediemtichluy">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.loadDG" Method="loadDG">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="loadDGResult">
+      <Column Name="Ma_HDN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_Size" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_MauSac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

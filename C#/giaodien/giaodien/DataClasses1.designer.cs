@@ -671,6 +671,27 @@ namespace giaodien
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
 			return ((ISingleResult<selectTTKHResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateLKH")]
+		public int updateLKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loaikh)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, loaikh);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updatediemtichluy")]
+		public int updatediemtichluy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diem)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, diem);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.loadDG")]
+		public ISingleResult<loadDGResult> loadDG([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> masp)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, masp);
+			return ((ISingleResult<loadDGResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ad")]
@@ -8163,6 +8184,140 @@ namespace giaodien
 				if ((this._SoDienThoai != value))
 				{
 					this._SoDienThoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class loadDGResult
+	{
+		
+		private int _Ma_HDN;
+		
+		private int _Ma_SP;
+		
+		private int _Ma_Size;
+		
+		private int _Ma_MauSac;
+		
+		private System.Nullable<int> _Soluong;
+		
+		private System.Nullable<int> _DonGia;
+		
+		private System.Nullable<int> _ThanhTien;
+		
+		public loadDGResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_HDN", DbType="Int NOT NULL")]
+		public int Ma_HDN
+		{
+			get
+			{
+				return this._Ma_HDN;
+			}
+			set
+			{
+				if ((this._Ma_HDN != value))
+				{
+					this._Ma_HDN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_SP", DbType="Int NOT NULL")]
+		public int Ma_SP
+		{
+			get
+			{
+				return this._Ma_SP;
+			}
+			set
+			{
+				if ((this._Ma_SP != value))
+				{
+					this._Ma_SP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_Size", DbType="Int NOT NULL")]
+		public int Ma_Size
+		{
+			get
+			{
+				return this._Ma_Size;
+			}
+			set
+			{
+				if ((this._Ma_Size != value))
+				{
+					this._Ma_Size = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_MauSac", DbType="Int NOT NULL")]
+		public int Ma_MauSac
+		{
+			get
+			{
+				return this._Ma_MauSac;
+			}
+			set
+			{
+				if ((this._Ma_MauSac != value))
+				{
+					this._Ma_MauSac = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Soluong", DbType="Int")]
+		public System.Nullable<int> Soluong
+		{
+			get
+			{
+				return this._Soluong;
+			}
+			set
+			{
+				if ((this._Soluong != value))
+				{
+					this._Soluong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Int")]
+		public System.Nullable<int> DonGia
+		{
+			get
+			{
+				return this._DonGia;
+			}
+			set
+			{
+				if ((this._DonGia != value))
+				{
+					this._DonGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
+		public System.Nullable<int> ThanhTien
+		{
+			get
+			{
+				return this._ThanhTien;
+			}
+			set
+			{
+				if ((this._ThanhTien != value))
+				{
+					this._ThanhTien = value;
 				}
 			}
 		}

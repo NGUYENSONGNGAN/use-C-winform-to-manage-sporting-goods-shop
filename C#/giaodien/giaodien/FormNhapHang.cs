@@ -34,6 +34,8 @@ namespace giaodien
         int i = 0;
         private void FormCTHDNhap_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'size_FormNhapHang.Size' table. You can move, or remove it, as needed.
+            this.sizeTableAdapter.Fill(this.size_FormNhapHang.Size);
             // TODO: This line of code loads data into the 'sanPham_FormNhapHang.SanPham' table. You can move, or remove it, as needed.
             this.sanPhamTableAdapter.Fill(this.sanPham_FormNhapHang.SanPham);
             // TODO: This line of code loads data into the 'sanPham_FormNhapHang.SanPham' table. You can move, or remove it, as needed.
@@ -57,8 +59,15 @@ namespace giaodien
             dgvCTHDN.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             var r = from s in dt.HDNhaps select s.Ma;
-            lbMaHD.Text = Convert.ToString(Convert.ToInt32(r.Max().ToString()) + 1);
-            
+            if (r.Count() == 0)
+            {
+                lbMaHD.Text = "1";
+            }
+            else if (r.Count() != 0)
+            {
+                lbMaHD.Text = Convert.ToString(Convert.ToInt32(r.Max().ToString()) + 1);
+            }
+
             btnThem.Enabled = true;
             btnLuu.Enabled = false;
             btnHuy.Enabled = true;
@@ -117,14 +126,15 @@ namespace giaodien
             cbbSP.Text = "";
             cbbSize.Text = "";
             cbbMau.Text = "";
-            var CTHDN = dt.selectTTCTHDN(Convert.ToInt32(lbMaHD.Text), Convert.ToInt32(cbbSP.SelectedValue), 
-                                       Convert.ToInt32(cbbSize.SelectedValue), Convert.ToInt32(cbbMau.SelectedValue)).FirstOrDefault();
-            if (CTHDN!= null)
+            //var CTHDN = dt.selectTTCTHDN(Convert.ToInt32(lbMaHD.Text), Convert.ToInt32(cbbSP.SelectedValue), 
+            //                           Convert.ToInt32(cbbSize.SelectedValue), Convert.ToInt32(cbbMau.SelectedValue)).FirstOrDefault();
+            var LoadDG = dt.loadDG(Convert.ToInt32(lbMaHD.Text), Convert.ToInt32(cbbSP.SelectedValue)).FirstOrDefault();
+            if (LoadDG!= null)
             {
                 txtDonGia.Enabled = false;
-                txtDonGia.Text = CTHDN.DonGia.ToString();
+                txtDonGia.Text = LoadDG.DonGia.ToString();
             }    
-            else if (CTHDN == null)
+            else if (LoadDG == null)
             {
                 txtDonGia.ResetText();
                 txtDonGia.Enabled = true;
@@ -133,6 +143,7 @@ namespace giaodien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
+            
             var HDN = dt.selectTTHDN(Convert.ToInt32(lbMaHD.Text)).FirstOrDefault();
             var CTSP = dt.selectTTCTSP(Convert.ToInt32(cbbSP.SelectedValue),
                                             Convert.ToInt32(cbbSize.SelectedValue),
@@ -239,7 +250,7 @@ namespace giaodien
                                                        Convert.ToInt32(cbbSP.SelectedValue),
                                                        Convert.ToInt32(cbbSize.SelectedValue),
                                                        Convert.ToInt32(cbbMau.SelectedValue))
-                                                  .FirstOrDefault();
+                                                       .FirstOrDefault();
                     if (CTHDN1  == null)
                     {
                         dt.insertCTHDN(Convert.ToInt32(lbMaHD.Text), Convert.ToInt32(cbbSP.SelectedValue), Convert.ToInt32(cbbSize.SelectedValue),
@@ -281,8 +292,9 @@ namespace giaodien
                     }  
                     else if (CTHDN != null)
                     {
+                    
                         dt.updateCTHDN(Convert.ToInt32(lbMaHD.Text), Convert.ToInt32(cbbSP.SelectedValue), Convert.ToInt32(cbbSize.SelectedValue),
-                                       Convert.ToInt32(cbbMau.SelectedValue), (Convert.ToInt32(txtSoLuong.Text) + CTHDN.Soluong),
+                                       Convert.ToInt32(cbbMau.SelectedValue), (Convert.ToInt32(txtSoLuong.Text) + CTHDN1.Soluong),
                                        Convert.ToInt32(txtDonGia.Text), ((Convert.ToInt32(txtSoLuong.Text) * Convert.ToInt32(txtDonGia.Text)) + CTHDN.ThanhTien));
                         int tongtien = 0;
                         foreach (var a in dt.selectCTHDN(Convert.ToInt32(lbMaHD.Text)))
@@ -416,10 +428,10 @@ namespace giaodien
 
             int r = dgvCTHDN.CurrentRow.Index;
 
-            CTHDNhap CTHDN = dt.CTHDNhaps.Where(s => s.Ma_HDN == Convert.ToInt32(lbMaHD.Text))
-                                         .Where(s => s.Ma_SP == Convert.ToInt32(dgvCTHDN.Rows[r].Cells[0].Value.ToString()))
-                                         .Where(s => s.Ma_Size == Convert.ToInt32(dgvCTHDN.Rows[r].Cells[1].Value.ToString()))
-                                         .Where(s => s.Ma_MauSac == Convert.ToInt32(dgvCTHDN.Rows[r].Cells[2].Value.ToString()))
+            var CTHDN = dt.selectTTCTHDN(Convert.ToInt32(lbMaHD.Text),
+                                              Convert.ToInt32(dgvCTHDN.Rows[r].Cells[0].Value.ToString()),
+                                              Convert.ToInt32(dgvCTHDN.Rows[r].Cells[1].Value.ToString()),
+                                              Convert.ToInt32(dgvCTHDN.Rows[r].Cells[2].Value.ToString()))
                                          .FirstOrDefault();
             if (dgvCTHDN.Columns[e.ColumnIndex].Name == "Xoa")
             {
