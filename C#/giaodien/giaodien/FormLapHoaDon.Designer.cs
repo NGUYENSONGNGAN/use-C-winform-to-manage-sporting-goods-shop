@@ -37,12 +37,18 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnQuayLai = new Guna.UI.WinForms.GunaGradientButton();
             this.dgvCTHDX = new Guna.UI.WinForms.GunaDataGridView();
+            this.SanPham = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.sanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sanPham_FormLapHoaDon = new giaodien.SanPham_FormLapHoaDon();
+            this.Ma_Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.size_FormLapHoaDon = new giaodien.Size_FormLapHoaDon();
+            this.Mau = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.mauSacBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mauSac_FormLapHoaDon = new giaodien.MauSac_FormLapHoaDon();
+            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.sizeTableAdapter = new giaodien.Size_FormLapHoaDonTableAdapters.SizeTableAdapter();
             this.mauSacTableAdapter = new giaodien.MauSac_FormLapHoaDonTableAdapters.MauSacTableAdapter();
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
@@ -72,12 +78,6 @@
             this.lbThanhTien = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.btnThanhToan = new Guna.UI.WinForms.GunaGradientButton();
-            this.SanPham = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Ma_Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Mau = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).BeginInit();
@@ -192,6 +192,16 @@
             this.dgvCTHDX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCTHDX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHDX_CellContentClick);
             // 
+            // SanPham
+            // 
+            this.SanPham.DataPropertyName = "Ma_SP";
+            this.SanPham.DataSource = this.sanPhamBindingSource;
+            this.SanPham.DisplayMember = "Ten";
+            this.SanPham.HeaderText = "Sản phẩm";
+            this.SanPham.Name = "SanPham";
+            this.SanPham.ReadOnly = true;
+            this.SanPham.ValueMember = "Ma";
+            // 
             // sanPhamBindingSource
             // 
             this.sanPhamBindingSource.DataMember = "SanPham";
@@ -201,6 +211,16 @@
             // 
             this.sanPham_FormLapHoaDon.DataSetName = "SanPham_FormLapHoaDon";
             this.sanPham_FormLapHoaDon.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Ma_Size
+            // 
+            this.Ma_Size.DataPropertyName = "Ma_Size";
+            this.Ma_Size.DataSource = this.sizeBindingSource;
+            this.Ma_Size.DisplayMember = "TenSize";
+            this.Ma_Size.HeaderText = "Size";
+            this.Ma_Size.Name = "Ma_Size";
+            this.Ma_Size.ReadOnly = true;
+            this.Ma_Size.ValueMember = "Ma";
             // 
             // sizeBindingSource
             // 
@@ -212,6 +232,16 @@
             this.size_FormLapHoaDon.DataSetName = "Size_FormLapHoaDon";
             this.size_FormLapHoaDon.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // Mau
+            // 
+            this.Mau.DataPropertyName = "Ma_MauSac";
+            this.Mau.DataSource = this.mauSacBindingSource;
+            this.Mau.DisplayMember = "TenMau";
+            this.Mau.HeaderText = "Màu";
+            this.Mau.Name = "Mau";
+            this.Mau.ReadOnly = true;
+            this.Mau.ValueMember = "Ma";
+            // 
             // mauSacBindingSource
             // 
             this.mauSacBindingSource.DataMember = "MauSac";
@@ -221,6 +251,31 @@
             // 
             this.mauSac_FormLapHoaDon.DataSetName = "MauSac_FormLapHoaDon";
             this.mauSac_FormLapHoaDon.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // SoLuong
+            // 
+            this.SoLuong.DataPropertyName = "SoLuong";
+            this.SoLuong.HeaderText = "Số lượng";
+            this.SoLuong.Name = "SoLuong";
+            this.SoLuong.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
+            // Xoa
+            // 
+            this.Xoa.HeaderText = "Xóa";
+            this.Xoa.Name = "Xoa";
+            this.Xoa.ReadOnly = true;
+            this.Xoa.Text = "Xóa";
+            this.Xoa.UseColumnTextForButtonValue = true;
             // 
             // sizeTableAdapter
             // 
@@ -594,61 +649,6 @@
             this.btnThanhToan.Text = "Thanh toán";
             this.btnThanhToan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
-            // SanPham
-            // 
-            this.SanPham.DataPropertyName = "Ma_SP";
-            this.SanPham.DataSource = this.sanPhamBindingSource;
-            this.SanPham.DisplayMember = "Ten";
-            this.SanPham.HeaderText = "Sản phẩm";
-            this.SanPham.Name = "SanPham";
-            this.SanPham.ReadOnly = true;
-            this.SanPham.ValueMember = "Ma";
-            // 
-            // Ma_Size
-            // 
-            this.Ma_Size.DataPropertyName = "Ma_Size";
-            this.Ma_Size.DataSource = this.sizeBindingSource;
-            this.Ma_Size.DisplayMember = "TenSize";
-            this.Ma_Size.HeaderText = "Size";
-            this.Ma_Size.Name = "Ma_Size";
-            this.Ma_Size.ReadOnly = true;
-            this.Ma_Size.ValueMember = "Ma";
-            // 
-            // Mau
-            // 
-            this.Mau.DataPropertyName = "Ma_MauSac";
-            this.Mau.DataSource = this.mauSacBindingSource;
-            this.Mau.DisplayMember = "TenMau";
-            this.Mau.HeaderText = "Màu";
-            this.Mau.Name = "Mau";
-            this.Mau.ReadOnly = true;
-            this.Mau.ValueMember = "Ma";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số lượng";
-            this.SoLuong.Name = "SoLuong";
-            this.SoLuong.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            // 
-            // Xoa
-            // 
-            this.Xoa.HeaderText = "Xóa";
-            this.Xoa.Name = "Xoa";
-            this.Xoa.ReadOnly = true;
-            this.Xoa.Text = "Xóa";
-            this.Xoa.UseColumnTextForButtonValue = true;
             // 
             // FormLapHoaDon
             // 

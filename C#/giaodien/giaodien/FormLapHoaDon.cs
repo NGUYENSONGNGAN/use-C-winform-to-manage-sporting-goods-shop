@@ -511,6 +511,7 @@ namespace giaodien
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            
             FormKhachHangMoi.TTKHM.Ma = 0;
             FormKiemTraKhachHang.TTKHC.Ma = 0;
             var CTHDX = dt.selectCTHDX(Convert.ToInt32(lbMaHD.Text)).FirstOrDefault();
@@ -520,6 +521,9 @@ namespace giaodien
             }   
             else if (CTHDX != null)
             {
+                var KH = dt.selectTTKH(MaKH);
+                var HD = dt.selectTTHDX(Convert.ToInt32( lbMaHD.Text));
+
                 FormThanhToan FTT = new FormThanhToan();
                 FTT.Show();
                 this.Close();

@@ -2680,7 +2680,15 @@ select *
 from SanPham SP, Size SZ, MauSac MS,  CTHDXuat CTHDX, NhanVien NV, KhachHang KH, HDXuat HDX, LoaiKH LKH
 where HDX.Ma=@mahdx and HDX.Ma_NV = NV.Ma and HDX.Ma_KH = KH.Ma  and KH.Ma_LoaiKH = LKH.Ma and CTHDX.Ma_HDX = HDX.Ma and CTHDX.Ma_SP = SP.Ma and CTHDX.Ma_Size= SZ.Ma and CTHDX.Ma_MauSac = MS.Ma
 go
-exec selectRePortHDX 30
+exec selectRePortHDX 35
+
+
+
+
+
+
+
+
 --select * from CTHDNhap
 --select * from ThongTinCTHDN
 --select * from CTSanPham

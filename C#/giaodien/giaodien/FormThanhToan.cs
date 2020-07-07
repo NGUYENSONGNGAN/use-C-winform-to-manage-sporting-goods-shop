@@ -55,7 +55,7 @@ namespace giaodien
                 {
                     dt.updateghichu(MaHD, txtGhiChu.Text);
                     MessageBox.Show("Thanh toán thành công", "Thanh công");
-                    FormRePortHDX FRPHDX = new FormRePortHDX();
+                    FormRPHDX FRPHDX = new FormRPHDX();
                     FRPHDX.Show();
                     TTTT.Ma = 0;
                     this.Close();
@@ -66,7 +66,7 @@ namespace giaodien
                 dt.updateghichu(MaHD, txtGhiChu.Text);
                 MessageBox.Show("Thanh toán thành công", "Thành công");
                 TTTT.MoFormRP = 1;
-                FormRePortHDX FRPHDX = new FormRePortHDX();
+                FormRPHDX FRPHDX = new FormRPHDX();
                 FRPHDX.Show();
                 TTTT.Ma = 0;
                 this.Close();

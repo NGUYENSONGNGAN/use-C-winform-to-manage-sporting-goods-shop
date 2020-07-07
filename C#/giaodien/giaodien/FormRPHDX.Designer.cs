@@ -1,6 +1,6 @@
 ﻿namespace giaodien
 {
-    partial class FormRePortHDX
+    partial class FormRPHDX
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRePortHDX));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRPHDX));
             this.selectRePortHDXBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ttcmDataSet = new giaodien.ttcmDataSet1();
+            this.ttcmDataSet = new giaodien.ttcmDataSet();
+            this.TTHDXReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.selectRePortHDXTableAdapter = new giaodien.ttcmDataSetTableAdapters.selectRePortHDXTableAdapter();
+            this.TTHDXReportTableAdapter = new giaodien.ttcmDataSetTableAdapters.TTHDXReportTableAdapter();
             this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
-            this.selectRePortHDXTableAdapter = new giaodien.ttcmDataSet1TableAdapters.selectRePortHDXTableAdapter();
-            this.ttcmDataSet1 = new giaodien.ttcmDataSet1();
             ((System.ComponentModel.ISupportInitialize)(this.selectRePortHDXBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttcmDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ttcmDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TTHDXReportBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // selectRePortHDXBindingSource
@@ -52,18 +54,34 @@
             this.ttcmDataSet.DataSetName = "ttcmDataSet";
             this.ttcmDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // TTHDXReportBindingSource
+            // 
+            this.TTHDXReportBindingSource.DataMember = "TTHDXReport";
+            this.TTHDXReportBindingSource.DataSource = this.ttcmDataSet;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             reportDataSource1.Name = "DataSet1";
             reportDataSource1.Value = this.selectRePortHDXBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.TTHDXReportBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "giaodien.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 28);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "giaodien.Report2.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 25);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1135, 614);
+            this.reportViewer1.Size = new System.Drawing.Size(1155, 502);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // selectRePortHDXTableAdapter
+            // 
+            this.selectRePortHDXTableAdapter.ClearBeforeFill = true;
+            // 
+            // TTHDXReportTableAdapter
+            // 
+            this.TTHDXReportTableAdapter.ClearBeforeFill = true;
             // 
             // gunaControlBox1
             // 
@@ -72,40 +90,31 @@
             this.gunaControlBox1.AnimationSpeed = 0.03F;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1090, -1);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1110, -4);
             this.gunaControlBox1.Name = "gunaControlBox1";
-            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
             this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
             this.gunaControlBox1.TabIndex = 1;
             this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
             // 
-            // selectRePortHDXTableAdapter
-            // 
-            this.selectRePortHDXTableAdapter.ClearBeforeFill = true;
-            // 
-            // ttcmDataSet1
-            // 
-            this.ttcmDataSet1.DataSetName = "ttcmDataSet1";
-            this.ttcmDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // FormRePortHDX
+            // FormRPHDX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1135, 642);
+            this.ClientSize = new System.Drawing.Size(1155, 527);
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormRePortHDX";
+            this.Name = "FormRPHDX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormRePortHDX";
-            this.Load += new System.EventHandler(this.FormRePortHDX_Load);
+            this.Text = "FormRPHDX";
+            this.Load += new System.EventHandler(this.FormRPHDX_Load);
             ((System.ComponentModel.ISupportInitialize)(this.selectRePortHDXBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ttcmDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ttcmDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TTHDXReportBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -114,9 +123,10 @@
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource selectRePortHDXBindingSource;
-        private ttcmDataSet1 ttcmDataSet;
-        private ttcmDataSet1TableAdapters.selectRePortHDXTableAdapter selectRePortHDXTableAdapter;
+        private ttcmDataSet ttcmDataSet;
+        private ttcmDataSetTableAdapters.selectRePortHDXTableAdapter selectRePortHDXTableAdapter;
+        private System.Windows.Forms.BindingSource TTHDXReportBindingSource;
+        private ttcmDataSetTableAdapters.TTHDXReportTableAdapter TTHDXReportTableAdapter;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
-        private ttcmDataSet1 ttcmDataSet1;
     }
 }

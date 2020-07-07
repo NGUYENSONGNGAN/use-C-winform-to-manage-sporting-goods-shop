@@ -227,11 +227,11 @@
     <Compile Include="FormKhachHangMoi.Designer.cs">
       <DependentUpon>FormKhachHangMoi.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRePortHDX.cs">
+    <Compile Include="FormRPHDX.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRePortHDX.Designer.cs">
-      <DependentUpon>FormRePortHDX.cs</DependentUpon>
+    <Compile Include="FormRPHDX.Designer.cs">
+      <DependentUpon>FormRPHDX.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThanhToan.cs">
       <SubType>Form</SubType>
@@ -352,12 +352,15 @@
       <DependentUpon>Size_FormThanhToan.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <Compile Include="ttcmDataSet1.Designer.cs">
+    <Compile Include="ttcmDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ttcmDataSet1.xsd</DependentUpon>
+      <DependentUpon>ttcmDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="FormRPHDX.resx">
+      <DependentUpon>FormRPHDX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report2.rdlc" />
     <None Include="ChucVu_FormDuLieuNV.xsc">
       <DependentUpon>ChucVu_FormDuLieuNV.xsd</DependentUpon>
     </None>
@@ -418,9 +421,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormKhachHangMoi.resx">
       <DependentUpon>FormKhachHangMoi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormRePortHDX.resx">
-      <DependentUpon>FormRePortHDX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThanhToan.resx">
       <DependentUpon>FormThanhToan.cs</DependentUpon>
@@ -642,16 +642,16 @@
     <None Include="Size_FormThanhToan.xss">
       <DependentUpon>Size_FormThanhToan.xsd</DependentUpon>
     </None>
-    <None Include="ttcmDataSet1.xsc">
-      <DependentUpon>ttcmDataSet1.xsd</DependentUpon>
+    <None Include="ttcmDataSet.xsc">
+      <DependentUpon>ttcmDataSet.xsd</DependentUpon>
     </None>
-    <None Include="ttcmDataSet1.xsd">
+    <None Include="ttcmDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ttcmDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>ttcmDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="ttcmDataSet1.xss">
-      <DependentUpon>ttcmDataSet1.xsd</DependentUpon>
+    <None Include="ttcmDataSet.xss">
+      <DependentUpon>ttcmDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -60,7 +60,7 @@ namespace giaodien
                 int Ma = Convert.ToInt32(dgvHDX.Rows[e.RowIndex].Cells[0].Value.ToString());
                 TTHDX.MaHDX = Ma;
                 TTHDX.MoFormRP = 1;
-                FormRePortHDX FRPHDX = new FormRePortHDX();
+                FormRPHDX FRPHDX = new FormRPHDX();
                 FRPHDX.ShowDialog();
             }
         }

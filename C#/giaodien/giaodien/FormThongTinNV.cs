@@ -151,7 +151,7 @@ namespace giaodien
                 btnChonAnh.Visible = true;
                 btnDoiMatKhau.Visible = false;
                 pictureBox1.Image = null;
-
+                btnHuy.Visible = false;
             }
             //sua
             else if (FormDuLieuNV.MoFormThongTinNV.phanbietthemsua ==2)
@@ -170,11 +170,11 @@ namespace giaodien
                 {
                     rbtNu.Checked = true;
                 }
-                dtpNgaySinh.Value = Convert.ToDateTime(nv.NgaySinh);
-                dtpNgayVaoLam.Value = Convert.ToDateTime(nv.NgayVaoLam);
-                txtDiaChi.Text = nv.DiaChi;
-                txtEmail.Text = nv.Email;
-                cbbChucVu.SelectedValue = nv.ChucVu;
+                dtpNgaySinh.Value = Convert.ToDateTime(NVCT.NgaySinh);
+                dtpNgayVaoLam.Value = Convert.ToDateTime(NVCT.NgayVaoLam);
+                txtDiaChi.Text = NVCT.DiaChi;
+                txtEmail.Text = NVCT.Email;
+                cbbChucVu.SelectedValue = Convert.ToInt32( NVCT.Ma_CV);
                 groupBox2.Visible = false;
                 txtTen.Enabled = false;
                 cbbChucVu.Enabled = false;
