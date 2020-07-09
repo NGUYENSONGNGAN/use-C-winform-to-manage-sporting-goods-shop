@@ -17,7 +17,7 @@ namespace giaodien
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FormDangNhap());
-           // Application.Run(new FormRePortHDX());
+          //  Application.Run(new FormQuetQRTimKiemHDX());
         }
     }
 }

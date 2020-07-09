@@ -21,6 +21,7 @@ namespace giaodien
         {
             public static int MaHDX;
             public static int MoFormRP;
+            public static int MoFormGhiChuHuy;
         }
         private void FormHDX_Load(object sender, EventArgs e)
         {
@@ -63,6 +64,43 @@ namespace giaodien
                 FormRPHDX FRPHDX = new FormRPHDX();
                 FRPHDX.ShowDialog();
             }
+            else if (dgvHDX.Columns[e.ColumnIndex].Name == "ThayDoiTrangThai")
+            {
+                int Ma = Convert.ToInt32(dgvHDX.Rows[e.RowIndex].Cells[0].Value.ToString());
+                TTHDX.MaHDX = Ma;
+                TTHDX.MoFormGhiChuHuy = 1;
+                FormGhiChuHuyHDX FGCHHDX = new FormGhiChuHuyHDX();
+                FGCHHDX.ShowDialog();   
+                if (FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX == 1)
+                {
+                    var HDX = dt.selectTTHDX(Ma).FirstOrDefault();
+                    var KH = dt.selectTTKH(HDX.Ma_KH).FirstOrDefault();
+                    var LKH = dt.LoaiKHs.Where(s => s.Ma == KH.Ma_LoaiKH).FirstOrDefault();
+                    if (HDX.TongTien >=200000)
+                    {
+                        int DiemTL = Convert.ToInt32(KH.DiemTichLuy) - 10;
+                        dt.updatediemtichluy(KH.Ma, DiemTL);
+                        if (DiemTL <200)
+                        {
+                            dt.updateKH_LoaiKH(KH.Ma, 1);
+                        }   
+                        else if (DiemTL >=200 && DiemTL <400)
+                        {
+                            dt.updateKH_LoaiKH(KH.Ma, 2);
+                        }   
+                    }    
+                    dgvHDX.DataSource = dt.selectHDX();
+                    FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX = 0;
+                    FGCHHDX.Close();
+                }    
+            }
+        }
+
+        private void btnTikKiemNangCao_Click(object sender, EventArgs e)
+        {
+            FormQuetQRTimKiemHDX FQQRTK = new FormQuetQRTimKiemHDX();
+            FQQRTK.Show();
+            this.Close();
         }
     }
 }

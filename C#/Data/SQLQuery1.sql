@@ -2570,6 +2570,10 @@ create proc selectTTCTSP (@maSP int, @ma_Size int, @ma_Mau int)
 as
 select * from CTSanPham where Ma_SP = @maSP and Ma_Size = @ma_Size and Ma_MauSac = @ma_Mau
 go
+
+
+
+
 ---KhachHang
 create proc insertKH (@ma int, @ten nvarchar(1000), @Email nvarchar (1000), @Diachi nvarchar (1000), @SDT nvarchar (1000))
 as
@@ -2584,11 +2588,6 @@ go
 create proc selectKH
 as
 select * from KhachHang
-go
-
-create proc updateKH_DTL (@ma int, @diemTL int)
-as
-update KhachHang set DiemTichLuy = @diemTL where Ma = @ma
 go
 
 create proc updateKH_LoaiKH (@ma int, @loaikh int)
@@ -2650,7 +2649,10 @@ create proc updateghichu (@ma int,@ghichu nvarchar (1000))
 as
 update HDXuat set GhiChu = @ghichu where Ma = @ma
 go
-
+create proc selectHDX 
+as
+select * from HDXuat 
+go
 
 --CTHDX
 create proc insertCTHDX (@mahdx int,@masp int, @masize int, @mamau int, @soluong int, @thanhtien int)
@@ -2710,9 +2712,20 @@ as
 select * from HDXuat HDX, NhanVien NV, KhachHang KH
 where HDX.Ma = @mahdx and HDX.Ma_NV = NV.Ma and HDX.Ma_KH = KH.Ma
 
+--Thống kê
 
+--Tiền nhập theo tháng của năm ...
+select CONCAT(N'Tháng ', Datepart (MM, NgayNhap)) as 'Thang', Sum(TongTien) as 'TongTien' From HDNhap
+where DATEPART (YY, NgayNhap) = 2020
+group by Datepart (MM, NgayNhap)
+
+---Doanh thu 
+select CONCAT(N'Tháng ', Datepart (MM, NgayXuat)) as 'Thang', Sum(TongTien) as 'TongTien' From HDXuat
+where DATEPART (YY, NgayXuat) = 2020 and TrangThai = 'true' 
+group by Datepart (MM, NgayXuat)
 
 --select * from CTHDNhap
 --select * from ThongTinCTHDN
 --select * from CTSanPham
 --select * from MauSac
+select * from CTHDXuat where Ma_HDX =50

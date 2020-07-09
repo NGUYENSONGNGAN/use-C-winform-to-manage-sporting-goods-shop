@@ -54,10 +54,18 @@
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dgvCTHDN = new Guna.UI.WinForms.GunaDataGridView();
+            this.Ma_SP = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.sanPhamBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sanPham_FormNhapHang = new giaodien.SanPham_FormNhapHang();
+            this.Ma_Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.size_FormNhapHang = new giaodien.Size_FormNhapHang();
+            this.Ma_MauSac = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.mauSacBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mau_FormNhapHang = new giaodien.Mau_FormNhapHang();
+            this.Soluong12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
             this.mauSacTableAdapter = new giaodien.Mau_FormNhapHangTableAdapters.MauSacTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,23 +76,16 @@
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
             this.btnThemNCC = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.sanPhamTableAdapter = new giaodien.SanPham_FormNhapHangTableAdapters.SanPhamTableAdapter();
-            this.size_FormNhapHang = new giaodien.Size_FormNhapHang();
-            this.sizeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.sizeTableAdapter = new giaodien.Size_FormNhapHangTableAdapters.SizeTableAdapter();
-            this.Ma_SP = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Ma_Size = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Ma_MauSac = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Soluong12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Xoa = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnThemSP = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDN)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPham_FormNhapHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mauSacBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mau_FormNhapHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -138,7 +139,7 @@
             this.lbMaHD.BackColor = System.Drawing.Color.Transparent;
             this.lbMaHD.Font = new System.Drawing.Font("Arial", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMaHD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbMaHD.Location = new System.Drawing.Point(387, 57);
+            this.lbMaHD.Location = new System.Drawing.Point(293, 57);
             this.lbMaHD.Name = "lbMaHD";
             this.lbMaHD.Size = new System.Drawing.Size(36, 40);
             this.lbMaHD.TabIndex = 7;
@@ -146,14 +147,14 @@
             // 
             // cbbSP
             // 
-            this.cbbSP.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbbSP.BackColor = System.Drawing.Color.White;
             this.cbbSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSP.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbSP.ForeColor = System.Drawing.Color.Navy;
             this.cbbSP.FormattingEnabled = true;
             this.cbbSP.Location = new System.Drawing.Point(163, 209);
             this.cbbSP.Name = "cbbSP";
-            this.cbbSP.Size = new System.Drawing.Size(307, 40);
+            this.cbbSP.Size = new System.Drawing.Size(260, 40);
             this.cbbSP.TabIndex = 8;
             this.cbbSP.SelectedIndexChanged += new System.EventHandler(this.cbbSP_SelectedIndexChanged);
             this.cbbSP.SelectedValueChanged += new System.EventHandler(this.cbbSP_SelectedValueChanged);
@@ -392,6 +393,17 @@
             this.dgvCTHDN.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHDN_CellClick);
             this.dgvCTHDN.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCTHDN_CellContentClick);
             // 
+            // Ma_SP
+            // 
+            this.Ma_SP.DataPropertyName = "Ma_SP";
+            this.Ma_SP.DataSource = this.sanPhamBindingSource;
+            this.Ma_SP.DisplayMember = "Ten";
+            this.Ma_SP.FillWeight = 140.168F;
+            this.Ma_SP.HeaderText = "Sản phẩm";
+            this.Ma_SP.Name = "Ma_SP";
+            this.Ma_SP.ReadOnly = true;
+            this.Ma_SP.ValueMember = "Ma";
+            // 
             // sanPhamBindingSource
             // 
             this.sanPhamBindingSource.DataMember = "SanPham";
@@ -402,6 +414,38 @@
             this.sanPham_FormNhapHang.DataSetName = "SanPham_FormNhapHang";
             this.sanPham_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // Ma_Size
+            // 
+            this.Ma_Size.DataPropertyName = "Ma_Size";
+            this.Ma_Size.DataSource = this.sizeBindingSource;
+            this.Ma_Size.DisplayMember = "TenSize";
+            this.Ma_Size.FillWeight = 103.0235F;
+            this.Ma_Size.HeaderText = "Size";
+            this.Ma_Size.Name = "Ma_Size";
+            this.Ma_Size.ReadOnly = true;
+            this.Ma_Size.ValueMember = "Ma";
+            // 
+            // sizeBindingSource
+            // 
+            this.sizeBindingSource.DataMember = "Size";
+            this.sizeBindingSource.DataSource = this.size_FormNhapHang;
+            // 
+            // size_FormNhapHang
+            // 
+            this.size_FormNhapHang.DataSetName = "Size_FormNhapHang";
+            this.size_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Ma_MauSac
+            // 
+            this.Ma_MauSac.DataPropertyName = "Ma_MauSac";
+            this.Ma_MauSac.DataSource = this.mauSacBindingSource;
+            this.Ma_MauSac.DisplayMember = "TenMau";
+            this.Ma_MauSac.FillWeight = 103.0235F;
+            this.Ma_MauSac.HeaderText = "Màu";
+            this.Ma_MauSac.Name = "Ma_MauSac";
+            this.Ma_MauSac.ReadOnly = true;
+            this.Ma_MauSac.ValueMember = "Ma";
+            // 
             // mauSacBindingSource
             // 
             this.mauSacBindingSource.DataMember = "MauSac";
@@ -411,6 +455,34 @@
             // 
             this.mau_FormNhapHang.DataSetName = "Mau_FormNhapHang";
             this.mau_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // Soluong12
+            // 
+            this.Soluong12.DataPropertyName = "SoLuong";
+            this.Soluong12.FillWeight = 103.0235F;
+            this.Soluong12.HeaderText = "Số lượng";
+            this.Soluong12.Name = "Soluong12";
+            this.Soluong12.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
+            // 
+            // Xoa
+            // 
+            this.Xoa.DataPropertyName = "Xoa";
+            this.Xoa.FillWeight = 50.76142F;
+            this.Xoa.HeaderText = "Xóa";
+            this.Xoa.Name = "Xoa";
+            this.Xoa.ReadOnly = true;
+            this.Xoa.Text = "Xóa";
+            this.Xoa.UseColumnTextForButtonValue = true;
             // 
             // mauSacTableAdapter
             // 
@@ -572,80 +644,35 @@
             // 
             this.sanPhamTableAdapter.ClearBeforeFill = true;
             // 
-            // size_FormNhapHang
-            // 
-            this.size_FormNhapHang.DataSetName = "Size_FormNhapHang";
-            this.size_FormNhapHang.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sizeBindingSource
-            // 
-            this.sizeBindingSource.DataMember = "Size";
-            this.sizeBindingSource.DataSource = this.size_FormNhapHang;
-            // 
             // sizeTableAdapter
             // 
             this.sizeTableAdapter.ClearBeforeFill = true;
             // 
-            // Ma_SP
+            // btnThemSP
             // 
-            this.Ma_SP.DataPropertyName = "Ma_SP";
-            this.Ma_SP.DataSource = this.sanPhamBindingSource;
-            this.Ma_SP.DisplayMember = "Ten";
-            this.Ma_SP.FillWeight = 140.168F;
-            this.Ma_SP.HeaderText = "Sản phẩm";
-            this.Ma_SP.Name = "Ma_SP";
-            this.Ma_SP.ReadOnly = true;
-            this.Ma_SP.ValueMember = "Ma";
-            // 
-            // Ma_Size
-            // 
-            this.Ma_Size.DataPropertyName = "Ma_Size";
-            this.Ma_Size.DataSource = this.sizeBindingSource;
-            this.Ma_Size.DisplayMember = "TenSize";
-            this.Ma_Size.FillWeight = 103.0235F;
-            this.Ma_Size.HeaderText = "Size";
-            this.Ma_Size.Name = "Ma_Size";
-            this.Ma_Size.ReadOnly = true;
-            this.Ma_Size.ValueMember = "Ma";
-            // 
-            // Ma_MauSac
-            // 
-            this.Ma_MauSac.DataPropertyName = "Ma_MauSac";
-            this.Ma_MauSac.DataSource = this.mauSacBindingSource;
-            this.Ma_MauSac.DisplayMember = "TenMau";
-            this.Ma_MauSac.FillWeight = 103.0235F;
-            this.Ma_MauSac.HeaderText = "Màu";
-            this.Ma_MauSac.Name = "Ma_MauSac";
-            this.Ma_MauSac.ReadOnly = true;
-            this.Ma_MauSac.ValueMember = "Ma";
-            // 
-            // Soluong12
-            // 
-            this.Soluong12.DataPropertyName = "SoLuong";
-            this.Soluong12.FillWeight = 103.0235F;
-            this.Soluong12.HeaderText = "Số lượng";
-            this.Soluong12.Name = "Soluong12";
-            this.Soluong12.ReadOnly = true;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.ThanhTien.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            // 
-            // Xoa
-            // 
-            this.Xoa.DataPropertyName = "Xoa";
-            this.Xoa.FillWeight = 50.76142F;
-            this.Xoa.HeaderText = "Xóa";
-            this.Xoa.Name = "Xoa";
-            this.Xoa.ReadOnly = true;
-            this.Xoa.Text = "Xóa";
-            this.Xoa.UseColumnTextForButtonValue = true;
+            this.btnThemSP.AnimationHoverSpeed = 0.07F;
+            this.btnThemSP.AnimationSpeed = 0.03F;
+            this.btnThemSP.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThemSP.BackgroundImage")));
+            this.btnThemSP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThemSP.BaseColor1 = System.Drawing.Color.Transparent;
+            this.btnThemSP.BaseColor2 = System.Drawing.Color.Transparent;
+            this.btnThemSP.BorderColor = System.Drawing.Color.Black;
+            this.btnThemSP.FocusedColor = System.Drawing.Color.Empty;
+            this.btnThemSP.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThemSP.ForeColor = System.Drawing.Color.White;
+            this.btnThemSP.Image = null;
+            this.btnThemSP.ImageSize = new System.Drawing.Size(52, 52);
+            this.btnThemSP.Location = new System.Drawing.Point(431, 209);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.OnHoverBaseColor1 = System.Drawing.Color.Transparent;
+            this.btnThemSP.OnHoverBaseColor2 = System.Drawing.Color.Transparent;
+            this.btnThemSP.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnThemSP.OnHoverForeColor = System.Drawing.Color.Transparent;
+            this.btnThemSP.OnHoverImage = null;
+            this.btnThemSP.OnPressedColor = System.Drawing.Color.Transparent;
+            this.btnThemSP.Size = new System.Drawing.Size(39, 40);
+            this.btnThemSP.TabIndex = 84;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // FormNhapHang
             // 
@@ -653,6 +680,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1311, 718);
+            this.Controls.Add(this.btnThemSP);
             this.Controls.Add(this.btnThemNCC);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnHuy);
@@ -690,10 +718,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDN)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPhamBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sanPham_FormNhapHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mauSacBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mau_FormNhapHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.size_FormNhapHang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sizeBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -743,6 +771,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Soluong12;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.DataGridViewButtonColumn Xoa;
+        private Guna.UI.WinForms.GunaGradientCircleButton btnThemSP;
         //     private BunifuMaterialTextbox bunifuMaterialTextbox2;
     }
 }

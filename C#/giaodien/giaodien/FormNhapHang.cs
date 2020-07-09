@@ -406,7 +406,7 @@ namespace giaodien
         {
 
         }
-
+        int r;
         private void dgvCTHDN_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //btnThem.Enabled = true;
@@ -425,8 +425,11 @@ namespace giaodien
             //txtSoLuong.Text = CTHDN.Soluong.ToString();
             //txtDonGia.Text = CTHDN.DonGia.ToString();
             //lbThanhTien.Text = CTHDN.ThanhTien.ToString();
-
-            int r = dgvCTHDN.CurrentRow.Index;
+            r = e.RowIndex;
+            if (r == -1)
+            {
+                return;
+            }    
 
             var CTHDN = dt.selectTTCTHDN(Convert.ToInt32(lbMaHD.Text),
                                               Convert.ToInt32(dgvCTHDN.Rows[r].Cells[0].Value.ToString()),
@@ -586,7 +589,12 @@ namespace giaodien
 
         private void dgvCTHDN_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            //r = dgvCTHDN.CurrentRow.Index;
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -542,3 +542,10 @@ D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\gia
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.exe
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.pdb
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormRPHDX.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormQuetQRTimKiemHDX.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.Video.DirectShow.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.Video.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.Video.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.Video.DirectShow.xml

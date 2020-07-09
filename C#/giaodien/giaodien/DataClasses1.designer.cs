@@ -588,13 +588,6 @@ namespace giaodien
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateKH_DTL")]
-		public int updateKH_DTL([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diemTL)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, diemTL);
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateKH_LoaiKH")]
 		public int updateKH_LoaiKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loaikh)
 		{
@@ -691,6 +684,13 @@ namespace giaodien
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, masp);
 			return ((ISingleResult<loadDGResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectHDX")]
+		public ISingleResult<selectHDXResult> selectHDX()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<selectHDXResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -8318,6 +8318,158 @@ namespace giaodien
 				if ((this._ThanhTien != value))
 				{
 					this._ThanhTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class selectHDXResult
+	{
+		
+		private int _Ma;
+		
+		private System.Nullable<int> _Ma_KH;
+		
+		private System.Nullable<int> _Ma_NV;
+		
+		private System.Nullable<System.DateTime> _NgayXuat;
+		
+		private System.Nullable<int> _TongTien;
+		
+		private System.Nullable<bool> _TrangThai;
+		
+		private string _GhiChu;
+		
+		private System.Data.Linq.Binary _MaQR;
+		
+		public selectHDXResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL")]
+		public int Ma
+		{
+			get
+			{
+				return this._Ma;
+			}
+			set
+			{
+				if ((this._Ma != value))
+				{
+					this._Ma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_KH", DbType="Int")]
+		public System.Nullable<int> Ma_KH
+		{
+			get
+			{
+				return this._Ma_KH;
+			}
+			set
+			{
+				if ((this._Ma_KH != value))
+				{
+					this._Ma_KH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_NV", DbType="Int")]
+		public System.Nullable<int> Ma_NV
+		{
+			get
+			{
+				return this._Ma_NV;
+			}
+			set
+			{
+				if ((this._Ma_NV != value))
+				{
+					this._Ma_NV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayXuat", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayXuat
+		{
+			get
+			{
+				return this._NgayXuat;
+			}
+			set
+			{
+				if ((this._NgayXuat != value))
+				{
+					this._NgayXuat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit")]
+		public System.Nullable<bool> TrangThai
+		{
+			get
+			{
+				return this._TrangThai;
+			}
+			set
+			{
+				if ((this._TrangThai != value))
+				{
+					this._TrangThai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(1000)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this._GhiChu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaQR", DbType="Image")]
+		public System.Data.Linq.Binary MaQR
+		{
+			get
+			{
+				return this._MaQR;
+			}
+			set
+			{
+				if ((this._MaQR != value))
+				{
+					this._MaQR = value;
 				}
 			}
 		}

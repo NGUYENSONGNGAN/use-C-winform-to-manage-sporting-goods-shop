@@ -583,10 +583,10 @@
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(502, 191);
+            this.panel2.Location = new System.Drawing.Point(1449, 720);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(55, 41);
-            this.panel2.TabIndex = 51;
+            this.panel2.Size = new System.Drawing.Size(10, 10);
+            this.panel2.TabIndex = 55;
             // 
             // FormTrangChu
             // 

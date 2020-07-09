@@ -16,10 +16,10 @@ namespace giaodien
         {
             InitializeComponent();
         }
-        int MaHD;
+        
         private void FormRPHDX_Load(object sender, EventArgs e)
         {
-       
+            int MaHD=0;
             if (FormThanhToan.TTTT.MoFormRP == 1)
             {
                 MaHD = FormThanhToan.TTTT.Ma;
@@ -27,6 +27,10 @@ namespace giaodien
             else if (FormHDX.TTHDX.MoFormRP == 1)
             {
                 MaHD = FormHDX.TTHDX.MaHDX;
+            }
+            else if (FormQuetQRTimKiemHDX.TTTK.MoFormRP ==1)
+            {
+                MaHD = FormQuetQRTimKiemHDX.TTTK.MaHDX;
             }
             // TODO: This line of code loads data into the 'ttcmDataSet.selectRePortHDX' table. You can move, or remove it, as needed.
             this.selectRePortHDXTableAdapter.Fill(this.ttcmDataSet.selectRePortHDX, MaHD);
@@ -47,6 +51,14 @@ namespace giaodien
             {
                 FormHDX.TTHDX.MoFormRP = 0;
                 this.Close();
+            }
+            else if (FormQuetQRTimKiemHDX.TTTK.MoFormRP ==1)
+            {
+                FormQuetQRTimKiemHDX.TTTK.MoFormRP = 0;
+                FormQuetQRTimKiemHDX.TTTK.Load = 1;
+                this.Close();
+                //FormHDX FHDX = new FormHDX();
+                //FHDX.Show();
             }
         }
     }

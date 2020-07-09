@@ -59,6 +59,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnTikKiemNangCao = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHang_FormHDX)).BeginInit();
@@ -324,6 +325,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnTikKiemNangCao);
             this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -341,7 +343,7 @@
             this.txtTimKiem.FocusedBorderColor = System.Drawing.Color.Cyan;
             this.txtTimKiem.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTimKiem.Location = new System.Drawing.Point(243, 7);
+            this.txtTimKiem.Location = new System.Drawing.Point(392, 6);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.PasswordChar = '\0';
             this.txtTimKiem.Size = new System.Drawing.Size(722, 63);
@@ -351,12 +353,37 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(971, 7);
+            this.pictureBox1.Location = new System.Drawing.Point(1154, 6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(77, 63);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnTikKiemNangCao
+            // 
+            this.btnTikKiemNangCao.AnimationHoverSpeed = 0.07F;
+            this.btnTikKiemNangCao.AnimationSpeed = 0.03F;
+            this.btnTikKiemNangCao.BaseColor1 = System.Drawing.Color.Transparent;
+            this.btnTikKiemNangCao.BaseColor2 = System.Drawing.Color.Transparent;
+            this.btnTikKiemNangCao.BorderColor = System.Drawing.Color.Black;
+            this.btnTikKiemNangCao.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTikKiemNangCao.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTikKiemNangCao.ForeColor = System.Drawing.Color.DimGray;
+            this.btnTikKiemNangCao.Image = ((System.Drawing.Image)(resources.GetObject("btnTikKiemNangCao.Image")));
+            this.btnTikKiemNangCao.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnTikKiemNangCao.Location = new System.Drawing.Point(12, 6);
+            this.btnTikKiemNangCao.Name = "btnTikKiemNangCao";
+            this.btnTikKiemNangCao.OnHoverBaseColor1 = System.Drawing.Color.Cyan;
+            this.btnTikKiemNangCao.OnHoverBaseColor2 = System.Drawing.Color.SkyBlue;
+            this.btnTikKiemNangCao.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTikKiemNangCao.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnTikKiemNangCao.OnHoverImage = null;
+            this.btnTikKiemNangCao.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTikKiemNangCao.Size = new System.Drawing.Size(336, 63);
+            this.btnTikKiemNangCao.TabIndex = 110;
+            this.btnTikKiemNangCao.Text = "Tìm kiếm nâng cao";
+            this.btnTikKiemNangCao.Click += new System.EventHandler(this.btnTikKiemNangCao_Click);
             // 
             // FormHDX
             // 
@@ -412,5 +439,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaTextBox txtTimKiem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI.WinForms.GunaGradientButton btnTikKiemNangCao;
     }
 }

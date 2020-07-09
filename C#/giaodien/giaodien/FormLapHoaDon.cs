@@ -24,6 +24,7 @@ namespace giaodien
         public class TTMHDX
         {
             public static int Ma;
+            public static int MoFormGhiChuHuyHDX;
         }
         int MaKH;
         int i = 0;
@@ -111,15 +112,16 @@ namespace giaodien
                 DialogResult a = MessageBox.Show("Bạn có muốn hủy hóa đơn này không ???", "Hủy", MessageBoxButtons.YesNo);
                 if (a== DialogResult.Yes)
                 {
+                    TTMHDX.MoFormGhiChuHuyHDX = 1;
                     FormGhiChuHuyHDX FGCHHDX = new FormGhiChuHuyHDX();
                     FGCHHDX.ShowDialog();
-                    if (FormGhiChuHuyHDX.TTDongForm.i ==1)
+                    if (FormGhiChuHuyHDX.TTDongForm.HuyHDX ==1)
                     {
                         FormKhachHangMoi.TTKHM.Ma = 0;
                         FormKiemTraKhachHang.TTKHC.Ma = 0;
                         FormTrangChu FTC = new FormTrangChu();
                         FTC.Show();
-                        FormGhiChuHuyHDX.TTDongForm.i = 0;
+                        FormGhiChuHuyHDX.TTDongForm.HuyHDX = 0;
                         this.Close();
                     }    
                 }    

@@ -94,6 +94,7 @@
             this.Name = "FormGhiChuHuyHDX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormGhiChuHuyHDX";
+            this.Load += new System.EventHandler(this.FormGhiChuHuyHDX_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
