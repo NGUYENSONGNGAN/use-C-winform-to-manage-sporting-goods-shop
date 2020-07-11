@@ -94,6 +94,8 @@ namespace giaodien
             lbThanhTien.Visible = false;
             lbThanhTien.Visible = false;
             TTMHDX.Ma = Convert.ToInt32(lbMaHD.Text);
+            dgvSanPham.AutoGenerateColumns = false;
+            dgvSanPham.DataSource = dt.SanPhams;
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)
@@ -297,6 +299,9 @@ namespace giaodien
             lbThanhTien.Visible = false;
             txtSoLuong.ResetText();
             lbThanhTien.Visible = false;
+            gunaGradientCircleButton1.Visible = true;
+            txtTimKiem.Visible = true;
+            dgvSanPham.Visible = true;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -405,6 +410,9 @@ namespace giaodien
                     lbSoLuongTon.Visible = false;
                     lbDonGia.Visible = false;
                     lbThanhTien.Visible = false;
+                    gunaGradientCircleButton1.Visible = false;
+                    txtTimKiem.Visible = false;
+                    dgvSanPham.Visible = false;
                 }    
             }
         }
@@ -438,6 +446,9 @@ namespace giaodien
             lbDonGia.Visible = true;
             lbThanhTien.Visible = true;
             txtSoLuong.Enabled = true;
+            gunaGradientCircleButton1.Visible = true;
+            txtTimKiem.Visible = true;
+            dgvSanPham.Visible = true;
         }
 
         private void dgvCTHDX_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -546,6 +557,36 @@ namespace giaodien
                 FTT.Show();
                 this.Close();
             }
+        }
+
+        private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgvSanPham.CurrentRow.Index;
+            int ma = Convert.ToInt32(dgvSanPham.Rows[r].Cells[0].Value.ToString());
+            cbbSP.SelectedValue = ma;
+            txtTimKiem.ResetText();
+            dgvSanPham.Visible = false;
+            txtSoLuong.Focus();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvSanPham.Visible = true;
+            if (txtTimKiem.Text.Trim() == "" || txtTimKiem.Text.Trim() == null)
+            {
+                dgvSanPham.AutoGenerateColumns = false;
+                dgvSanPham.DataSource = dt.SanPhams;
+            }
+            else if (txtTimKiem.Text.Trim() != "")
+            {
+                dgvSanPham.AutoGenerateColumns = false;
+                dgvSanPham.DataSource = dt.TKSPTrongHD(txtTimKiem.Text);
+            }
+        }
+
+        private void txtTimKiem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

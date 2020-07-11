@@ -7,15 +7,10 @@
       <Column Name="MatKhau" Type="System.String" DbType="NChar(1000)" CanBeNull="true" />
     </Type>
   </Table>
-  <Table Name="dbo.Size" Member="Sizes">
-    <Type Name="Size">
-      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenSize" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="Ma_LoaiSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Size_CTHDNhap" Member="CTHDNhaps" ThisKey="Ma" OtherKey="Ma_Size" Type="CTHDNhap" />
-      <Association Name="Size_CTHDXuat" Member="CTHDXuats" ThisKey="Ma" OtherKey="Ma_Size" Type="CTHDXuat" />
-      <Association Name="Size_CTSanPham" Member="CTSanPhams" ThisKey="Ma" OtherKey="Ma_Size" Type="CTSanPham" />
-      <Association Name="LoaiSP_Size" Member="LoaiSP" ThisKey="Ma_LoaiSP" OtherKey="Ma" Type="LoaiSP" IsForeignKey="true" />
+  <Table Name="dbo.TempChi" Member="TempChis">
+    <Type Name="TempChi">
+      <Column Name="Thang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.ChucVu" Member="ChucVus">
@@ -35,10 +30,10 @@
       <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Size_CTHDNhap" Member="Size" ThisKey="Ma_Size" OtherKey="Ma" Type="Size" IsForeignKey="true" />
       <Association Name="HDNhap_CTHDNhap" Member="HDNhap" ThisKey="Ma_HDN" OtherKey="Ma" Type="HDNhap" IsForeignKey="true" />
       <Association Name="MauSac_CTHDNhap" Member="MauSac" ThisKey="Ma_MauSac" OtherKey="Ma" Type="MauSac" IsForeignKey="true" />
       <Association Name="SanPham_CTHDNhap" Member="SanPham" ThisKey="Ma_SP" OtherKey="Ma" Type="SanPham" IsForeignKey="true" />
+      <Association Name="Size_CTHDNhap" Member="Size" ThisKey="Ma_Size" OtherKey="Ma" Type="Size" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CTHDXuat" Member="CTHDXuats">
@@ -49,10 +44,10 @@
       <Column Name="Ma_MauSac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Size_CTHDXuat" Member="Size" ThisKey="Ma_Size" OtherKey="Ma" Type="Size" IsForeignKey="true" />
       <Association Name="HDXuat_CTHDXuat" Member="HDXuat" ThisKey="Ma_HDX" OtherKey="Ma" Type="HDXuat" IsForeignKey="true" />
       <Association Name="MauSac_CTHDXuat" Member="MauSac" ThisKey="Ma_MauSac" OtherKey="Ma" Type="MauSac" IsForeignKey="true" />
       <Association Name="SanPham_CTHDXuat" Member="SanPham" ThisKey="Ma_SP" OtherKey="Ma" Type="SanPham" IsForeignKey="true" />
+      <Association Name="Size_CTHDXuat" Member="Size" ThisKey="Ma_Size" OtherKey="Ma" Type="Size" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.CTSanPham" Member="CTSanPhams">
@@ -61,9 +56,9 @@
       <Column Name="Ma_Size" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Ma_MauSac" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Association Name="Size_CTSanPham" Member="Size" ThisKey="Ma_Size" OtherKey="Ma" Type="Size" IsForeignKey="true" />
       <Association Name="MauSac_CTSanPham" Member="MauSac" ThisKey="Ma_MauSac" OtherKey="Ma" Type="MauSac" IsForeignKey="true" />
       <Association Name="SanPham_CTSanPham" Member="SanPham" ThisKey="Ma_SP" OtherKey="Ma" Type="SanPham" IsForeignKey="true" />
+      <Association Name="Size_CTSanPham" Member="Size" ThisKey="Ma_Size" OtherKey="Ma" Type="Size" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Email" Member="Emails">
@@ -125,8 +120,8 @@
     <Type Name="LoaiSP">
       <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Association Name="LoaiSP_Size" Member="Sizes" ThisKey="Ma" OtherKey="Ma_LoaiSP" Type="Size" />
       <Association Name="LoaiSP_SanPham" Member="SanPhams" ThisKey="Ma" OtherKey="Ma_LoaiSP" Type="SanPham" />
+      <Association Name="LoaiSP_Size" Member="Sizes" ThisKey="Ma" OtherKey="Ma_LoaiSP" Type="Size" />
     </Type>
   </Table>
   <Table Name="dbo.MauSac" Member="MauSacs">
@@ -179,18 +174,35 @@
       <Association Name="LoaiSP_SanPham" Member="LoaiSP" ThisKey="Ma_LoaiSP" OtherKey="Ma" Type="LoaiSP" IsForeignKey="true" />
     </Type>
   </Table>
-  <Function Name="dbo.updateTrangThaiHuy" Method="updateTrangThaiHuy">
-    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ghichu" Type="System.String" DbType="NVarChar(1000)" />
-    <Return Type="System.Int32" />
-  </Function>
+  <Table Name="dbo.Size" Member="Sizes">
+    <Type Name="Size">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenSize" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Ma_LoaiSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Size_CTHDNhap" Member="CTHDNhaps" ThisKey="Ma" OtherKey="Ma_Size" Type="CTHDNhap" />
+      <Association Name="Size_CTHDXuat" Member="CTHDXuats" ThisKey="Ma" OtherKey="Ma_Size" Type="CTHDXuat" />
+      <Association Name="Size_CTSanPham" Member="CTSanPhams" ThisKey="Ma" OtherKey="Ma_Size" Type="CTSanPham" />
+      <Association Name="LoaiSP_Size" Member="LoaiSP" ThisKey="Ma_LoaiSP" OtherKey="Ma" Type="LoaiSP" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TempThu" Member="TempThus">
+    <Type Name="TempThu">
+      <Column Name="Thang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
   <Function Name="dbo.cbbSize" Method="cbbSize">
     <Parameter Name="LoaiSp" Parameter="loaiSp" Type="System.Int32" DbType="Int" />
     <ElementType Name="cbbSizeResult">
       <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenSize" Type="System.String" DbType="NChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSize" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
       <Column Name="Ma_LoaiSP" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.updateTrangThaiHuy" Method="updateTrangThaiHuy">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ghichu" Type="System.String" DbType="NVarChar(1000)" />
+    <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.deletechucvu" Method="deletechucvu">
     <Parameter Name="ma" Type="System.Int32" DbType="Int" />
@@ -217,6 +229,11 @@
   <Function Name="dbo.deletenv" Method="deletenv">
     <Parameter Name="ma" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DoanhThuNamHienTai" Method="DoanhThuNamHienTai">
+    <ElementType Name="DoanhThuNamHienTaiResult">
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
   </Function>
   <Function Name="dbo.insertchucvu" Method="insertchucvu">
     <Parameter Name="ma" Type="System.Int32" DbType="Int" />
@@ -309,6 +326,29 @@
     <Parameter Name="hinhanh" Type="System.Data.Linq.Binary" DbType="Image" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.loadDG" Method="loadDG">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
+    <ElementType Name="loadDGResult">
+      <Column Name="Ma_HDN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_Size" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_MauSac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NamBanHang" Method="NamBanHang">
+    <ElementType Name="NamBanHangResult">
+      <Column Name="Nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.NamNhapHang" Method="NamNhapHang">
+    <ElementType Name="NamNhapHangResult">
+      <Column Name="Nam" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.ngaytrongnam_HDN" Method="ngaytrongnam_HDN">
     <Parameter Name="maHDN" Type="System.Int32" DbType="Int" />
     <ElementType Name="ngaytrongnam_HDNResult">
@@ -363,6 +403,18 @@
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.selectHDX" Method="selectHDX">
+    <ElementType Name="selectHDXResult">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ma_KH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ma_NV" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NgayXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="GhiChu" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="MaQR" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.selectKH" Method="selectKH">
     <ElementType Name="selectKHResult">
       <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -410,7 +462,7 @@
       <Column Name="DonGia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="HinhAnh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
       <Column Name="Ma1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TenSize" Type="System.String" DbType="NChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSize" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
       <Column Name="Ma_LoaiSP1" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="Ma2" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="TenMau" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
@@ -524,6 +576,37 @@
       <Column Name="MaQR" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.selectTTKH" Method="selectTTKH">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <ElementType Name="selectTTKHResult">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="DiemTichLuy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Ma_LoaiKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SoLuongHDXDaBan" Method="SoLuongHDXDaBan">
+    <ElementType Name="SoLuongHDXDaBanResult">
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TienBanTheoThangCuaNam" Method="TienBanTheoThangCuaNam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TienBanTheoThangCuaNamResult">
+      <Column Name="Thang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TienNhapTheoThangCuaNam" Method="TienNhapTheoThangCuaNam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="TienNhapTheoThangCuaNamResult">
+      <Column Name="Thang" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.TKHDN" Method="TKHDN">
     <Parameter Name="tk" Type="System.String" DbType="NVarChar(1000)" />
     <ElementType Name="TKHDNResult">
@@ -635,6 +718,11 @@
     <Parameter Name="thanhtien" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.updatediemtichluy" Method="updatediemtichluy">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
   <Function Name="dbo.updateDTL" Method="updateDTL">
     <Parameter Name="ma" Type="System.Int32" DbType="Int" />
     <Parameter Name="diemTL" Type="System.Int32" DbType="Int" />
@@ -670,6 +758,11 @@
     <Return Type="System.Int32" />
   </Function>
   <Function Name="dbo.updateKH_LoaiKH" Method="updateKH_LoaiKH">
+    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
+    <Parameter Name="loaikh" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateLKH" Method="updateLKH">
     <Parameter Name="ma" Type="System.Int32" DbType="Int" />
     <Parameter Name="loaikh" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
@@ -741,51 +834,43 @@
     <Parameter Name="tongtien" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.selectTTKH" Method="selectTTKH">
-    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
-    <ElementType Name="selectTTKHResult">
+  <Function Name="dbo.DanhSachHDNTrongNam" Method="DanhSachHDNTrongNam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DanhSachHDNTrongNamResult">
       <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Ten" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="DiemTichLuy" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Ma_LoaiKH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="SoDienThoai" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.updateLKH" Method="updateLKH">
-    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
-    <Parameter Name="loaikh" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.updatediemtichluy" Method="updatediemtichluy">
-    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
-    <Parameter Name="diem" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.loadDG" Method="loadDG">
-    <Parameter Name="ma" Type="System.Int32" DbType="Int" />
-    <Parameter Name="masp" Type="System.Int32" DbType="Int" />
-    <ElementType Name="loadDGResult">
-      <Column Name="Ma_HDN" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Ma_SP" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Ma_Size" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Ma_MauSac" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Soluong" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="DonGia" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ThanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.selectHDX" Method="selectHDX">
-    <ElementType Name="selectHDXResult">
-      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Ma_KH" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Ma_NV" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="NgayXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TenNCC" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayNhap" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DanhSachHDXtTrongNam" Method="DanhSachHDXtTrongNam">
+    <Parameter Name="nam" Type="System.Int32" DbType="Int" />
+    <ElementType Name="DanhSachHDXtTrongNamResult">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="NgayXuat" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="GhiChu" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
-      <Column Name="MaQR" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
+      <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKKHmuagi" Method="TKKHmuagi">
+    <ElementType Name="TKKHmuagiResult">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TKH" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SP" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="TenMau" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="TenSize" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SoLuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.TKSPTrongHD" Method="TKSPTrongHD">
+    <Parameter Name="tk" Type="System.String" DbType="NVarChar(1000)" />
+    <ElementType Name="TKSPTrongHDResult">
+      <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(1000) NOT NULL" CanBeNull="false" />
+      <Column Name="HinhAnh" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

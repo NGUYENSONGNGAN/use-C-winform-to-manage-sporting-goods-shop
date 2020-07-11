@@ -33,9 +33,6 @@ namespace giaodien
     partial void Insertad(ad instance);
     partial void Updatead(ad instance);
     partial void Deletead(ad instance);
-    partial void InsertSize(Size instance);
-    partial void UpdateSize(Size instance);
-    partial void DeleteSize(Size instance);
     partial void InsertChucVu(ChucVu instance);
     partial void UpdateChucVu(ChucVu instance);
     partial void DeleteChucVu(ChucVu instance);
@@ -78,6 +75,9 @@ namespace giaodien
     partial void InsertSanPham(SanPham instance);
     partial void UpdateSanPham(SanPham instance);
     partial void DeleteSanPham(SanPham instance);
+    partial void InsertSize(Size instance);
+    partial void UpdateSize(Size instance);
+    partial void DeleteSize(Size instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -118,11 +118,11 @@ namespace giaodien
 			}
 		}
 		
-		public System.Data.Linq.Table<Size> Sizes
+		public System.Data.Linq.Table<TempChi> TempChis
 		{
 			get
 			{
-				return this.GetTable<Size>();
+				return this.GetTable<TempChi>();
 			}
 		}
 		
@@ -238,11 +238,20 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateTrangThaiHuy")]
-		public int updateTrangThaiHuy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(1000)")] string ghichu)
+		public System.Data.Linq.Table<Size> Sizes
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ghichu);
-			return ((int)(result.ReturnValue));
+			get
+			{
+				return this.GetTable<Size>();
+			}
+		}
+		
+		public System.Data.Linq.Table<TempThu> TempThus
+		{
+			get
+			{
+				return this.GetTable<TempThu>();
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.cbbSize")]
@@ -250,6 +259,13 @@ namespace giaodien
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), loaiSp);
 			return ((ISingleResult<cbbSizeResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateTrangThaiHuy")]
+		public int updateTrangThaiHuy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(1000)")] string ghichu)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, ghichu);
+			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.deletechucvu")]
@@ -285,6 +301,13 @@ namespace giaodien
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DoanhThuNamHienTai")]
+		public ISingleResult<DoanhThuNamHienTaiResult> DoanhThuNamHienTai()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<DoanhThuNamHienTaiResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.insertchucvu")]
@@ -364,6 +387,27 @@ namespace giaodien
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.loadDG")]
+		public ISingleResult<loadDGResult> loadDG([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> masp)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, masp);
+			return ((ISingleResult<loadDGResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NamBanHang")]
+		public ISingleResult<NamBanHangResult> NamBanHang()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<NamBanHangResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.NamNhapHang")]
+		public ISingleResult<NamNhapHangResult> NamNhapHang()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<NamNhapHangResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ngaytrongnam_HDN")]
 		public ISingleResult<ngaytrongnam_HDNResult> ngaytrongnam_HDN([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maHDN)
 		{
@@ -404,6 +448,13 @@ namespace giaodien
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
 			return ((ISingleResult<selectHDNResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectHDX")]
+		public ISingleResult<selectHDXResult> selectHDX()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<selectHDXResult>)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectKH")]
@@ -483,6 +534,34 @@ namespace giaodien
 			return ((ISingleResult<selectTTHDXResult>)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectTTKH")]
+		public ISingleResult<selectTTKHResult> selectTTKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
+			return ((ISingleResult<selectTTKHResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SoLuongHDXDaBan")]
+		public ISingleResult<SoLuongHDXDaBanResult> SoLuongHDXDaBan()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<SoLuongHDXDaBanResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TienBanTheoThangCuaNam")]
+		public ISingleResult<TienBanTheoThangCuaNamResult> TienBanTheoThangCuaNam([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nam);
+			return ((ISingleResult<TienBanTheoThangCuaNamResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TienNhapTheoThangCuaNam")]
+		public ISingleResult<TienNhapTheoThangCuaNamResult> TienNhapTheoThangCuaNam([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nam);
+			return ((ISingleResult<TienNhapTheoThangCuaNamResult>)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TKHDN")]
 		public ISingleResult<TKHDNResult> TKHDN([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(1000)")] string tk)
 		{
@@ -546,6 +625,13 @@ namespace giaodien
 			return ((int)(result.ReturnValue));
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updatediemtichluy")]
+		public int updatediemtichluy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diem)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, diem);
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateDTL")]
 		public int updateDTL([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diemTL)
 		{
@@ -590,6 +676,13 @@ namespace giaodien
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateKH_LoaiKH")]
 		public int updateKH_LoaiKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loaikh)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, loaikh);
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateLKH")]
+		public int updateLKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loaikh)
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, loaikh);
 			return ((int)(result.ReturnValue));
@@ -658,39 +751,32 @@ namespace giaodien
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectTTKH")]
-		public ISingleResult<selectTTKHResult> selectTTKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachHDNTrongNam")]
+		public ISingleResult<DanhSachHDNTrongNamResult> DanhSachHDNTrongNam([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma);
-			return ((ISingleResult<selectTTKHResult>)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nam);
+			return ((ISingleResult<DanhSachHDNTrongNamResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updateLKH")]
-		public int updateLKH([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> loaikh)
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.DanhSachHDXtTrongNam")]
+		public ISingleResult<DanhSachHDXtTrongNamResult> DanhSachHDXtTrongNam([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> nam)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, loaikh);
-			return ((int)(result.ReturnValue));
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), nam);
+			return ((ISingleResult<DanhSachHDXtTrongNamResult>)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.updatediemtichluy")]
-		public int updatediemtichluy([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> diem)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, diem);
-			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.loadDG")]
-		public ISingleResult<loadDGResult> loadDG([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> ma, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> masp)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, masp);
-			return ((ISingleResult<loadDGResult>)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.selectHDX")]
-		public ISingleResult<selectHDXResult> selectHDX()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TKKHmuagi")]
+		public ISingleResult<TKKHmuagiResult> TKKHmuagi()
 		{
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
-			return ((ISingleResult<selectHDXResult>)(result.ReturnValue));
+			return ((ISingleResult<TKKHmuagiResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.TKSPTrongHD")]
+		public ISingleResult<TKSPTrongHDResult> TKSPTrongHD([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(1000)")] string tk)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tk);
+			return ((ISingleResult<TKSPTrongHDResult>)(result.ReturnValue));
 		}
 	}
 	
@@ -804,238 +890,48 @@ namespace giaodien
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Size")]
-	public partial class Size : INotifyPropertyChanging, INotifyPropertyChanged
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TempChi")]
+	public partial class TempChi
 	{
 		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		private string _Thang;
 		
-		private int _Ma;
+		private System.Nullable<int> _TongTien;
 		
-		private string _TenSize;
-		
-		private System.Nullable<int> _Ma_LoaiSP;
-		
-		private EntitySet<CTHDNhap> _CTHDNhaps;
-		
-		private EntitySet<CTHDXuat> _CTHDXuats;
-		
-		private EntitySet<CTSanPham> _CTSanPhams;
-		
-		private EntityRef<LoaiSP> _LoaiSP;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaChanging(int value);
-    partial void OnMaChanged();
-    partial void OnTenSizeChanging(string value);
-    partial void OnTenSizeChanged();
-    partial void OnMa_LoaiSPChanging(System.Nullable<int> value);
-    partial void OnMa_LoaiSPChanged();
-    #endregion
-		
-		public Size()
+		public TempChi()
 		{
-			this._CTHDNhaps = new EntitySet<CTHDNhap>(new Action<CTHDNhap>(this.attach_CTHDNhaps), new Action<CTHDNhap>(this.detach_CTHDNhaps));
-			this._CTHDXuats = new EntitySet<CTHDXuat>(new Action<CTHDXuat>(this.attach_CTHDXuats), new Action<CTHDXuat>(this.detach_CTHDXuats));
-			this._CTSanPhams = new EntitySet<CTSanPham>(new Action<CTSanPham>(this.attach_CTSanPhams), new Action<CTSanPham>(this.detach_CTSanPhams));
-			this._LoaiSP = default(EntityRef<LoaiSP>);
-			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Ma
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thang", DbType="NVarChar(50)")]
+		public string Thang
 		{
 			get
 			{
-				return this._Ma;
+				return this._Thang;
 			}
 			set
 			{
-				if ((this._Ma != value))
+				if ((this._Thang != value))
 				{
-					this.OnMaChanging(value);
-					this.SendPropertyChanging();
-					this._Ma = value;
-					this.SendPropertyChanged("Ma");
-					this.OnMaChanged();
+					this._Thang = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NVarChar(1000)")]
-		public string TenSize
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
-				return this._TenSize;
+				return this._TongTien;
 			}
 			set
 			{
-				if ((this._TenSize != value))
+				if ((this._TongTien != value))
 				{
-					this.OnTenSizeChanging(value);
-					this.SendPropertyChanging();
-					this._TenSize = value;
-					this.SendPropertyChanged("TenSize");
-					this.OnTenSizeChanged();
+					this._TongTien = value;
 				}
 			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_LoaiSP", DbType="Int")]
-		public System.Nullable<int> Ma_LoaiSP
-		{
-			get
-			{
-				return this._Ma_LoaiSP;
-			}
-			set
-			{
-				if ((this._Ma_LoaiSP != value))
-				{
-					if (this._LoaiSP.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnMa_LoaiSPChanging(value);
-					this.SendPropertyChanging();
-					this._Ma_LoaiSP = value;
-					this.SendPropertyChanged("Ma_LoaiSP");
-					this.OnMa_LoaiSPChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDNhap", Storage="_CTHDNhaps", ThisKey="Ma", OtherKey="Ma_Size")]
-		public EntitySet<CTHDNhap> CTHDNhaps
-		{
-			get
-			{
-				return this._CTHDNhaps;
-			}
-			set
-			{
-				this._CTHDNhaps.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDXuat", Storage="_CTHDXuats", ThisKey="Ma", OtherKey="Ma_Size")]
-		public EntitySet<CTHDXuat> CTHDXuats
-		{
-			get
-			{
-				return this._CTHDXuats;
-			}
-			set
-			{
-				this._CTHDXuats.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTSanPham", Storage="_CTSanPhams", ThisKey="Ma", OtherKey="Ma_Size")]
-		public EntitySet<CTSanPham> CTSanPhams
-		{
-			get
-			{
-				return this._CTSanPhams;
-			}
-			set
-			{
-				this._CTSanPhams.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiSP_Size", Storage="_LoaiSP", ThisKey="Ma_LoaiSP", OtherKey="Ma", IsForeignKey=true)]
-		public LoaiSP LoaiSP
-		{
-			get
-			{
-				return this._LoaiSP.Entity;
-			}
-			set
-			{
-				LoaiSP previousValue = this._LoaiSP.Entity;
-				if (((previousValue != value) 
-							|| (this._LoaiSP.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._LoaiSP.Entity = null;
-						previousValue.Sizes.Remove(this);
-					}
-					this._LoaiSP.Entity = value;
-					if ((value != null))
-					{
-						value.Sizes.Add(this);
-						this._Ma_LoaiSP = value.Ma;
-					}
-					else
-					{
-						this._Ma_LoaiSP = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("LoaiSP");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_CTHDNhaps(CTHDNhap entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = this;
-		}
-		
-		private void detach_CTHDNhaps(CTHDNhap entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = null;
-		}
-		
-		private void attach_CTHDXuats(CTHDXuat entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = this;
-		}
-		
-		private void detach_CTHDXuats(CTHDXuat entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = null;
-		}
-		
-		private void attach_CTSanPhams(CTSanPham entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = this;
-		}
-		
-		private void detach_CTSanPhams(CTSanPham entity)
-		{
-			this.SendPropertyChanging();
-			entity.Size = null;
 		}
 	}
 	
@@ -1197,13 +1093,13 @@ namespace giaodien
 		
 		private System.Nullable<int> _ThanhTien;
 		
-		private EntityRef<Size> _Size;
-		
 		private EntityRef<HDNhap> _HDNhap;
 		
 		private EntityRef<MauSac> _MauSac;
 		
 		private EntityRef<SanPham> _SanPham;
+		
+		private EntityRef<Size> _Size;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1227,10 +1123,10 @@ namespace giaodien
 		
 		public CTHDNhap()
 		{
-			this._Size = default(EntityRef<Size>);
 			this._HDNhap = default(EntityRef<HDNhap>);
 			this._MauSac = default(EntityRef<MauSac>);
 			this._SanPham = default(EntityRef<SanPham>);
+			this._Size = default(EntityRef<Size>);
 			OnCreated();
 		}
 		
@@ -1390,40 +1286,6 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDNhap", Storage="_Size", ThisKey="Ma_Size", OtherKey="Ma", IsForeignKey=true)]
-		public Size Size
-		{
-			get
-			{
-				return this._Size.Entity;
-			}
-			set
-			{
-				Size previousValue = this._Size.Entity;
-				if (((previousValue != value) 
-							|| (this._Size.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Size.Entity = null;
-						previousValue.CTHDNhaps.Remove(this);
-					}
-					this._Size.Entity = value;
-					if ((value != null))
-					{
-						value.CTHDNhaps.Add(this);
-						this._Ma_Size = value.Ma;
-					}
-					else
-					{
-						this._Ma_Size = default(int);
-					}
-					this.SendPropertyChanged("Size");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HDNhap_CTHDNhap", Storage="_HDNhap", ThisKey="Ma_HDN", OtherKey="Ma", IsForeignKey=true)]
 		public HDNhap HDNhap
 		{
@@ -1526,6 +1388,40 @@ namespace giaodien
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDNhap", Storage="_Size", ThisKey="Ma_Size", OtherKey="Ma", IsForeignKey=true)]
+		public Size Size
+		{
+			get
+			{
+				return this._Size.Entity;
+			}
+			set
+			{
+				Size previousValue = this._Size.Entity;
+				if (((previousValue != value) 
+							|| (this._Size.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Size.Entity = null;
+						previousValue.CTHDNhaps.Remove(this);
+					}
+					this._Size.Entity = value;
+					if ((value != null))
+					{
+						value.CTHDNhaps.Add(this);
+						this._Ma_Size = value.Ma;
+					}
+					else
+					{
+						this._Ma_Size = default(int);
+					}
+					this.SendPropertyChanged("Size");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1565,13 +1461,13 @@ namespace giaodien
 		
 		private System.Nullable<int> _ThanhTien;
 		
-		private EntityRef<Size> _Size;
-		
 		private EntityRef<HDXuat> _HDXuat;
 		
 		private EntityRef<MauSac> _MauSac;
 		
 		private EntityRef<SanPham> _SanPham;
+		
+		private EntityRef<Size> _Size;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1593,10 +1489,10 @@ namespace giaodien
 		
 		public CTHDXuat()
 		{
-			this._Size = default(EntityRef<Size>);
 			this._HDXuat = default(EntityRef<HDXuat>);
 			this._MauSac = default(EntityRef<MauSac>);
 			this._SanPham = default(EntityRef<SanPham>);
+			this._Size = default(EntityRef<Size>);
 			OnCreated();
 		}
 		
@@ -1736,40 +1632,6 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDXuat", Storage="_Size", ThisKey="Ma_Size", OtherKey="Ma", IsForeignKey=true)]
-		public Size Size
-		{
-			get
-			{
-				return this._Size.Entity;
-			}
-			set
-			{
-				Size previousValue = this._Size.Entity;
-				if (((previousValue != value) 
-							|| (this._Size.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Size.Entity = null;
-						previousValue.CTHDXuats.Remove(this);
-					}
-					this._Size.Entity = value;
-					if ((value != null))
-					{
-						value.CTHDXuats.Add(this);
-						this._Ma_Size = value.Ma;
-					}
-					else
-					{
-						this._Ma_Size = default(int);
-					}
-					this.SendPropertyChanged("Size");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="HDXuat_CTHDXuat", Storage="_HDXuat", ThisKey="Ma_HDX", OtherKey="Ma", IsForeignKey=true)]
 		public HDXuat HDXuat
 		{
@@ -1872,6 +1734,40 @@ namespace giaodien
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDXuat", Storage="_Size", ThisKey="Ma_Size", OtherKey="Ma", IsForeignKey=true)]
+		public Size Size
+		{
+			get
+			{
+				return this._Size.Entity;
+			}
+			set
+			{
+				Size previousValue = this._Size.Entity;
+				if (((previousValue != value) 
+							|| (this._Size.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Size.Entity = null;
+						previousValue.CTHDXuats.Remove(this);
+					}
+					this._Size.Entity = value;
+					if ((value != null))
+					{
+						value.CTHDXuats.Add(this);
+						this._Ma_Size = value.Ma;
+					}
+					else
+					{
+						this._Ma_Size = default(int);
+					}
+					this.SendPropertyChanged("Size");
+				}
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1907,11 +1803,11 @@ namespace giaodien
 		
 		private System.Nullable<int> _Soluong;
 		
-		private EntityRef<Size> _Size;
-		
 		private EntityRef<MauSac> _MauSac;
 		
 		private EntityRef<SanPham> _SanPham;
+		
+		private EntityRef<Size> _Size;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -1929,9 +1825,9 @@ namespace giaodien
 		
 		public CTSanPham()
 		{
-			this._Size = default(EntityRef<Size>);
 			this._MauSac = default(EntityRef<MauSac>);
 			this._SanPham = default(EntityRef<SanPham>);
+			this._Size = default(EntityRef<Size>);
 			OnCreated();
 		}
 		
@@ -2027,40 +1923,6 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTSanPham", Storage="_Size", ThisKey="Ma_Size", OtherKey="Ma", IsForeignKey=true)]
-		public Size Size
-		{
-			get
-			{
-				return this._Size.Entity;
-			}
-			set
-			{
-				Size previousValue = this._Size.Entity;
-				if (((previousValue != value) 
-							|| (this._Size.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Size.Entity = null;
-						previousValue.CTSanPhams.Remove(this);
-					}
-					this._Size.Entity = value;
-					if ((value != null))
-					{
-						value.CTSanPhams.Add(this);
-						this._Ma_Size = value.Ma;
-					}
-					else
-					{
-						this._Ma_Size = default(int);
-					}
-					this.SendPropertyChanged("Size");
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="MauSac_CTSanPham", Storage="_MauSac", ThisKey="Ma_MauSac", OtherKey="Ma", IsForeignKey=true)]
 		public MauSac MauSac
 		{
@@ -2125,6 +1987,40 @@ namespace giaodien
 						this._Ma_SP = default(int);
 					}
 					this.SendPropertyChanged("SanPham");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTSanPham", Storage="_Size", ThisKey="Ma_Size", OtherKey="Ma", IsForeignKey=true)]
+		public Size Size
+		{
+			get
+			{
+				return this._Size.Entity;
+			}
+			set
+			{
+				Size previousValue = this._Size.Entity;
+				if (((previousValue != value) 
+							|| (this._Size.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Size.Entity = null;
+						previousValue.CTSanPhams.Remove(this);
+					}
+					this._Size.Entity = value;
+					if ((value != null))
+					{
+						value.CTSanPhams.Add(this);
+						this._Ma_Size = value.Ma;
+					}
+					else
+					{
+						this._Ma_Size = default(int);
+					}
+					this.SendPropertyChanged("Size");
 				}
 			}
 		}
@@ -3291,9 +3187,9 @@ namespace giaodien
 		
 		private string _Ten;
 		
-		private EntitySet<Size> _Sizes;
-		
 		private EntitySet<SanPham> _SanPhams;
+		
+		private EntitySet<Size> _Sizes;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -3307,8 +3203,8 @@ namespace giaodien
 		
 		public LoaiSP()
 		{
-			this._Sizes = new EntitySet<Size>(new Action<Size>(this.attach_Sizes), new Action<Size>(this.detach_Sizes));
 			this._SanPhams = new EntitySet<SanPham>(new Action<SanPham>(this.attach_SanPhams), new Action<SanPham>(this.detach_SanPhams));
+			this._Sizes = new EntitySet<Size>(new Action<Size>(this.attach_Sizes), new Action<Size>(this.detach_Sizes));
 			OnCreated();
 		}
 		
@@ -3352,19 +3248,6 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiSP_Size", Storage="_Sizes", ThisKey="Ma", OtherKey="Ma_LoaiSP")]
-		public EntitySet<Size> Sizes
-		{
-			get
-			{
-				return this._Sizes;
-			}
-			set
-			{
-				this._Sizes.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiSP_SanPham", Storage="_SanPhams", ThisKey="Ma", OtherKey="Ma_LoaiSP")]
 		public EntitySet<SanPham> SanPhams
 		{
@@ -3375,6 +3258,19 @@ namespace giaodien
 			set
 			{
 				this._SanPhams.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiSP_Size", Storage="_Sizes", ThisKey="Ma", OtherKey="Ma_LoaiSP")]
+		public EntitySet<Size> Sizes
+		{
+			get
+			{
+				return this._Sizes;
+			}
+			set
+			{
+				this._Sizes.Assign(value);
 			}
 		}
 		
@@ -3398,18 +3294,6 @@ namespace giaodien
 			}
 		}
 		
-		private void attach_Sizes(Size entity)
-		{
-			this.SendPropertyChanging();
-			entity.LoaiSP = this;
-		}
-		
-		private void detach_Sizes(Size entity)
-		{
-			this.SendPropertyChanging();
-			entity.LoaiSP = null;
-		}
-		
 		private void attach_SanPhams(SanPham entity)
 		{
 			this.SendPropertyChanging();
@@ -3417,6 +3301,18 @@ namespace giaodien
 		}
 		
 		private void detach_SanPhams(SanPham entity)
+		{
+			this.SendPropertyChanging();
+			entity.LoaiSP = null;
+		}
+		
+		private void attach_Sizes(Size entity)
+		{
+			this.SendPropertyChanging();
+			entity.LoaiSP = this;
+		}
+		
+		private void detach_Sizes(Size entity)
 		{
 			this.SendPropertyChanging();
 			entity.LoaiSP = null;
@@ -4461,6 +4357,286 @@ namespace giaodien
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Size")]
+	public partial class Size : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Ma;
+		
+		private string _TenSize;
+		
+		private System.Nullable<int> _Ma_LoaiSP;
+		
+		private EntitySet<CTHDNhap> _CTHDNhaps;
+		
+		private EntitySet<CTHDXuat> _CTHDXuats;
+		
+		private EntitySet<CTSanPham> _CTSanPhams;
+		
+		private EntityRef<LoaiSP> _LoaiSP;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaChanging(int value);
+    partial void OnMaChanged();
+    partial void OnTenSizeChanging(string value);
+    partial void OnTenSizeChanged();
+    partial void OnMa_LoaiSPChanging(System.Nullable<int> value);
+    partial void OnMa_LoaiSPChanged();
+    #endregion
+		
+		public Size()
+		{
+			this._CTHDNhaps = new EntitySet<CTHDNhap>(new Action<CTHDNhap>(this.attach_CTHDNhaps), new Action<CTHDNhap>(this.detach_CTHDNhaps));
+			this._CTHDXuats = new EntitySet<CTHDXuat>(new Action<CTHDXuat>(this.attach_CTHDXuats), new Action<CTHDXuat>(this.detach_CTHDXuats));
+			this._CTSanPhams = new EntitySet<CTSanPham>(new Action<CTSanPham>(this.attach_CTSanPhams), new Action<CTSanPham>(this.detach_CTSanPhams));
+			this._LoaiSP = default(EntityRef<LoaiSP>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Ma
+		{
+			get
+			{
+				return this._Ma;
+			}
+			set
+			{
+				if ((this._Ma != value))
+				{
+					this.OnMaChanging(value);
+					this.SendPropertyChanging();
+					this._Ma = value;
+					this.SendPropertyChanged("Ma");
+					this.OnMaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NVarChar(1000)")]
+		public string TenSize
+		{
+			get
+			{
+				return this._TenSize;
+			}
+			set
+			{
+				if ((this._TenSize != value))
+				{
+					this.OnTenSizeChanging(value);
+					this.SendPropertyChanging();
+					this._TenSize = value;
+					this.SendPropertyChanged("TenSize");
+					this.OnTenSizeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_LoaiSP", DbType="Int")]
+		public System.Nullable<int> Ma_LoaiSP
+		{
+			get
+			{
+				return this._Ma_LoaiSP;
+			}
+			set
+			{
+				if ((this._Ma_LoaiSP != value))
+				{
+					if (this._LoaiSP.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnMa_LoaiSPChanging(value);
+					this.SendPropertyChanging();
+					this._Ma_LoaiSP = value;
+					this.SendPropertyChanged("Ma_LoaiSP");
+					this.OnMa_LoaiSPChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDNhap", Storage="_CTHDNhaps", ThisKey="Ma", OtherKey="Ma_Size")]
+		public EntitySet<CTHDNhap> CTHDNhaps
+		{
+			get
+			{
+				return this._CTHDNhaps;
+			}
+			set
+			{
+				this._CTHDNhaps.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTHDXuat", Storage="_CTHDXuats", ThisKey="Ma", OtherKey="Ma_Size")]
+		public EntitySet<CTHDXuat> CTHDXuats
+		{
+			get
+			{
+				return this._CTHDXuats;
+			}
+			set
+			{
+				this._CTHDXuats.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Size_CTSanPham", Storage="_CTSanPhams", ThisKey="Ma", OtherKey="Ma_Size")]
+		public EntitySet<CTSanPham> CTSanPhams
+		{
+			get
+			{
+				return this._CTSanPhams;
+			}
+			set
+			{
+				this._CTSanPhams.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="LoaiSP_Size", Storage="_LoaiSP", ThisKey="Ma_LoaiSP", OtherKey="Ma", IsForeignKey=true)]
+		public LoaiSP LoaiSP
+		{
+			get
+			{
+				return this._LoaiSP.Entity;
+			}
+			set
+			{
+				LoaiSP previousValue = this._LoaiSP.Entity;
+				if (((previousValue != value) 
+							|| (this._LoaiSP.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._LoaiSP.Entity = null;
+						previousValue.Sizes.Remove(this);
+					}
+					this._LoaiSP.Entity = value;
+					if ((value != null))
+					{
+						value.Sizes.Add(this);
+						this._Ma_LoaiSP = value.Ma;
+					}
+					else
+					{
+						this._Ma_LoaiSP = default(Nullable<int>);
+					}
+					this.SendPropertyChanged("LoaiSP");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_CTHDNhaps(CTHDNhap entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = this;
+		}
+		
+		private void detach_CTHDNhaps(CTHDNhap entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = null;
+		}
+		
+		private void attach_CTHDXuats(CTHDXuat entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = this;
+		}
+		
+		private void detach_CTHDXuats(CTHDXuat entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = null;
+		}
+		
+		private void attach_CTSanPhams(CTSanPham entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = this;
+		}
+		
+		private void detach_CTSanPhams(CTSanPham entity)
+		{
+			this.SendPropertyChanging();
+			entity.Size = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.TempThu")]
+	public partial class TempThu
+	{
+		
+		private string _Thang;
+		
+		private System.Nullable<int> _TongTien;
+		
+		public TempThu()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thang", DbType="NVarChar(50)")]
+		public string Thang
+		{
+			get
+			{
+				return this._Thang;
+			}
+			set
+			{
+				if ((this._Thang != value))
+				{
+					this._Thang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
 	public partial class cbbSizeResult
 	{
 		
@@ -4490,7 +4666,7 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NChar(1000) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NVarChar(1000)")]
 		public string TenSize
 		{
 			get
@@ -4518,6 +4694,218 @@ namespace giaodien
 				if ((this._Ma_LoaiSP != value))
 				{
 					this._Ma_LoaiSP = value;
+				}
+			}
+		}
+	}
+	
+	public partial class DoanhThuNamHienTaiResult
+	{
+		
+		private System.Nullable<int> _TongTien;
+		
+		public DoanhThuNamHienTaiResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class loadDGResult
+	{
+		
+		private int _Ma_HDN;
+		
+		private int _Ma_SP;
+		
+		private int _Ma_Size;
+		
+		private int _Ma_MauSac;
+		
+		private System.Nullable<int> _Soluong;
+		
+		private System.Nullable<int> _DonGia;
+		
+		private System.Nullable<int> _ThanhTien;
+		
+		public loadDGResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_HDN", DbType="Int NOT NULL")]
+		public int Ma_HDN
+		{
+			get
+			{
+				return this._Ma_HDN;
+			}
+			set
+			{
+				if ((this._Ma_HDN != value))
+				{
+					this._Ma_HDN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_SP", DbType="Int NOT NULL")]
+		public int Ma_SP
+		{
+			get
+			{
+				return this._Ma_SP;
+			}
+			set
+			{
+				if ((this._Ma_SP != value))
+				{
+					this._Ma_SP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_Size", DbType="Int NOT NULL")]
+		public int Ma_Size
+		{
+			get
+			{
+				return this._Ma_Size;
+			}
+			set
+			{
+				if ((this._Ma_Size != value))
+				{
+					this._Ma_Size = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_MauSac", DbType="Int NOT NULL")]
+		public int Ma_MauSac
+		{
+			get
+			{
+				return this._Ma_MauSac;
+			}
+			set
+			{
+				if ((this._Ma_MauSac != value))
+				{
+					this._Ma_MauSac = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Soluong", DbType="Int")]
+		public System.Nullable<int> Soluong
+		{
+			get
+			{
+				return this._Soluong;
+			}
+			set
+			{
+				if ((this._Soluong != value))
+				{
+					this._Soluong = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Int")]
+		public System.Nullable<int> DonGia
+		{
+			get
+			{
+				return this._DonGia;
+			}
+			set
+			{
+				if ((this._DonGia != value))
+				{
+					this._DonGia = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
+		public System.Nullable<int> ThanhTien
+		{
+			get
+			{
+				return this._ThanhTien;
+			}
+			set
+			{
+				if ((this._ThanhTien != value))
+				{
+					this._ThanhTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class NamBanHangResult
+	{
+		
+		private System.Nullable<int> _Nam;
+		
+		public NamBanHangResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nam", DbType="Int")]
+		public System.Nullable<int> Nam
+		{
+			get
+			{
+				return this._Nam;
+			}
+			set
+			{
+				if ((this._Nam != value))
+				{
+					this._Nam = value;
+				}
+			}
+		}
+	}
+	
+	public partial class NamNhapHangResult
+	{
+		
+		private System.Nullable<int> _Nam;
+		
+		public NamNhapHangResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nam", DbType="Int")]
+		public System.Nullable<int> Nam
+		{
+			get
+			{
+				return this._Nam;
+			}
+			set
+			{
+				if ((this._Nam != value))
+				{
+					this._Nam = value;
 				}
 			}
 		}
@@ -5052,6 +5440,158 @@ namespace giaodien
 				if ((this._TongTien != value))
 				{
 					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class selectHDXResult
+	{
+		
+		private int _Ma;
+		
+		private System.Nullable<int> _Ma_KH;
+		
+		private System.Nullable<int> _Ma_NV;
+		
+		private System.Nullable<System.DateTime> _NgayXuat;
+		
+		private System.Nullable<int> _TongTien;
+		
+		private System.Nullable<bool> _TrangThai;
+		
+		private string _GhiChu;
+		
+		private System.Data.Linq.Binary _MaQR;
+		
+		public selectHDXResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL")]
+		public int Ma
+		{
+			get
+			{
+				return this._Ma;
+			}
+			set
+			{
+				if ((this._Ma != value))
+				{
+					this._Ma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_KH", DbType="Int")]
+		public System.Nullable<int> Ma_KH
+		{
+			get
+			{
+				return this._Ma_KH;
+			}
+			set
+			{
+				if ((this._Ma_KH != value))
+				{
+					this._Ma_KH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_NV", DbType="Int")]
+		public System.Nullable<int> Ma_NV
+		{
+			get
+			{
+				return this._Ma_NV;
+			}
+			set
+			{
+				if ((this._Ma_NV != value))
+				{
+					this._Ma_NV = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayXuat", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayXuat
+		{
+			get
+			{
+				return this._NgayXuat;
+			}
+			set
+			{
+				if ((this._NgayXuat != value))
+				{
+					this._NgayXuat = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit")]
+		public System.Nullable<bool> TrangThai
+		{
+			get
+			{
+				return this._TrangThai;
+			}
+			set
+			{
+				if ((this._TrangThai != value))
+				{
+					this._TrangThai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(1000)")]
+		public string GhiChu
+		{
+			get
+			{
+				return this._GhiChu;
+			}
+			set
+			{
+				if ((this._GhiChu != value))
+				{
+					this._GhiChu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaQR", DbType="Image")]
+		public System.Data.Linq.Binary MaQR
+		{
+			get
+			{
+				return this._MaQR;
+			}
+			set
+			{
+				if ((this._MaQR != value))
+				{
+					this._MaQR = value;
 				}
 			}
 		}
@@ -5680,7 +6220,7 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NChar(1000) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NVarChar(1000)")]
 		public string TenSize
 		{
 			get
@@ -6999,6 +7539,254 @@ namespace giaodien
 		}
 	}
 	
+	public partial class selectTTKHResult
+	{
+		
+		private int _Ma;
+		
+		private string _Ten;
+		
+		private string _Email;
+		
+		private string _DiaChi;
+		
+		private System.Nullable<int> _DiemTichLuy;
+		
+		private System.Nullable<int> _Ma_LoaiKH;
+		
+		private string _SoDienThoai;
+		
+		public selectTTKHResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL")]
+		public int Ma
+		{
+			get
+			{
+				return this._Ma;
+			}
+			set
+			{
+				if ((this._Ma != value))
+				{
+					this._Ma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(1000)")]
+		public string Ten
+		{
+			get
+			{
+				return this._Ten;
+			}
+			set
+			{
+				if ((this._Ten != value))
+				{
+					this._Ten = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(1000)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(1000)")]
+		public string DiaChi
+		{
+			get
+			{
+				return this._DiaChi;
+			}
+			set
+			{
+				if ((this._DiaChi != value))
+				{
+					this._DiaChi = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiemTichLuy", DbType="Int")]
+		public System.Nullable<int> DiemTichLuy
+		{
+			get
+			{
+				return this._DiemTichLuy;
+			}
+			set
+			{
+				if ((this._DiemTichLuy != value))
+				{
+					this._DiemTichLuy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_LoaiKH", DbType="Int")]
+		public System.Nullable<int> Ma_LoaiKH
+		{
+			get
+			{
+				return this._Ma_LoaiKH;
+			}
+			set
+			{
+				if ((this._Ma_LoaiKH != value))
+				{
+					this._Ma_LoaiKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="NVarChar(1000)")]
+		public string SoDienThoai
+		{
+			get
+			{
+				return this._SoDienThoai;
+			}
+			set
+			{
+				if ((this._SoDienThoai != value))
+				{
+					this._SoDienThoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class SoLuongHDXDaBanResult
+	{
+		
+		private System.Nullable<int> _SoLuong;
+		
+		public SoLuongHDXDaBanResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this._SoLuong = value;
+				}
+			}
+		}
+	}
+	
+	public partial class TienBanTheoThangCuaNamResult
+	{
+		
+		private string _Thang;
+		
+		private System.Nullable<int> _TongTien;
+		
+		public TienBanTheoThangCuaNamResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thang", DbType="NVarChar(50)")]
+		public string Thang
+		{
+			get
+			{
+				return this._Thang;
+			}
+			set
+			{
+				if ((this._Thang != value))
+				{
+					this._Thang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class TienNhapTheoThangCuaNamResult
+	{
+		
+		private string _Thang;
+		
+		private System.Nullable<int> _TongTien;
+		
+		public TienNhapTheoThangCuaNamResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Thang", DbType="NVarChar(50)")]
+		public string Thang
+		{
+			get
+			{
+				return this._Thang;
+			}
+			set
+			{
+				if ((this._Thang != value))
+				{
+					this._Thang = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
+		{
+			get
+			{
+				return this._TongTien;
+			}
+			set
+			{
+				if ((this._TongTien != value))
+				{
+					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
 	public partial class TKHDNResult
 	{
 		
@@ -8055,24 +8843,20 @@ namespace giaodien
 		}
 	}
 	
-	public partial class selectTTKHResult
+	public partial class DanhSachHDNTrongNamResult
 	{
 		
 		private int _Ma;
 		
 		private string _Ten;
 		
-		private string _Email;
+		private string _TenNCC;
 		
-		private string _DiaChi;
+		private System.Nullable<System.DateTime> _NgayNhap;
 		
-		private System.Nullable<int> _DiemTichLuy;
+		private System.Nullable<int> _TongTien;
 		
-		private System.Nullable<int> _Ma_LoaiKH;
-		
-		private string _SoDienThoai;
-		
-		public selectTTKHResult()
+		public DanhSachHDNTrongNamResult()
 		{
 		}
 		
@@ -8108,241 +8892,71 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(1000)")]
-		public string Email
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenNCC", DbType="NVarChar(1000) NOT NULL", CanBeNull=false)]
+		public string TenNCC
 		{
 			get
 			{
-				return this._Email;
+				return this._TenNCC;
 			}
 			set
 			{
-				if ((this._Email != value))
+				if ((this._TenNCC != value))
 				{
-					this._Email = value;
+					this._TenNCC = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiaChi", DbType="NVarChar(1000)")]
-		public string DiaChi
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayNhap", DbType="Date")]
+		public System.Nullable<System.DateTime> NgayNhap
 		{
 			get
 			{
-				return this._DiaChi;
+				return this._NgayNhap;
 			}
 			set
 			{
-				if ((this._DiaChi != value))
+				if ((this._NgayNhap != value))
 				{
-					this._DiaChi = value;
+					this._NgayNhap = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DiemTichLuy", DbType="Int")]
-		public System.Nullable<int> DiemTichLuy
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
-				return this._DiemTichLuy;
+				return this._TongTien;
 			}
 			set
 			{
-				if ((this._DiemTichLuy != value))
+				if ((this._TongTien != value))
 				{
-					this._DiemTichLuy = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_LoaiKH", DbType="Int")]
-		public System.Nullable<int> Ma_LoaiKH
-		{
-			get
-			{
-				return this._Ma_LoaiKH;
-			}
-			set
-			{
-				if ((this._Ma_LoaiKH != value))
-				{
-					this._Ma_LoaiKH = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoDienThoai", DbType="NVarChar(1000)")]
-		public string SoDienThoai
-		{
-			get
-			{
-				return this._SoDienThoai;
-			}
-			set
-			{
-				if ((this._SoDienThoai != value))
-				{
-					this._SoDienThoai = value;
+					this._TongTien = value;
 				}
 			}
 		}
 	}
 	
-	public partial class loadDGResult
-	{
-		
-		private int _Ma_HDN;
-		
-		private int _Ma_SP;
-		
-		private int _Ma_Size;
-		
-		private int _Ma_MauSac;
-		
-		private System.Nullable<int> _Soluong;
-		
-		private System.Nullable<int> _DonGia;
-		
-		private System.Nullable<int> _ThanhTien;
-		
-		public loadDGResult()
-		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_HDN", DbType="Int NOT NULL")]
-		public int Ma_HDN
-		{
-			get
-			{
-				return this._Ma_HDN;
-			}
-			set
-			{
-				if ((this._Ma_HDN != value))
-				{
-					this._Ma_HDN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_SP", DbType="Int NOT NULL")]
-		public int Ma_SP
-		{
-			get
-			{
-				return this._Ma_SP;
-			}
-			set
-			{
-				if ((this._Ma_SP != value))
-				{
-					this._Ma_SP = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_Size", DbType="Int NOT NULL")]
-		public int Ma_Size
-		{
-			get
-			{
-				return this._Ma_Size;
-			}
-			set
-			{
-				if ((this._Ma_Size != value))
-				{
-					this._Ma_Size = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_MauSac", DbType="Int NOT NULL")]
-		public int Ma_MauSac
-		{
-			get
-			{
-				return this._Ma_MauSac;
-			}
-			set
-			{
-				if ((this._Ma_MauSac != value))
-				{
-					this._Ma_MauSac = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Soluong", DbType="Int")]
-		public System.Nullable<int> Soluong
-		{
-			get
-			{
-				return this._Soluong;
-			}
-			set
-			{
-				if ((this._Soluong != value))
-				{
-					this._Soluong = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DonGia", DbType="Int")]
-		public System.Nullable<int> DonGia
-		{
-			get
-			{
-				return this._DonGia;
-			}
-			set
-			{
-				if ((this._DonGia != value))
-				{
-					this._DonGia = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThanhTien", DbType="Int")]
-		public System.Nullable<int> ThanhTien
-		{
-			get
-			{
-				return this._ThanhTien;
-			}
-			set
-			{
-				if ((this._ThanhTien != value))
-				{
-					this._ThanhTien = value;
-				}
-			}
-		}
-	}
-	
-	public partial class selectHDXResult
+	public partial class DanhSachHDXtTrongNamResult
 	{
 		
 		private int _Ma;
 		
-		private System.Nullable<int> _Ma_KH;
+		private string _Ten;
 		
-		private System.Nullable<int> _Ma_NV;
+		private string _TenKH;
 		
 		private System.Nullable<System.DateTime> _NgayXuat;
 		
-		private System.Nullable<int> _TongTien;
-		
-		private System.Nullable<bool> _TrangThai;
-		
 		private string _GhiChu;
 		
-		private System.Data.Linq.Binary _MaQR;
+		private System.Nullable<int> _TongTien;
 		
-		public selectHDXResult()
+		public DanhSachHDXtTrongNamResult()
 		{
 		}
 		
@@ -8362,34 +8976,34 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_KH", DbType="Int")]
-		public System.Nullable<int> Ma_KH
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(1000)")]
+		public string Ten
 		{
 			get
 			{
-				return this._Ma_KH;
+				return this._Ten;
 			}
 			set
 			{
-				if ((this._Ma_KH != value))
+				if ((this._Ten != value))
 				{
-					this._Ma_KH = value;
+					this._Ten = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma_NV", DbType="Int")]
-		public System.Nullable<int> Ma_NV
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenKH", DbType="NVarChar(1000)")]
+		public string TenKH
 		{
 			get
 			{
-				return this._Ma_NV;
+				return this._TenKH;
 			}
 			set
 			{
-				if ((this._Ma_NV != value))
+				if ((this._TenKH != value))
 				{
-					this._Ma_NV = value;
+					this._TenKH = value;
 				}
 			}
 		}
@@ -8410,38 +9024,6 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
-		public System.Nullable<int> TongTien
-		{
-			get
-			{
-				return this._TongTien;
-			}
-			set
-			{
-				if ((this._TongTien != value))
-				{
-					this._TongTien = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TrangThai", DbType="Bit")]
-		public System.Nullable<bool> TrangThai
-		{
-			get
-			{
-				return this._TrangThai;
-			}
-			set
-			{
-				if ((this._TrangThai != value))
-				{
-					this._TrangThai = value;
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(1000)")]
 		public string GhiChu
 		{
@@ -8458,18 +9040,196 @@ namespace giaodien
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaQR", DbType="Image")]
-		public System.Data.Linq.Binary MaQR
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
+		public System.Nullable<int> TongTien
 		{
 			get
 			{
-				return this._MaQR;
+				return this._TongTien;
 			}
 			set
 			{
-				if ((this._MaQR != value))
+				if ((this._TongTien != value))
 				{
-					this._MaQR = value;
+					this._TongTien = value;
+				}
+			}
+		}
+	}
+	
+	public partial class TKKHmuagiResult
+	{
+		
+		private int _Ma;
+		
+		private string _TKH;
+		
+		private string _SP;
+		
+		private string _TenMau;
+		
+		private string _TenSize;
+		
+		private System.Nullable<int> _SoLuong;
+		
+		public TKKHmuagiResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL")]
+		public int Ma
+		{
+			get
+			{
+				return this._Ma;
+			}
+			set
+			{
+				if ((this._Ma != value))
+				{
+					this._Ma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TKH", DbType="NVarChar(1000)")]
+		public string TKH
+		{
+			get
+			{
+				return this._TKH;
+			}
+			set
+			{
+				if ((this._TKH != value))
+				{
+					this._TKH = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SP", DbType="NVarChar(1000) NOT NULL", CanBeNull=false)]
+		public string SP
+		{
+			get
+			{
+				return this._SP;
+			}
+			set
+			{
+				if ((this._SP != value))
+				{
+					this._SP = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenMau", DbType="NVarChar(1000) NOT NULL", CanBeNull=false)]
+		public string TenMau
+		{
+			get
+			{
+				return this._TenMau;
+			}
+			set
+			{
+				if ((this._TenMau != value))
+				{
+					this._TenMau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NVarChar(1000)")]
+		public string TenSize
+		{
+			get
+			{
+				return this._TenSize;
+			}
+			set
+			{
+				if ((this._TenSize != value))
+				{
+					this._TenSize = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoLuong", DbType="Int")]
+		public System.Nullable<int> SoLuong
+		{
+			get
+			{
+				return this._SoLuong;
+			}
+			set
+			{
+				if ((this._SoLuong != value))
+				{
+					this._SoLuong = value;
+				}
+			}
+		}
+	}
+	
+	public partial class TKSPTrongHDResult
+	{
+		
+		private int _Ma;
+		
+		private string _Ten;
+		
+		private System.Data.Linq.Binary _HinhAnh;
+		
+		public TKSPTrongHDResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ma", DbType="Int NOT NULL")]
+		public int Ma
+		{
+			get
+			{
+				return this._Ma;
+			}
+			set
+			{
+				if ((this._Ma != value))
+				{
+					this._Ma = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(1000) NOT NULL", CanBeNull=false)]
+		public string Ten
+		{
+			get
+			{
+				return this._Ten;
+			}
+			set
+			{
+				if ((this._Ten != value))
+				{
+					this._Ten = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HinhAnh", DbType="Image")]
+		public System.Data.Linq.Binary HinhAnh
+		{
+			get
+			{
+				return this._HinhAnh;
+			}
+			set
+			{
+				if ((this._HinhAnh != value))
+				{
+					this._HinhAnh = value;
 				}
 			}
 		}

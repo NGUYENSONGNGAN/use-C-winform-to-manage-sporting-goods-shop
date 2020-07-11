@@ -21,6 +21,7 @@
         <Value>=First(Fields!MaQR.Value, "DataSet1")</Value>
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
+        <Top>0.02777in</Top>
         <Left>9.88757in</Left>
         <Height>1.9023in</Height>
         <Width>1.9023in</Width>
@@ -101,8 +102,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox18</rd:DefaultName>
-        <Top>0.01389in</Top>
-        <Left>2.85519in</Left>
+        <Top>0.04813in</Top>
+        <Left>2.76412in</Left>
         <Height>0.40625in</Height>
         <Width>7.05401in</Width>
         <ZIndex>3</ZIndex>

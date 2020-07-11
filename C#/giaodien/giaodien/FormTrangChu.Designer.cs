@@ -39,10 +39,29 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnChat = new Bunifu.Framework.UI.BunifuImageButton();
+            this.gunaGradientPanel3 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.lbSoLuongHoaDon = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbDoanhThu = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.lbTongKhachHang = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnBackUp = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnFaceBook = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnMenu = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnCauHinhEmail = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnThongKeThuChi = new System.Windows.Forms.Button();
+            this.btnTongquan = new System.Windows.Forms.Button();
+            this.btnThongKe = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnBanHang = new System.Windows.Forms.Panel();
             this.btnThongTinHoaDon = new System.Windows.Forms.Button();
             this.btnLapHoaDon = new System.Windows.Forms.Button();
@@ -59,13 +78,21 @@
             this.btnQuanLyDuLieu = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChat)).BeginInit();
+            this.gunaGradientPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.gunaGradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.gunaGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackUp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFaceBook)).BeginInit();
             this.pnMenu.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.pnBanHang.SuspendLayout();
             this.pnNhapHang.SuspendLayout();
             this.pnQuanLyThongTin.SuspendLayout();
@@ -96,7 +123,7 @@
             this.pnTitle.Location = new System.Drawing.Point(301, 0);
             this.pnTitle.Name = "pnTitle";
             this.pnTitle.Quality = 10;
-            this.pnTitle.Size = new System.Drawing.Size(1170, 109);
+            this.pnTitle.Size = new System.Drawing.Size(1169, 109);
             this.pnTitle.TabIndex = 47;
             // 
             // label2
@@ -133,7 +160,7 @@
             this.bunifuImageButton1.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
             this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1065, 0);
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1064, 0);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(105, 109);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -171,12 +198,195 @@
             this.bunifuDragControl2.TargetControl = this.label2;
             this.bunifuDragControl2.Vertical = true;
             // 
+            // panel2
+            // 
+            this.panel2.Location = new System.Drawing.Point(1704, 736);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 10);
+            this.panel2.TabIndex = 55;
+            // 
+            // btnChat
+            // 
+            this.btnChat.BackColor = System.Drawing.Color.Transparent;
+            this.btnChat.Image = ((System.Drawing.Image)(resources.GetObject("btnChat.Image")));
+            this.btnChat.ImageActive = null;
+            this.btnChat.Location = new System.Drawing.Point(1403, 785);
+            this.btnChat.Name = "btnChat";
+            this.btnChat.Size = new System.Drawing.Size(55, 43);
+            this.btnChat.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnChat.TabIndex = 59;
+            this.btnChat.TabStop = false;
+            this.btnChat.Zoom = 10;
+            this.btnChat.Click += new System.EventHandler(this.btnChat_Click);
+            // 
+            // gunaGradientPanel3
+            // 
+            this.gunaGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel3.BackgroundImage")));
+            this.gunaGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel3.Controls.Add(this.lbSoLuongHoaDon);
+            this.gunaGradientPanel3.Controls.Add(this.label6);
+            this.gunaGradientPanel3.Controls.Add(this.pictureBox4);
+            this.gunaGradientPanel3.GradientColor1 = System.Drawing.Color.Azure;
+            this.gunaGradientPanel3.GradientColor2 = System.Drawing.Color.White;
+            this.gunaGradientPanel3.GradientColor3 = System.Drawing.Color.PowderBlue;
+            this.gunaGradientPanel3.GradientColor4 = System.Drawing.Color.White;
+            this.gunaGradientPanel3.Location = new System.Drawing.Point(1116, 128);
+            this.gunaGradientPanel3.Name = "gunaGradientPanel3";
+            this.gunaGradientPanel3.Size = new System.Drawing.Size(311, 200);
+            this.gunaGradientPanel3.TabIndex = 58;
+            this.gunaGradientPanel3.Text = "gunaGradientPanel3";
+            // 
+            // lbSoLuongHoaDon
+            // 
+            this.lbSoLuongHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.lbSoLuongHoaDon.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSoLuongHoaDon.Location = new System.Drawing.Point(2, 104);
+            this.lbSoLuongHoaDon.Name = "lbSoLuongHoaDon";
+            this.lbSoLuongHoaDon.Size = new System.Drawing.Size(306, 42);
+            this.lbSoLuongHoaDon.TabIndex = 8;
+            this.lbSoLuongHoaDon.Text = "0";
+            this.lbSoLuongHoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(64, 27);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(244, 50);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Số lượng hóa đơn đã bán trong năm";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(3, 27);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // gunaGradientPanel2
+            // 
+            this.gunaGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel2.BackgroundImage")));
+            this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel2.Controls.Add(this.label3);
+            this.gunaGradientPanel2.Controls.Add(this.lbDoanhThu);
+            this.gunaGradientPanel2.Controls.Add(this.label4);
+            this.gunaGradientPanel2.Controls.Add(this.pictureBox3);
+            this.gunaGradientPanel2.GradientColor1 = System.Drawing.Color.MediumSpringGreen;
+            this.gunaGradientPanel2.GradientColor2 = System.Drawing.Color.White;
+            this.gunaGradientPanel2.GradientColor3 = System.Drawing.Color.Aquamarine;
+            this.gunaGradientPanel2.GradientColor4 = System.Drawing.Color.White;
+            this.gunaGradientPanel2.Location = new System.Drawing.Point(720, 128);
+            this.gunaGradientPanel2.Name = "gunaGradientPanel2";
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(311, 200);
+            this.gunaGradientPanel2.TabIndex = 57;
+            this.gunaGradientPanel2.Text = "gunaGradientPanel2";
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(235, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 42);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "VND";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbDoanhThu
+            // 
+            this.lbDoanhThu.BackColor = System.Drawing.Color.Transparent;
+            this.lbDoanhThu.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDoanhThu.Location = new System.Drawing.Point(3, 104);
+            this.lbDoanhThu.Name = "lbDoanhThu";
+            this.lbDoanhThu.Size = new System.Drawing.Size(226, 42);
+            this.lbDoanhThu.TabIndex = 5;
+            this.lbDoanhThu.Text = "0";
+            this.lbDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(70, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(241, 50);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Doanh thu năm hiện tại";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 27);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // gunaGradientPanel1
+            // 
+            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
+            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.lbTongKhachHang);
+            this.gunaGradientPanel1.Controls.Add(this.label5);
+            this.gunaGradientPanel1.Controls.Add(this.pictureBox2);
+            this.gunaGradientPanel1.GradientColor1 = System.Drawing.Color.DarkKhaki;
+            this.gunaGradientPanel1.GradientColor2 = System.Drawing.Color.White;
+            this.gunaGradientPanel1.GradientColor3 = System.Drawing.Color.GreenYellow;
+            this.gunaGradientPanel1.GradientColor4 = System.Drawing.Color.White;
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(319, 128);
+            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(311, 200);
+            this.gunaGradientPanel1.TabIndex = 56;
+            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // lbTongKhachHang
+            // 
+            this.lbTongKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.lbTongKhachHang.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTongKhachHang.Location = new System.Drawing.Point(3, 104);
+            this.lbTongKhachHang.Name = "lbTongKhachHang";
+            this.lbTongKhachHang.Size = new System.Drawing.Size(305, 42);
+            this.lbTongKhachHang.TabIndex = 2;
+            this.lbTongKhachHang.Text = "0";
+            this.lbTongKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(60, 27);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(248, 50);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Tổng số lượng khách hàng";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, 27);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(51, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
             // btnBackUp
             // 
             this.btnBackUp.BackColor = System.Drawing.Color.Transparent;
             this.btnBackUp.Image = ((System.Drawing.Image)(resources.GetObject("btnBackUp.Image")));
             this.btnBackUp.ImageActive = null;
-            this.btnBackUp.Location = new System.Drawing.Point(1404, 736);
+            this.btnBackUp.Location = new System.Drawing.Point(1403, 687);
             this.btnBackUp.Name = "btnBackUp";
             this.btnBackUp.Size = new System.Drawing.Size(55, 43);
             this.btnBackUp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +400,7 @@
             this.btnFaceBook.BackColor = System.Drawing.Color.Transparent;
             this.btnFaceBook.Image = ((System.Drawing.Image)(resources.GetObject("btnFaceBook.Image")));
             this.btnFaceBook.ImageActive = null;
-            this.btnFaceBook.Location = new System.Drawing.Point(1404, 785);
+            this.btnFaceBook.Location = new System.Drawing.Point(1403, 736);
             this.btnFaceBook.Name = "btnFaceBook";
             this.btnFaceBook.Size = new System.Drawing.Size(55, 43);
             this.btnFaceBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,6 +414,8 @@
             this.pnMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pnMenu.BackgroundImage")));
             this.pnMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnMenu.Controls.Add(this.btnCauHinhEmail);
+            this.pnMenu.Controls.Add(this.panel3);
+            this.pnMenu.Controls.Add(this.btnThongKe);
             this.pnMenu.Controls.Add(this.pnBanHang);
             this.pnMenu.Controls.Add(this.btnQuanLyBanHang);
             this.pnMenu.Controls.Add(this.pnNhapHang);
@@ -246,7 +458,7 @@
             this.btnCauHinhEmail.IconVisible = true;
             this.btnCauHinhEmail.IconZoom = 90D;
             this.btnCauHinhEmail.IsTab = false;
-            this.btnCauHinhEmail.Location = new System.Drawing.Point(0, 762);
+            this.btnCauHinhEmail.Location = new System.Drawing.Point(0, 944);
             this.btnCauHinhEmail.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.btnCauHinhEmail.Name = "btnCauHinhEmail";
             this.btnCauHinhEmail.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
@@ -261,6 +473,94 @@
             this.btnCauHinhEmail.Textcolor = System.Drawing.Color.WhiteSmoke;
             this.btnCauHinhEmail.TextFont = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
             this.btnCauHinhEmail.Click += new System.EventHandler(this.btnCauHinhEmail_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.Controls.Add(this.btnThongKeThuChi);
+            this.panel3.Controls.Add(this.btnTongquan);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 830);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(301, 114);
+            this.panel3.TabIndex = 50;
+            this.panel3.Visible = false;
+            // 
+            // btnThongKeThuChi
+            // 
+            this.btnThongKeThuChi.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKeThuChi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKeThuChi.FlatAppearance.BorderSize = 0;
+            this.btnThongKeThuChi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKeThuChi.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeThuChi.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnThongKeThuChi.Location = new System.Drawing.Point(0, 55);
+            this.btnThongKeThuChi.Name = "btnThongKeThuChi";
+            this.btnThongKeThuChi.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnThongKeThuChi.Size = new System.Drawing.Size(301, 55);
+            this.btnThongKeThuChi.TabIndex = 42;
+            this.btnThongKeThuChi.Text = "Thống kê thu / chi";
+            this.btnThongKeThuChi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKeThuChi.UseVisualStyleBackColor = false;
+            this.btnThongKeThuChi.Click += new System.EventHandler(this.btnThongKeThuChi_Click);
+            // 
+            // btnTongquan
+            // 
+            this.btnTongquan.BackColor = System.Drawing.Color.Transparent;
+            this.btnTongquan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTongquan.FlatAppearance.BorderSize = 0;
+            this.btnTongquan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTongquan.Font = new System.Drawing.Font("Microsoft Tai Le", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTongquan.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.btnTongquan.Location = new System.Drawing.Point(0, 0);
+            this.btnTongquan.Name = "btnTongquan";
+            this.btnTongquan.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnTongquan.Size = new System.Drawing.Size(301, 55);
+            this.btnTongquan.TabIndex = 41;
+            this.btnTongquan.Text = "Thống kê độc giả";
+            this.btnTongquan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTongquan.UseVisualStyleBackColor = false;
+            this.btnTongquan.Click += new System.EventHandler(this.btnTongquan_Click);
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnThongKe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnThongKe.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnThongKe.BorderRadius = 0;
+            this.btnThongKe.ButtonText = "Thống kê dữ liệu";
+            this.btnThongKe.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKe.DisabledColor = System.Drawing.Color.Empty;
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnThongKe.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnThongKe.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnThongKe.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Iconimage")));
+            this.btnThongKe.Iconimage_right = null;
+            this.btnThongKe.Iconimage_right_Selected = null;
+            this.btnThongKe.Iconimage_Selected = null;
+            this.btnThongKe.IconMarginLeft = 0;
+            this.btnThongKe.IconMarginRight = 0;
+            this.btnThongKe.IconRightVisible = true;
+            this.btnThongKe.IconRightZoom = 0D;
+            this.btnThongKe.IconVisible = true;
+            this.btnThongKe.IconZoom = 90D;
+            this.btnThongKe.IsTab = false;
+            this.btnThongKe.Location = new System.Drawing.Point(0, 762);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnThongKe.OnHovercolor = System.Drawing.Color.DeepSkyBlue;
+            this.btnThongKe.OnHoverTextColor = System.Drawing.Color.WhiteSmoke;
+            this.btnThongKe.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
+            this.btnThongKe.selected = false;
+            this.btnThongKe.Size = new System.Drawing.Size(301, 68);
+            this.btnThongKe.TabIndex = 51;
+            this.btnThongKe.Text = "Thống kê dữ liệu";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnThongKe.Textcolor = System.Drawing.Color.WhiteSmoke;
+            this.btnThongKe.TextFont = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold);
+            this.btnThongKe.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
             // pnBanHang
             // 
@@ -581,19 +881,25 @@
             this.pictureBox1.TabIndex = 49;
             this.pictureBox1.TabStop = false;
             // 
-            // panel2
+            // panel4
             // 
-            this.panel2.Location = new System.Drawing.Point(1449, 720);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 10);
-            this.panel2.TabIndex = 55;
+            this.panel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel4.Location = new System.Drawing.Point(1093, 500);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(304, 328);
+            this.panel4.TabIndex = 60;
             // 
             // FormTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.ClientSize = new System.Drawing.Size(1471, 840);
+            this.ClientSize = new System.Drawing.Size(1470, 840);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.btnChat);
+            this.Controls.Add(this.gunaGradientPanel3);
+            this.Controls.Add(this.gunaGradientPanel2);
+            this.Controls.Add(this.gunaGradientPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnBackUp);
             this.Controls.Add(this.btnFaceBook);
@@ -610,9 +916,17 @@
             this.pnTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnChat)).EndInit();
+            this.gunaGradientPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.gunaGradientPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.gunaGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBackUp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFaceBook)).EndInit();
             this.pnMenu.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.pnBanHang.ResumeLayout(false);
             this.pnNhapHang.ResumeLayout(false);
             this.pnQuanLyThongTin.ResumeLayout(false);
@@ -653,5 +967,24 @@
         private System.Windows.Forms.Button btnThongTinKhachHang;
         private Bunifu.Framework.UI.BunifuFlatButton btnCauHinhEmail;
         private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnThongKe;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnThongKeThuChi;
+        private System.Windows.Forms.Button btnTongquan;
+        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel3;
+        private System.Windows.Forms.Label lbSoLuongHoaDon;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbDoanhThu;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
+        private System.Windows.Forms.Label lbTongKhachHang;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuImageButton btnChat;
+        private System.Windows.Forms.Panel panel4;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DevExpress.DirectX.Common;
+using DevExpress.XtraReports.Import;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,10 +56,10 @@ namespace giaodien
             //font size data gridview
           //  dgvCTHDN.DefaultCellStyle.Font= new Font("Tahoma", 14);
             //      //// font title datagridview
-            dgvCTHDN.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 20);
+      //      dgvCTHDN.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 20);
 
             dgvCTHDN.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
+            dgvSanPham.DataSource = dt.SanPhams;
             var r = from s in dt.HDNhaps select s.Ma;
             if (r.Count() == 0)
             {
@@ -109,10 +111,14 @@ namespace giaodien
             //    btnThem.Enabled = false;
             //    btnLuu.Enabled = false;
             //}
+            dgvSanPham.AutoGenerateColumns = false;
+            dgvSanPham.DataSource = dt.SanPhams;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
-        {            
+        {
+            txtTimKiem.Visible = true;
+            gunaGradientCircleButton1.Visible = true;
             btnThem.Enabled = false;
             btnLuu.Enabled = true;
             btnHuy.Enabled = true;
@@ -143,14 +149,15 @@ namespace giaodien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            
+            txtTimKiem.Visible = false;
+            gunaGradientCircleButton1.Visible = false;
+            dgvSanPham.Visible = false;
             var HDN = dt.selectTTHDN(Convert.ToInt32(lbMaHD.Text)).FirstOrDefault();
             var CTSP = dt.selectTTCTSP(Convert.ToInt32(cbbSP.SelectedValue),
                                             Convert.ToInt32(cbbSize.SelectedValue),
                                             Convert.ToInt32(cbbMau.SelectedValue)).FirstOrDefault();
                                          
-            if (txtDonGia.Text == "" || txtSoLuong.Text == ""|| cbbSP.Text ==""||cbbSize.Text ==""||cbbMau.Text == ""||
-                cbbNhaCungCap.Text ==""||Convert.ToInt32( cbbSP.SelectedValue) ==0|| 
+            if (txtDonGia.Text.Trim() == "" || txtSoLuong.Text.Trim() == ""|| Convert.ToInt32( cbbSP.SelectedValue) ==0|| 
                 Convert.ToInt32(cbbSize.SelectedValue) == 0|| Convert.ToInt32(cbbMau.SelectedValue) == 0)
             {
                 MessageBox.Show("Bạn chưa nhập đủ thông tin\nVui lòng kiểm tra lại", "Lỗi");
@@ -483,6 +490,9 @@ namespace giaodien
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            txtTimKiem.Visible = false;
+            gunaGradientCircleButton1.Visible = false;
+            dgvSanPham.Visible = false;
             cbbSP.Enabled = false;
             cbbSize.Enabled = false;
             cbbMau.Enabled = false;
@@ -592,9 +602,35 @@ namespace giaodien
             //r = dgvCTHDN.CurrentRow.Index;
         }
 
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
 
+        private void dgvSanPham_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int r = dgvSanPham.CurrentRow.Index;
+            int ma = Convert.ToInt32( dgvSanPham.Rows[r].Cells[0].Value.ToString());
+            cbbSP.SelectedValue = ma;
+            txtTimKiem.ResetText();
+            dgvSanPham.Visible = false;
+            txtSoLuong.Focus();
+        }
+
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            dgvSanPham.Visible = true;
+            if (txtTimKiem.Text.Trim() == "" || txtTimKiem.Text.Trim() == null)
+            {
+                dgvSanPham.AutoGenerateColumns = false;
+                dgvSanPham.DataSource = dt.SanPhams;
+            }
+            else if (txtTimKiem.Text.Trim() != "")
+            {
+                dgvSanPham.AutoGenerateColumns = false;
+                dgvSanPham.DataSource = dt.TKSPTrongHD(txtTimKiem.Text);
+            }
+        }
+
+        private void txtTimKiem_Leave_1(object sender, EventArgs e)
+        {
+      //      dgvSanPham.Visible = false;
         }
     }
 }

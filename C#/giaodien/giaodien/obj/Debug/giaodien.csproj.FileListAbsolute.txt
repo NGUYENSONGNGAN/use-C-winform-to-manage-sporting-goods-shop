@@ -513,7 +513,6 @@ D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\gia
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\es\DevExpress.Diagram.v19.1.Core.resources.dll
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\ja\DevExpress.Diagram.v19.1.Core.resources.dll
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\ru\DevExpress.Diagram.v19.1.Core.resources.dll
-D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.csprojAssemblyReference.cache
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormBackUpDuLieu.resources
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormCauHinhEmail.resources
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormGhiChuHuyHDX.resources
@@ -549,3 +548,9 @@ D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\gia
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.xml
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.Video.xml
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\AForge.Video.DirectShow.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\DevExpress.XtraCharts.v19.1.UI.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\DevExpress.XtraCharts.v19.1.UI.xml
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongKeThuChi.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongKeKhachHang.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormChatServer.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.csprojAssemblyReference.cache

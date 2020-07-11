@@ -1,9 +1,13 @@
 ﻿using DevExpress.Emf;
+using DevExpress.XtraExport.Helpers;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -25,7 +29,7 @@ namespace giaodien
             InitializeComponent();
             customizeDesing();
         }
-
+        CultureInfo culture = new CultureInfo("vi-VN");
         DataClasses1DataContext dt = new DataClasses1DataContext();
 
         private void customizeDesing()
@@ -45,7 +49,8 @@ namespace giaodien
                 pnBanHang.Visible = false;
             if (panel2.Visible == true)
                 panel2.Visible = false;
-            
+            if (panel3.Visible == true)
+                panel3.Visible = false;
         }
 
         private void showmenu( Panel pnQuanLyThongTin)
@@ -90,8 +95,53 @@ namespace giaodien
 
         private void FormTrangChu_Load(object sender, EventArgs e)
         {
+            FormChatServer FC = new FormChatServer();
+            FC.TopLevel = false;
+            panel4.Controls.Add(FC);
+            FC.Dock = DockStyle.Fill;
+            FC.Show();
+            panel4.Visible = false;
+
             NhanVien nv = dt.NhanViens.Where(s => s.Ma == Convert.ToInt32(FormDangNhap.ThongTinNVDangNhap.MaNVDangNhap)).FirstOrDefault();
-            label2.Text = "Xin chào " + nv.Ten; 
+            label2.Text = "Xin chào " + nv.Ten;
+            if (nv.Ma_CV == 1)
+            {
+                btnQuanLyDuLieu.Visible = true;
+                btnQuanLyNhapHang.Visible = true;
+                btnQuanLyBanHang.Visible = true;
+                btnThongKe.Visible = true;
+                btnCauHinhEmail.Visible = true;
+                btnBackUp.Visible = true;
+            }    
+            else if (nv.Ma_CV == 2)
+            {
+                btnQuanLyDuLieu.Visible = false;
+                btnQuanLyNhapHang.Visible = false;
+                btnQuanLyBanHang.Visible = true;
+                btnThongKe.Visible = false;
+                btnCauHinhEmail.Visible = false;
+                btnBackUp.Visible = false;
+            }
+            else if (nv.Ma_CV ==3)
+            {
+                btnQuanLyDuLieu.Visible = false;
+                btnQuanLyNhapHang.Visible = false;
+                btnQuanLyBanHang.Visible = false;
+                btnThongKe.Visible = true;
+                btnCauHinhEmail.Visible = false;
+                btnBackUp.Visible = false;
+            }    
+            int KH =0;
+            foreach(var kh in dt.KhachHangs)
+            {
+                KH = KH + 1;
+            }
+            lbTongKhachHang.Text = KH.ToString();
+            // int DoanhThu = 0;
+            var DoanhThu = dt.DoanhThuNamHienTai().FirstOrDefault();
+            lbDoanhThu.Text = Convert.ToInt32(DoanhThu.TongTien).ToString("N0");
+            var HD = dt.SoLuongHDXDaBan().FirstOrDefault();
+            lbSoLuongHoaDon.Text = Convert.ToInt32(HD.SoLuong).ToString("N0");
         }
 
         private void btnThongTinSanPham_Click_1(object sender, EventArgs e)
@@ -181,6 +231,45 @@ namespace giaodien
         }
 
         private void btnFaceBook_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://www.facebook.com/");
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            showmenu(panel3);
+        }
+
+        private void btnTongquan_Click(object sender, EventArgs e)
+        {
+            FormThongKeKhachHang FTT = new FormThongKeKhachHang();
+            FTT.Show();
+            this.Hide();
+        }
+
+        private void btnThongKeThuChi_Click(object sender, EventArgs e)
+        {
+            FormThongKeThuChi FTTTC = new FormThongKeThuChi();
+            FTTTC.Show();
+            this.Hide();
+        }
+        int i = 0;
+        private void btnChat_Click(object sender, EventArgs e)
+        {
+   
+            i++;
+            if (i%2 != 0)
+            {
+                panel4.Visible = true;
+                
+            }
+            else
+            {
+                panel4.Visible = false;
+            }
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

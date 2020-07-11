@@ -2550,6 +2550,10 @@ as
 select SP.Ma, Sp.Ten, SP.DonGia, SP.Ma_LoaiSP from SanPham SP, LoaiSP L where CONCAT(SP.Ma, SP.Ten, SP.DonGia, L.Ten ) like '%' +@text+ '%' and SP.Ma_LoaiSP = L.Ma
 go
 
+create proc TKSPTrongHD (@tk nvarchar (1000))
+as
+select Ma, Ten, HinhAnh from SanPham where CONCAT(Ma, Ten) like '%' + @tk + '%'
+
 ---CTSP
 create proc insertCTSP (@maSP int, @maSize int, @maMau int, @soluong int)
 as
@@ -2714,16 +2718,111 @@ where HDX.Ma = @mahdx and HDX.Ma_NV = NV.Ma and HDX.Ma_KH = KH.Ma
 
 --Thống kê
 
+
+
+--Năm bán hàng
+create proc NamBanHang
+as
+select DATEPART(YY, NgayXuat) as N'Nam' from HDXuat 
+group  by  DATEPART(YY, NgayXuat)
+go
+--Năm nhập hàng
+create proc NamNhapHang 
+as
+select DATEPART(YY, NgayNhap) as N'Nam' from HDNhap
+group  by  DATEPART(YY, NgayNhap)
+go
+--Doanh Thu năm 
+create proc DoanhThuNamHienTai 
+as
+select Sum (TongTien) as N'TongTien' from HDXuat where DATEPART(YY, NgayXuat) = DATEPART(YY, getdate())
+go
+--SoluongHD đã bán trong năm
+create proc SoLuongHDXDaBan
+as
+select Count (Ma ) as 'SoLuong' From HDXuat where DATEPART(YY, NgayXuat) = DATEPART(YY, getdate()) and TrangThai = 'True'
+go
+
+alter proc TienNhapTheoThangCuaNam (@nam int)
+as
+begin
+declare @sothang int =0;
+declare @tongtien int =0;
+Delete from TempChi
+--	create table if not exists TempChi ( Thang nvarchar (50), TongTien  int)
+	while @sothang <=11
+	begin
+		set @tongtien = 0
+		set @sothang = @sothang +1;
+		 select @tongtien =  Sum(TongTien)  From HDNhap
+						where DATEPART (YY, NgayNhap) = @nam AND DATEPART(MM, NgayNhap) = @sothang
+		 if (@tongtien is null)
+		 begin
+			set @tongtien = 0;
+		 end
+		insert into TempChi values (N'Tháng ' + cast( @sothang as nvarchar), @tongtien)
+	end
+	select * from TempChi 
+end
+go
+alter proc TienBanTheoThangCuaNam (@nam int)
+as
+begin
+declare @sothang int =0;
+declare @tongtien int =0;
+Delete from TempThu
+--	create table TempThu ( Thang nvarchar (50), TongTien  int)
+	while @sothang <=11
+	begin
+		set @tongtien = 0
+		set @sothang = @sothang +1;
+		 select @tongtien =  Sum(TongTien)  From HDXuat
+						where DATEPART (YY, NgayXuat) = @nam AND DATEPART(MM, NgayXuat) = @sothang and TrangThai = 'True'
+		 if (@tongtien is null)
+		 begin
+			set @tongtien = 0;
+		 end
+		insert into TempThu values (N'Tháng ' + cast( @sothang as nvarchar), @tongtien)
+	end
+	select * from TempThu 
+end
+go
+
+--Danh sach HDN trong nam
+alter proc DanhSachHDNTrongNam  (@nam int)
+as
+select HDN.Ma, NV.Ten, NCC.Ten as N'TenNCC', HDN.NgayNhap, HDN.TongTien from HDNhap HDN, NhanVien NV, NhaCungCap NCC 
+where DATEPART (YY, NgayNhap) = @nam and HDN.Ma_NCC = NCC.Ma and HDN.Ma_NV =NV.Ma
+go
+
+--Danh Sách HDX trong nam
+alter proc DanhSachHDXtTrongNam (@nam int)
+as
+
+select HDX.Ma , NV.Ten,  KH.Ten as N'TenKH', HDX.NgayXuat, HDX.GhiChu, HDX.TongTien  from HDXuat HDX, KhachHang KH, NhanVien NV 
+where DATEPART (YY, NgayXuat ) = @nam and HDX.Ma_KH = KH.Ma and HDX.Ma_NV = NV.Ma and TrangThai = 'True'
+go
+
+
 --Tiền nhập theo tháng của năm ...
 select CONCAT(N'Tháng ', Datepart (MM, NgayNhap)) as 'Thang', Sum(TongTien) as 'TongTien' From HDNhap
 where DATEPART (YY, NgayNhap) = 2020
 group by Datepart (MM, NgayNhap)
-
----Doanh thu 
+go
+---Doanh thu theo thang của năm
 select CONCAT(N'Tháng ', Datepart (MM, NgayXuat)) as 'Thang', Sum(TongTien) as 'TongTien' From HDXuat
 where DATEPART (YY, NgayXuat) = 2020 and TrangThai = 'true' 
 group by Datepart (MM, NgayXuat)
+go
 
+--Thống kê kh đã mua gì
+alter proc TKKHmuagi 
+as
+select HDX.Ma, KH.Ten as N'TKH',  SP.Ten as N'SP' , MS.TenMau, SZ.TenSize, CTHDX.SoLuong
+from HDXuat HDX, CTHDXuat CTHDX, KhachHang KH, SanPham SP, MauSac MS, Size SZ
+where HDX.Ma = CTHDX.Ma_HDX and HDX.Ma_KH = KH.Ma  and CTHDX.Ma_SP = SP.Ma and CTHDX.Ma_Size = SZ.Ma and CTHDX.Ma_MauSac = MS.Ma and HDX.TrangThai = 'True'
+
+--
 --select * from CTHDNhap
 --select * from ThongTinCTHDN
 --select * from CTSanPham

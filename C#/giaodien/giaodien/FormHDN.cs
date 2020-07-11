@@ -96,5 +96,10 @@ namespace giaodien
                 dgvHoaDon.DataSource = dt.TKHDN(txtTimKiem.Text);
             }    
         }
+
+        private void dgvHoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

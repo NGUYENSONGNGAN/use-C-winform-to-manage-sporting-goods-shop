@@ -54,13 +54,13 @@ namespace giaodien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTen.Text =="")
+            if (txtEmail.Text.Trim() == "" || txtTen.Text.Trim() =="" || txtTen.Text.Trim() == null|| txtEmail.Text.Trim() == null)
             {
-                MessageBox.Show("Bạn chưa nhập tên");
+                MessageBox.Show("Bạn chưa nhập tên hoặc gmail");
             }
             else
             {
-                if (txtEmail.Text == "" || txtDiaChi.Text == "" || txtSoDienThoai.Text == "")
+                if ( txtDiaChi.Text == "" || txtSoDienThoai.Text == "")
                 {
                     DialogResult a = MessageBox.Show("Bạn chưa nhập đủ thông tin\nBạn có muốn tiếp tục không?", "Thiếu thông tin", MessageBoxButtons.YesNo);
                     if (a == DialogResult.Yes)

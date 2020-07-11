@@ -32,6 +32,7 @@
             this.txtGhiChu = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
+            this.gunaControlBox1 = new Guna.UI.WinForms.GunaControlBox();
             this.SuspendLayout();
             // 
             // txtGhiChu
@@ -80,12 +81,29 @@
             this.btnLuu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
+            // gunaControlBox1
+            // 
+            this.gunaControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaControlBox1.AnimationHoverSpeed = 0.07F;
+            this.gunaControlBox1.AnimationSpeed = 0.03F;
+            this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.IconSize = 15F;
+            this.gunaControlBox1.Location = new System.Drawing.Point(463, -1);
+            this.gunaControlBox1.Name = "gunaControlBox1";
+            this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.Red;
+            this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
+            this.gunaControlBox1.OnPressedColor = System.Drawing.Color.Black;
+            this.gunaControlBox1.Size = new System.Drawing.Size(45, 29);
+            this.gunaControlBox1.TabIndex = 83;
+            this.gunaControlBox1.Click += new System.EventHandler(this.gunaControlBox1_Click);
+            // 
             // FormGhiChuHuyHDX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(505, 355);
+            this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.txtGhiChu);
             this.Controls.Add(this.label1);
@@ -105,5 +123,6 @@
         private System.Windows.Forms.RichTextBox txtGhiChu;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradientButton btnLuu;
+        private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
     }
 }

@@ -57,9 +57,9 @@
             this.khachHangTableAdapter = new giaodien.KhachHang_FormHDXTableAdapters.KhachHangTableAdapter();
             this.nhanVienTableAdapter = new giaodien.NhanVien_FormHDXTableAdapters.NhanVienTableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTikKiemNangCao = new Guna.UI.WinForms.GunaGradientButton();
             this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTikKiemNangCao = new Guna.UI.WinForms.GunaGradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHang_FormHDX)).BeginInit();
@@ -334,6 +334,31 @@
             this.panel1.Size = new System.Drawing.Size(1290, 76);
             this.panel1.TabIndex = 4;
             // 
+            // btnTikKiemNangCao
+            // 
+            this.btnTikKiemNangCao.AnimationHoverSpeed = 0.07F;
+            this.btnTikKiemNangCao.AnimationSpeed = 0.03F;
+            this.btnTikKiemNangCao.BaseColor1 = System.Drawing.Color.Transparent;
+            this.btnTikKiemNangCao.BaseColor2 = System.Drawing.Color.Transparent;
+            this.btnTikKiemNangCao.BorderColor = System.Drawing.Color.Black;
+            this.btnTikKiemNangCao.FocusedColor = System.Drawing.Color.Empty;
+            this.btnTikKiemNangCao.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTikKiemNangCao.ForeColor = System.Drawing.Color.DimGray;
+            this.btnTikKiemNangCao.Image = ((System.Drawing.Image)(resources.GetObject("btnTikKiemNangCao.Image")));
+            this.btnTikKiemNangCao.ImageSize = new System.Drawing.Size(45, 45);
+            this.btnTikKiemNangCao.Location = new System.Drawing.Point(12, 6);
+            this.btnTikKiemNangCao.Name = "btnTikKiemNangCao";
+            this.btnTikKiemNangCao.OnHoverBaseColor1 = System.Drawing.Color.Cyan;
+            this.btnTikKiemNangCao.OnHoverBaseColor2 = System.Drawing.Color.SkyBlue;
+            this.btnTikKiemNangCao.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnTikKiemNangCao.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnTikKiemNangCao.OnHoverImage = null;
+            this.btnTikKiemNangCao.OnPressedColor = System.Drawing.Color.Black;
+            this.btnTikKiemNangCao.Size = new System.Drawing.Size(336, 63);
+            this.btnTikKiemNangCao.TabIndex = 110;
+            this.btnTikKiemNangCao.Text = "Tìm kiếm QR";
+            this.btnTikKiemNangCao.Click += new System.EventHandler(this.btnTikKiemNangCao_Click);
+            // 
             // txtTimKiem
             // 
             this.txtTimKiem.BaseColor = System.Drawing.Color.White;
@@ -359,31 +384,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnTikKiemNangCao
-            // 
-            this.btnTikKiemNangCao.AnimationHoverSpeed = 0.07F;
-            this.btnTikKiemNangCao.AnimationSpeed = 0.03F;
-            this.btnTikKiemNangCao.BaseColor1 = System.Drawing.Color.Transparent;
-            this.btnTikKiemNangCao.BaseColor2 = System.Drawing.Color.Transparent;
-            this.btnTikKiemNangCao.BorderColor = System.Drawing.Color.Black;
-            this.btnTikKiemNangCao.FocusedColor = System.Drawing.Color.Empty;
-            this.btnTikKiemNangCao.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTikKiemNangCao.ForeColor = System.Drawing.Color.DimGray;
-            this.btnTikKiemNangCao.Image = ((System.Drawing.Image)(resources.GetObject("btnTikKiemNangCao.Image")));
-            this.btnTikKiemNangCao.ImageSize = new System.Drawing.Size(45, 45);
-            this.btnTikKiemNangCao.Location = new System.Drawing.Point(12, 6);
-            this.btnTikKiemNangCao.Name = "btnTikKiemNangCao";
-            this.btnTikKiemNangCao.OnHoverBaseColor1 = System.Drawing.Color.Cyan;
-            this.btnTikKiemNangCao.OnHoverBaseColor2 = System.Drawing.Color.SkyBlue;
-            this.btnTikKiemNangCao.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnTikKiemNangCao.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnTikKiemNangCao.OnHoverImage = null;
-            this.btnTikKiemNangCao.OnPressedColor = System.Drawing.Color.Black;
-            this.btnTikKiemNangCao.Size = new System.Drawing.Size(336, 63);
-            this.btnTikKiemNangCao.TabIndex = 110;
-            this.btnTikKiemNangCao.Text = "Tìm kiếm nâng cao";
-            this.btnTikKiemNangCao.Click += new System.EventHandler(this.btnTikKiemNangCao_Click);
             // 
             // FormHDX
             // 
