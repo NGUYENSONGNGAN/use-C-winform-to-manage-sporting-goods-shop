@@ -14,6 +14,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace giaodien
 {
     public partial class FormTrangChu : Form
@@ -269,9 +271,12 @@ namespace giaodien
             }
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
+        private void btnThongKeTonKho_Click(object sender, EventArgs e)
+        {            
+            FormThongKeTonKho FTKTK = new FormThongKeTonKho();
+            FTKTK.Show();
+            this.Hide();
         }
+
     }
 }

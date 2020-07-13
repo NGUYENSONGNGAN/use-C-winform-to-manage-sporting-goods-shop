@@ -19,6 +19,10 @@ namespace giaodien
         }
         DataClasses1DataContext dt = new DataClasses1DataContext();
         CultureInfo culture = new CultureInfo("vi-VN");
+        public class ThongTinHDN
+        {
+            public static int Ma;
+        }
         private void FormHDN1_Load(object sender, EventArgs e)
         {
             //int a = 20000000;
@@ -62,13 +66,13 @@ namespace giaodien
             //btnLuu.Enabled = false;
             //btnHuy.Enabled = true; 
 
-            //if (dgvHoaDon.Columns[e.ColumnIndex].Name == "Xem")
-            //{
-            //    ThongTinHDN.ma_HDN = Convert.ToInt32(dgvHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString());
-            //    FormNhapHang CTHDN = new FormNhapHang();
-            //    CTHDN.Show();
-            //    this.Hide();
-            //}
+            if (dgvHoaDon.Columns[e.ColumnIndex].Name == "Xem")
+            {
+                ThongTinHDN.Ma = Convert.ToInt32(dgvHoaDon.Rows[e.RowIndex].Cells[0].Value.ToString());
+                FormCTHDN CTHDN = new FormCTHDN();
+                CTHDN.ShowDialog();
+
+            }
 
 
         }

@@ -778,6 +778,13 @@ namespace giaodien
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), tk);
 			return ((ISingleResult<TKSPTrongHDResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.ThongKeSLTLoaiSP")]
+		public ISingleResult<ThongKeSLTLoaiSPResult> ThongKeSLTLoaiSP([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> maloai)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), maloai);
+			return ((ISingleResult<ThongKeSLTLoaiSPResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ad")]
@@ -9230,6 +9237,104 @@ namespace giaodien
 				if ((this._HinhAnh != value))
 				{
 					this._HinhAnh = value;
+				}
+			}
+		}
+	}
+	
+	public partial class ThongKeSLTLoaiSPResult
+	{
+		
+		private string _Ten;
+		
+		private string _Loai;
+		
+		private string _TenSize;
+		
+		private string _TenMau;
+		
+		private System.Nullable<int> _Soluong;
+		
+		public ThongKeSLTLoaiSPResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ten", DbType="NVarChar(1000) NOT NULL", CanBeNull=false)]
+		public string Ten
+		{
+			get
+			{
+				return this._Ten;
+			}
+			set
+			{
+				if ((this._Ten != value))
+				{
+					this._Ten = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Loai", DbType="NVarChar(1000)")]
+		public string Loai
+		{
+			get
+			{
+				return this._Loai;
+			}
+			set
+			{
+				if ((this._Loai != value))
+				{
+					this._Loai = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenSize", DbType="NVarChar(1000)")]
+		public string TenSize
+		{
+			get
+			{
+				return this._TenSize;
+			}
+			set
+			{
+				if ((this._TenSize != value))
+				{
+					this._TenSize = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenMau", DbType="NVarChar(1000) NOT NULL", CanBeNull=false)]
+		public string TenMau
+		{
+			get
+			{
+				return this._TenMau;
+			}
+			set
+			{
+				if ((this._TenMau != value))
+				{
+					this._TenMau = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Soluong", DbType="Int")]
+		public System.Nullable<int> Soluong
+		{
+			get
+			{
+				return this._Soluong;
+			}
+			set
+			{
+				if ((this._Soluong != value))
+				{
+					this._Soluong = value;
 				}
 			}
 		}

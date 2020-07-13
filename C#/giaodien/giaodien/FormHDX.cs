@@ -67,32 +67,41 @@ namespace giaodien
             else if (dgvHDX.Columns[e.ColumnIndex].Name == "ThayDoiTrangThai")
             {
                 int Ma = Convert.ToInt32(dgvHDX.Rows[e.RowIndex].Cells[0].Value.ToString());
-                TTHDX.MaHDX = Ma;
-                TTHDX.MoFormGhiChuHuy = 1;
-                FormGhiChuHuyHDX FGCHHDX = new FormGhiChuHuyHDX();
-                FGCHHDX.ShowDialog();   
-                if (FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX == 1)
+                var tthdx = dt.HDXuats.Where(s => s.Ma == Ma).FirstOrDefault();
+                if (tthdx.TrangThai == Convert.ToBoolean("False"))
                 {
-                    var HDX = dt.selectTTHDX(Ma).FirstOrDefault();
-                    var KH = dt.selectTTKH(HDX.Ma_KH).FirstOrDefault();
-                    var LKH = dt.LoaiKHs.Where(s => s.Ma == KH.Ma_LoaiKH).FirstOrDefault();
-                    if (HDX.TongTien >=200000)
+                    MessageBox.Show("Hóa đơn đã hủy");
+                }
+                else if (tthdx.TrangThai == Convert.ToBoolean("True"))
+                {
+
+                    TTHDX.MaHDX = Ma;
+                    TTHDX.MoFormGhiChuHuy = 1;
+                    FormGhiChuHuyHDX FGCHHDX = new FormGhiChuHuyHDX();
+                    FGCHHDX.ShowDialog();
+                    if (FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX == 1)
                     {
-                        int DiemTL = Convert.ToInt32(KH.DiemTichLuy) - 10;
-                        dt.updatediemtichluy(KH.Ma, DiemTL);
-                        if (DiemTL <200)
+                        var HDX = dt.selectTTHDX(Ma).FirstOrDefault();
+                        var KH = dt.selectTTKH(HDX.Ma_KH).FirstOrDefault();
+                        var LKH = dt.LoaiKHs.Where(s => s.Ma == KH.Ma_LoaiKH).FirstOrDefault();
+                        if (HDX.TongTien >= 200000)
                         {
-                            dt.updateKH_LoaiKH(KH.Ma, 1);
-                        }   
-                        else if (DiemTL >=200 && DiemTL <400)
-                        {
-                            dt.updateKH_LoaiKH(KH.Ma, 2);
-                        }   
-                    }    
-                    dgvHDX.DataSource = dt.selectHDX();
-                    FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX = 0;
-                    FGCHHDX.Close();
-                }    
+                            int DiemTL = Convert.ToInt32(KH.DiemTichLuy) - 10;
+                            dt.updatediemtichluy(KH.Ma, DiemTL);
+                            if (DiemTL < 200)
+                            {
+                                dt.updateKH_LoaiKH(KH.Ma, 1);
+                            }
+                            else if (DiemTL >= 200 && DiemTL < 400)
+                            {
+                                dt.updateKH_LoaiKH(KH.Ma, 2);
+                            }
+                        }
+                        dgvHDX.DataSource = dt.selectHDX();
+                        FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX = 0;
+                        FGCHHDX.Close();
+                    }
+                }
             }
         }
 

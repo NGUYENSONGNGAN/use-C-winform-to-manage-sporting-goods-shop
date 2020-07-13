@@ -2821,7 +2821,14 @@ as
 select HDX.Ma, KH.Ten as N'TKH',  SP.Ten as N'SP' , MS.TenMau, SZ.TenSize, CTHDX.SoLuong
 from HDXuat HDX, CTHDXuat CTHDX, KhachHang KH, SanPham SP, MauSac MS, Size SZ
 where HDX.Ma = CTHDX.Ma_HDX and HDX.Ma_KH = KH.Ma  and CTHDX.Ma_SP = SP.Ma and CTHDX.Ma_Size = SZ.Ma and CTHDX.Ma_MauSac = MS.Ma and HDX.TrangThai = 'True'
+go
 
+-- Thống kê số lương tồn của từng loại sản phẩm
+alter proc ThongKeSLTLoaiSP (@maloai int)
+as
+select SP.Ten,LSP.Ten as N'Loai' , SZ.TenSize, MS.TenMau, CTSP.Soluong  from CTSanPham CTSP, SanPham SP, MauSac MS, Size SZ, LoaiSP LSP 
+where LSP.Ma = @maloai and SP.Ma_LoaiSP = LSP.Ma and CTSP.Ma_SP = SP.Ma and CTSP.Ma_MauSac = MS.Ma and CTSP.Ma_Size = SZ.Ma
+exec ThongKeSLTLoaiSP 2
 --
 --select * from CTHDNhap
 --select * from ThongTinCTHDN

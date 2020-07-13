@@ -38,7 +38,7 @@
             this.btnThoat = new Guna.UI.WinForms.GunaGradientButton();
             this.pnTimKiemKhachHang = new System.Windows.Forms.Panel();
             this.txtTen = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtMaKhachHang = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtEmailKhachHang = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnTimKiem = new Guna.UI.WinForms.GunaGradientButton();
             this.btnQuayLai = new Guna.UI.WinForms.GunaGradientButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -160,7 +160,7 @@
             // pnTimKiemKhachHang
             // 
             this.pnTimKiemKhachHang.Controls.Add(this.txtTen);
-            this.pnTimKiemKhachHang.Controls.Add(this.txtMaKhachHang);
+            this.pnTimKiemKhachHang.Controls.Add(this.txtEmailKhachHang);
             this.pnTimKiemKhachHang.Controls.Add(this.btnTimKiem);
             this.pnTimKiemKhachHang.Controls.Add(this.btnQuayLai);
             this.pnTimKiemKhachHang.Controls.Add(this.label3);
@@ -191,26 +191,26 @@
             this.txtTen.TabIndex = 91;
             this.txtTen.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txtMaKhachHang
+            // txtEmailKhachHang
             // 
-            this.txtMaKhachHang.BackColor = System.Drawing.Color.White;
-            this.txtMaKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMaKhachHang.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMaKhachHang.HintForeColor = System.Drawing.Color.Empty;
-            this.txtMaKhachHang.HintText = "";
-            this.txtMaKhachHang.isPassword = false;
-            this.txtMaKhachHang.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtMaKhachHang.LineIdleColor = System.Drawing.Color.Transparent;
-            this.txtMaKhachHang.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtMaKhachHang.LineThickness = 5;
-            this.txtMaKhachHang.Location = new System.Drawing.Point(310, 40);
-            this.txtMaKhachHang.Margin = new System.Windows.Forms.Padding(8);
-            this.txtMaKhachHang.Name = "txtMaKhachHang";
-            this.txtMaKhachHang.Size = new System.Drawing.Size(436, 53);
-            this.txtMaKhachHang.TabIndex = 90;
-            this.txtMaKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtMaKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaKhachHang_KeyPress);
+            this.txtEmailKhachHang.BackColor = System.Drawing.Color.White;
+            this.txtEmailKhachHang.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmailKhachHang.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmailKhachHang.HintForeColor = System.Drawing.Color.Empty;
+            this.txtEmailKhachHang.HintText = "";
+            this.txtEmailKhachHang.isPassword = false;
+            this.txtEmailKhachHang.LineFocusedColor = System.Drawing.Color.Blue;
+            this.txtEmailKhachHang.LineIdleColor = System.Drawing.Color.Transparent;
+            this.txtEmailKhachHang.LineMouseHoverColor = System.Drawing.Color.Blue;
+            this.txtEmailKhachHang.LineThickness = 5;
+            this.txtEmailKhachHang.Location = new System.Drawing.Point(310, 40);
+            this.txtEmailKhachHang.Margin = new System.Windows.Forms.Padding(8);
+            this.txtEmailKhachHang.Name = "txtEmailKhachHang";
+            this.txtEmailKhachHang.Size = new System.Drawing.Size(436, 53);
+            this.txtEmailKhachHang.TabIndex = 90;
+            this.txtEmailKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtEmailKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaKhachHang_KeyPress);
             // 
             // btnTimKiem
             // 
@@ -278,9 +278,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 31);
+            this.label2.Size = new System.Drawing.Size(81, 31);
             this.label2.TabIndex = 63;
-            this.label2.Text = "Nhập mã khách hàng";
+            this.label2.Text = "Email";
             // 
             // bunifuDragControl1
             // 
@@ -335,6 +335,6 @@
         private Guna.UI.WinForms.GunaGradientButton btnKhachHangCu;
         private Guna.UI.WinForms.GunaGradientButton btnKhachHangMoi;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTen;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaKhachHang;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmailKhachHang;
     }
 }

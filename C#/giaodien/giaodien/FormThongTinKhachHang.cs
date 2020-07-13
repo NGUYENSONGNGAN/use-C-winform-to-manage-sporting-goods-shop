@@ -62,6 +62,7 @@ namespace giaodien
             else if (r.Count() != 0)
             {
                 lbMaKH.Text = Convert.ToString(Convert.ToInt32(r.Max().ToString()) + 1);
+               // int a = Convert.ToInt32()
             }
             lbDiemTichLuy.Text = "0";
             lbThanhVien.Text = "Bạc";
@@ -148,103 +149,64 @@ namespace giaodien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTen.Text.Trim()==""|| txtTen.Text.Trim() == null)
+            if (txtTen.Text.Trim()==""|| txtTen.Text.Trim() == null|| txtEmail.Text.Trim() != ""|| txtEmail.Text.Trim() != null)
             {
                 MessageBox.Show("Bạn chưa nhập tên\nVui lòng kiểm tra lại", "Thiếu thông tin");
             }
             
             else 
             {
-                if (txtEmail.Text.Trim() != "" )
+                Regex mRegxExpression;
+                if (txtEmail.Text.Trim() != string.Empty)
                 {
-                    Regex mRegxExpression;
-                    if (txtEmail.Text.Trim() != string.Empty)
-                    {
-                        mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4]
+                    mRegxExpression = new Regex(@"^([a-zA-Z0-9_\-])([a-zA-Z0-9_\-\.]*)@(\[((25[0-5]|2[0-4]
 
                     [0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\.){3}|((([a-zA-Z0-9\-]+)\.)+))([a-zA-Z]{2,}|
 
                     (25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\])$");
 
-                        if (!mRegxExpression.IsMatch(txtEmail.Text.Trim()))
+                    if (!mRegxExpression.IsMatch(txtEmail.Text.Trim()))
+                    {
+                        MessageBox.Show("Lỗi định dạng email", "Lỗi");
+                        txtEmail.Focus();
+                    }
+                    else
+                    {
+                        if (txtEmail.Text.Trim() == "" || txtDiaChi.Text.Trim() == "" || txtSoDienThoai.Text.Trim() == "")
                         {
-                            MessageBox.Show("Lỗi định dạng email", "Lỗi");
-                            txtEmail.Focus();
-                        }
-                        else
-                        {
-                            if (txtEmail.Text.Trim() == "" || txtDiaChi.Text.Trim() == "" || txtSoDienThoai.Text.Trim() == "")
+                            DialogResult kiemtra = MessageBox.Show("Bạn chưa nhập đủ thông tin\nBạn có muốn tiếp tục không ?", "Thiếu thông tin", MessageBoxButtons.YesNo);
+                            if (kiemtra == DialogResult.Yes)
                             {
-                                DialogResult kiemtra = MessageBox.Show("Bạn chưa nhập đủ thông tin\nBạn có muốn tiếp tục không ?", "Thiếu thông tin", MessageBoxButtons.YesNo);
-                                if (kiemtra == DialogResult.Yes)
+                                if (i == 1)
                                 {
-                                    if (i == 1)
-                                    {
-                                        dt.insertKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
-                                        MessageBox.Show("Bạn đã thêm thành công");
-                                    }
-                                    else if (i == 2)
-                                    {
-                                        dt.updateKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
-                                        MessageBox.Show("Bạn đã sửa thành công");
-                                    }
-                                    dgvKhachHang.DataSource = dt.selectKH();
-                                    btnThem.Enabled = true;
-                                    btnSua.Enabled = false;
-                                    btnLuu.Enabled = false;
-                                    btnHuy.Enabled = true;
-                                    txtTen.ResetText();
-                                    txtEmail.ResetText();
-                                    txtSoDienThoai.ResetText();
-                                    txtDiaChi.ResetText();
-                                    lbMaKH.Visible = false;
-                                    lbDiemTichLuy.Visible = false;
-                                    lbThanhVien.Visible = false;
-                                    txtTen.Enabled = false;
-                                    txtSoDienThoai.Enabled = false;
-                                    txtDiaChi.Enabled = false;
-                                    txtEmail.Enabled = false;
+                                    dt.insertKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
+                                    MessageBox.Show("Bạn đã thêm thành công");
                                 }
+                                else if (i == 2)
+                                {
+                                    dt.updateKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
+                                    MessageBox.Show("Bạn đã sửa thành công");
+                                }
+                                dgvKhachHang.DataSource = dt.selectKH();
+                                btnThem.Enabled = true;
+                                btnSua.Enabled = false;
+                                btnLuu.Enabled = false;
+                                btnHuy.Enabled = true;
+                                txtTen.ResetText();
+                                txtEmail.ResetText();
+                                txtSoDienThoai.ResetText();
+                                txtDiaChi.ResetText();
+                                lbMaKH.Visible = false;
+                                lbDiemTichLuy.Visible = false;
+                                lbThanhVien.Visible = false;
+                                txtTen.Enabled = false;
+                                txtSoDienThoai.Enabled = false;
+                                txtDiaChi.Enabled = false;
+                                txtEmail.Enabled = false;
                             }
                         }
                     }
-                }
-                else if (txtEmail.Text.Trim()=="")
-                {
-                    if (txtEmail.Text.Trim() == ""||txtDiaChi.Text.Trim()==""||txtSoDienThoai.Text.Trim()=="")
-                    {
-                        DialogResult kiemtra = MessageBox.Show("Bạn chưa nhập đủ thông tin\nBạn có muốn tiếp tục không ?", "Thiếu thông tin", MessageBoxButtons.YesNo);
-                        if (kiemtra == DialogResult.Yes)
-                        {
-                            if (i == 1)
-                            {
-                                dt.insertKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
-                                MessageBox.Show("Bạn đã thêm thành công");
-                            }
-                            else if (i == 2)
-                            {
-                                dt.updateKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
-                                MessageBox.Show("Bạn đã sửa thành công");
-                            }
-                            dgvKhachHang.DataSource = dt.selectKH();
-                            btnThem.Enabled = true;
-                            btnSua.Enabled = false;
-                            btnLuu.Enabled = false;
-                            btnHuy.Enabled = true;
-                            txtTen.ResetText();
-                            txtEmail.ResetText();
-                            txtSoDienThoai.ResetText();
-                            txtDiaChi.ResetText();
-                            lbMaKH.Visible = false;
-                            lbDiemTichLuy.Visible = false;
-                            lbThanhVien.Visible = false;
-                            txtTen.Enabled = false;
-                            txtSoDienThoai.Enabled = false;
-                            txtDiaChi.Enabled = false;
-                            txtEmail.Enabled = false;
-                        }
-                    }    
-                }    
+                }            
             }
         }
     }

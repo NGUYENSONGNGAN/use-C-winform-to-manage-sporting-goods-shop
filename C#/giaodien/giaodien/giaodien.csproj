@@ -184,6 +184,12 @@
     <Compile Include="FormChatServer.Designer.cs">
       <DependentUpon>FormChatServer.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCTHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCTHDN.Designer.cs">
+      <DependentUpon>FormCTHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGhiChuHuyHDX.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,12 @@
     <Compile Include="FormThongKeThuChi.Designer.cs">
       <DependentUpon>FormThongKeThuChi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongKeTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKeTonKho.Designer.cs">
+      <DependentUpon>FormThongKeTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongTinKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +336,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LoaiSP_FormThongTinSP.xsd</DependentUpon>
     </Compile>
+    <Compile Include="MauSac_FormCTHDN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MauSac_FormCTHDN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="MauSac_FormLapHoaDon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -356,6 +373,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SanPham_FormCTHDN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SanPham_FormCTHDN.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SanPham_FormLapHoaDon.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -370,6 +392,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SanPham_FormThanhToan.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Size_FormCTHDN.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Size_FormCTHDN.xsd</DependentUpon>
     </Compile>
     <Compile Include="Size_FormLapHoaDon.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -395,6 +422,9 @@
     <EmbeddedResource Include="FormChatServer.resx">
       <DependentUpon>FormChatServer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCTHDN.resx">
+      <DependentUpon>FormCTHDN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQuetQRTimKiemHDX.resx">
       <DependentUpon>FormQuetQRTimKiemHDX.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,6 +436,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKeThuChi.resx">
       <DependentUpon>FormThongKeThuChi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKeTonKho.resx">
+      <DependentUpon>FormThongKeTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report2.rdlc" />
     <None Include="ChucVu_FormDuLieuNV.xsc">
@@ -547,6 +580,17 @@
     <None Include="LoaiSP_FormThongTinSP.xss">
       <DependentUpon>LoaiSP_FormThongTinSP.xsd</DependentUpon>
     </None>
+    <None Include="MauSac_FormCTHDN.xsc">
+      <DependentUpon>MauSac_FormCTHDN.xsd</DependentUpon>
+    </None>
+    <None Include="MauSac_FormCTHDN.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MauSac_FormCTHDN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MauSac_FormCTHDN.xss">
+      <DependentUpon>MauSac_FormCTHDN.xsd</DependentUpon>
+    </None>
     <None Include="MauSac_FormLapHoaDon.xsc">
       <DependentUpon>MauSac_FormLapHoaDon.xsd</DependentUpon>
     </None>
@@ -623,6 +667,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SanPham_FormCTHDN.xsc">
+      <DependentUpon>SanPham_FormCTHDN.xsd</DependentUpon>
+    </None>
+    <None Include="SanPham_FormCTHDN.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SanPham_FormCTHDN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SanPham_FormCTHDN.xss">
+      <DependentUpon>SanPham_FormCTHDN.xsd</DependentUpon>
+    </None>
     <None Include="SanPham_FormLapHoaDon.xsc">
       <DependentUpon>SanPham_FormLapHoaDon.xsd</DependentUpon>
     </None>
@@ -655,6 +710,17 @@
     </None>
     <None Include="SanPham_FormThanhToan.xss">
       <DependentUpon>SanPham_FormThanhToan.xsd</DependentUpon>
+    </None>
+    <None Include="Size_FormCTHDN.xsc">
+      <DependentUpon>Size_FormCTHDN.xsd</DependentUpon>
+    </None>
+    <None Include="Size_FormCTHDN.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Size_FormCTHDN.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Size_FormCTHDN.xss">
+      <DependentUpon>Size_FormCTHDN.xsd</DependentUpon>
     </None>
     <None Include="Size_FormLapHoaDon.xsc">
       <DependentUpon>Size_FormLapHoaDon.xsd</DependentUpon>

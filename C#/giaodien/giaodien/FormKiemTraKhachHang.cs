@@ -54,13 +54,13 @@ namespace giaodien
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (txtMaKhachHang.Text.Trim() =="" || txtTen.Text.Trim() == "")
+            if (txtEmailKhachHang.Text.Trim() =="" || txtTen.Text.Trim() == "")
             {
                 MessageBox.Show("Bạn chưa nhập đủ\nVui lòng nhập đủ thông tin", "Lỗi");
             }       
             else
             {
-                KhachHang KH = dt.KhachHangs.Where(s => s.Ma == Convert.ToInt32(txtMaKhachHang.Text.Trim()))
+                KhachHang KH = dt.KhachHangs.Where(s => s.Email == txtEmailKhachHang.Text.Trim())
                 .Where(s => s.Ten == txtTen.Text.Trim()).FirstOrDefault();
                 if (KH == null)
                 {
@@ -68,7 +68,7 @@ namespace giaodien
                 }
                 else if (KH != null)
                 {
-                    TTKHC.Ma = Convert.ToInt32(txtMaKhachHang.Text);
+                    TTKHC.Ma = KH.Ma; 
                     MessageBox.Show("Mời bạn vào mua hàng");
                     FormLapHoaDon FLHD = new FormLapHoaDon();
                     FLHD.Show();
