@@ -21,10 +21,10 @@
         <Value>=First(Fields!MaQR.Value, "DataSet1")</Value>
         <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
-        <Top>0.02777in</Top>
+        <Top>0.04166in</Top>
         <Left>9.88757in</Left>
         <Height>1.9023in</Height>
-        <Width>1.9023in</Width>
+        <Width>1.96977in</Width>
         <ZIndex>1</ZIndex>
         <ToolTip>=First(Fields!MaQR.Value, "DataSet1")</ToolTip>
         <Style>
@@ -156,7 +156,7 @@
       <Line Name="Line2">
         <Top>4.11063in</Top>
         <Height>0in</Height>
-        <Width>11.85734in</Width>
+        <Width>12.16017in</Width>
         <ZIndex>5</ZIndex>
         <Style>
           <Border>
@@ -507,7 +507,7 @@
         <Top>4.70438in</Top>
         <Left>0.02275in</Left>
         <Height>0in</Height>
-        <Width>11.83458in</Width>
+        <Width>12.13742in</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -1148,7 +1148,7 @@
       <Line Name="Line4">
         <Top>3.64882in</Top>
         <Height>0in</Height>
-        <Width>11.84597in</Width>
+        <Width>12.16017in</Width>
         <ZIndex>20</ZIndex>
         <Style>
           <Border>
@@ -1227,7 +1227,7 @@
     <Height>5.25251in</Height>
     <Style />
   </Body>
-  <Width>12.07684in</Width>
+  <Width>12.16017in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

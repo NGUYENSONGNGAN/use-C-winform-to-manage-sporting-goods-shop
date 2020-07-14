@@ -168,5 +168,10 @@ namespace giaodien
                 txtMessage.Clear();
             }
         }
+
+        private void FormChatServer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -210,7 +210,6 @@
             this.txtEmailKhachHang.Size = new System.Drawing.Size(436, 53);
             this.txtEmailKhachHang.TabIndex = 90;
             this.txtEmailKhachHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtEmailKhachHang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMaKhachHang_KeyPress);
             // 
             // btnTimKiem
             // 

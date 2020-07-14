@@ -96,6 +96,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChatServer";
             this.Text = "FormChatServer";
+            this.Load += new System.EventHandler(this.FormChatServer_Load);
             this.ResumeLayout(false);
 
         }

@@ -52,13 +52,14 @@ namespace giaodien
             dgvCTHDN.AutoGenerateColumns = false;
             dgvCTHDN.DataSource = dt.HDNhaps;
             i = 1;
-            dgvCTHDN.AutoGenerateColumns = false;
+
             //font size data gridview
           //  dgvCTHDN.DefaultCellStyle.Font= new Font("Tahoma", 14);
             //      //// font title datagridview
       //      dgvCTHDN.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 20);
 
             dgvCTHDN.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvSanPham.AutoGenerateColumns = false;
             dgvSanPham.DataSource = dt.SanPhams;
             var r = from s in dt.HDNhaps select s.Ma;
             if (r.Count() == 0)
@@ -111,8 +112,8 @@ namespace giaodien
             //    btnThem.Enabled = false;
             //    btnLuu.Enabled = false;
             //}
-            dgvSanPham.AutoGenerateColumns = false;
-            dgvSanPham.DataSource = dt.SanPhams;
+          
+           // dgvSanPham.DataSource = dt.SanPhams;
         }
 
         private void btnThem_Click(object sender, EventArgs e)

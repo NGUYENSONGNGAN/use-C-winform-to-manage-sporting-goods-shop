@@ -2828,7 +2828,8 @@ alter proc ThongKeSLTLoaiSP (@maloai int)
 as
 select SP.Ten,LSP.Ten as N'Loai' , SZ.TenSize, MS.TenMau, CTSP.Soluong  from CTSanPham CTSP, SanPham SP, MauSac MS, Size SZ, LoaiSP LSP 
 where LSP.Ma = @maloai and SP.Ma_LoaiSP = LSP.Ma and CTSP.Ma_SP = SP.Ma and CTSP.Ma_MauSac = MS.Ma and CTSP.Ma_Size = SZ.Ma
-exec ThongKeSLTLoaiSP 2
+order by CTSP.Soluong, SP.Ten asc 
+exec ThongKeSLTLoaiSP 1
 --
 --select * from CTHDNhap
 --select * from ThongTinCTHDN

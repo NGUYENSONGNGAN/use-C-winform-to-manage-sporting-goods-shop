@@ -105,15 +105,7 @@ namespace giaodien
 
         private void cbbLoai_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                dataGridView1.AutoGenerateColumns = false;
-                dataGridView1.DataSource = dt.ThongKeSLTLoaiSP(Convert.ToInt32( cbbLoai.SelectedValue));
-            }
-            catch
-            {
 
-            }
         }
 
         private void gunaControlBox1_Click(object sender, EventArgs e)
@@ -121,6 +113,28 @@ namespace giaodien
             FormTrangChu FTC = new FormTrangChu();
             FTC.Show();
             this.Close();
+        }
+
+        private void cbbLoai_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = dt.ThongKeSLTLoaiSP(Convert.ToInt32(cbbLoai.SelectedValue));
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    if (Convert.ToInt32(row.Cells[4].Value) < 10)
+                    {
+                        row.DefaultCellStyle.BackColor = Color.Red;
+                    }
+                }
+                    
+
+            }
+            catch
+            {
+
+            }
         }
     }
 }
