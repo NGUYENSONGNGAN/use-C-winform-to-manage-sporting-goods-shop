@@ -250,10 +250,15 @@ namespace giaodien
             //lưu khi xem thông tin nhan viên cũ
             if (FormTrangChu.ThongTinCaNhan.SuaTTCaNhan == 1)
             {
+                NhanVien NV = dt.NhanViens.Where(s=>s.Email == txtEmail.Text).Where(s => s.Ma != Convert.ToInt32(lbSoMaNV.Text)).FirstOrDefault();
                 if (txtDiaChi.Text == "" || txtEmail.Text == "" || txtTen.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đủ thông tin", "Lỗi");
                 }
+                else if (NV!= null)
+                {
+                    MessageBox.Show("Đã có Email này\nVui lòng thử lại Email khác", "Lỗi");
+                }    
                 else
                 {
                     string gt = "";
@@ -264,7 +269,7 @@ namespace giaodien
                     else if (rbtNu.Checked == true)
                     {
                         gt = "Nữ";
-                    }  
+                    }
                     if (pictureBox1.Image == null)
                     {
                         DialogResult img = MessageBox.Show("Bạn chưa chọn hình.\nBạn có muốn lưu không ?", "Thiếu thông tin", MessageBoxButtons.YesNo);
@@ -272,6 +277,29 @@ namespace giaodien
                         {
                             dt.updatenv(Convert.ToInt32(lbSoMaNV.Text), txtTen.Text, Convert.ToInt32(cbbChucVu.SelectedValue), gt, txtDiaChi.Text,
                                 txtEmail.Text, Convert.ToDateTime(dtpNgaySinh.Value), Convert.ToDateTime(dtpNgayVaoLam.Value), null);
+                            NhanVien nv = dt.NhanViens.Where(s => s.Ma == Convert.ToInt32(lbSoMaNV.Text)).FirstOrDefault();
+                            txtDiaChi.Text = nv.DiaChi;
+                            txtEmail.Text = nv.Email;
+                            dtpNgaySinh.Value = Convert.ToDateTime(nv.NgaySinh);
+                            dtpNgayVaoLam.Value = Convert.ToDateTime(nv.NgayVaoLam);
+                            txtTen.Enabled = false;
+                            cbbChucVu.Enabled = false;
+                            rbtNam.Enabled = false;
+                            rbtNu.Enabled = false;
+                            txtDiaChi.Enabled = false;
+                            txtEmail.Enabled = false;
+                            dtpNgaySinh.Enabled = false;
+                            dtpNgayVaoLam.Enabled = false;
+                            btnChonAnh.Enabled = false;
+                            btnLuu.Enabled = false;
+                            btnSua.Enabled = true;
+                            groupBox2.Visible = false;
+
+                            //bunifuMaterialTextbox1.Visible = false;
+                            //bunifuMaterialTextbox1.Visible = false;
+                            btnHuy.Visible = true;
+                            btnChonAnh.Visible = false;
+                            MessageBox.Show("Bạn đã sửa thành công");
                         }
                     }
                     else if (pictureBox1.Image != null)
@@ -280,41 +308,47 @@ namespace giaodien
                         pictureBox1.Image.Save(stream, ImageFormat.Jpeg);
                         dt.updatenv(Convert.ToInt32(lbSoMaNV.Text), txtTen.Text, Convert.ToInt32(cbbChucVu.SelectedValue), gt, txtDiaChi.Text,
                             txtEmail.Text, Convert.ToDateTime(dtpNgaySinh.Value), Convert.ToDateTime(dtpNgayVaoLam.Value), stream.ToArray());
+                        NhanVien nv = dt.NhanViens.Where(s => s.Ma == Convert.ToInt32(lbSoMaNV.Text)).FirstOrDefault();
+                        txtDiaChi.Text = nv.DiaChi;
+                        txtEmail.Text = nv.Email;
+                        dtpNgaySinh.Value = Convert.ToDateTime(nv.NgaySinh);
+                        dtpNgayVaoLam.Value = Convert.ToDateTime(nv.NgayVaoLam);
+                        txtTen.Enabled = false;
+                        cbbChucVu.Enabled = false;
+                        rbtNam.Enabled = false;
+                        rbtNu.Enabled = false;
+                        txtDiaChi.Enabled = false;
+                        txtEmail.Enabled = false;
+                        dtpNgaySinh.Enabled = false;
+                        dtpNgayVaoLam.Enabled = false;
+                        btnChonAnh.Enabled = false;
+                        btnLuu.Enabled = false;
+                        btnSua.Enabled = true;
+                        groupBox2.Visible = false;
 
+                        //bunifuMaterialTextbox1.Visible = false;
+                        //bunifuMaterialTextbox1.Visible = false;
+                        btnHuy.Visible = true;
+                        btnChonAnh.Visible = false;
+                        MessageBox.Show("Bạn đã sửa thành công");
                     }
-                    NhanVien nv = dt.NhanViens.Where(s => s.Ma == Convert.ToInt32(lbSoMaNV.Text)).FirstOrDefault();
-                    txtDiaChi.Text = nv.DiaChi;
-                    txtEmail.Text = nv.Email;
-                    dtpNgaySinh.Value = Convert.ToDateTime(nv.NgaySinh);
-                    dtpNgayVaoLam.Value = Convert.ToDateTime(nv.NgayVaoLam);
-                    txtTen.Enabled = false;
-                    cbbChucVu.Enabled = false;
-                    rbtNam.Enabled = false;
-                    rbtNu.Enabled = false;
-                    txtDiaChi.Enabled = false;
-                    txtEmail.Enabled = false;
-                    dtpNgaySinh.Enabled = false;
-                    dtpNgayVaoLam.Enabled = false;
-                    btnChonAnh.Enabled = false;
-                    btnLuu.Enabled = false;
-                    btnSua.Enabled = true;
-                    groupBox2.Visible = false;
-
-                    //bunifuMaterialTextbox1.Visible = false;
-                    //bunifuMaterialTextbox1.Visible = false;
-                    btnHuy.Visible = true;
-                    btnChonAnh.Visible = false;
-                    MessageBox.Show("Bạn đã sửa thành công");
+                   
                 }
             }
 
             //Lưu khi thêm nhân viên
             else if (FormDuLieuNV.MoFormThongTinNV.phanbietthemsua == 1 && kiemtrasua != 2)
             {
+                NhanVien NV = dt.NhanViens.Where(s => s.Email == txtEmail.Text).FirstOrDefault();
                 if (txtDiaChi.Text == "" || txtEmail.Text == "" || txtTen.Text == ""||txtTaiKhoan.Text == ""||txtMatKhau.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đủ thông tin", "Lỗi");
                 }
+                else if (NV!= null)
+                {
+                    MessageBox.Show("Đã có Email này\nVui lòng thử lại Email khác", "Lỗi");
+                }   
+
                 else
                 {
                     string gt = "";
@@ -330,7 +364,7 @@ namespace giaodien
                     if (nv != null)
                     {
                         MessageBox.Show("Đã có tài khoản này\nHãy thử tài khoản khác", "Lỗi");
-                    }
+                    }    
                     else
                     {
                         
@@ -393,9 +427,14 @@ namespace giaodien
             // sưa ttnv
             else if ( kiemtrasua == 2)
             {
+                NhanVien NV = dt.NhanViens.Where(s => s.Email == txtEmail.Text).Where(s=>s.Ma != Convert.ToInt32(lbSoMaNV.Text)).FirstOrDefault();
                 if (txtDiaChi.Text == "" || txtEmail.Text == "" || txtTen.Text == "")
                 {
                     MessageBox.Show("Bạn chưa nhập đủ thông tin", "Lỗi");
+                }
+                else if (NV != null)
+                {
+                    MessageBox.Show("Đã có Email này\nVui lòng thử lại Email khác", "Lỗi");
                 }
                 else
                 {

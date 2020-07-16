@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDangNhap));
-            this.txtMatKhau = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnDangNhap = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbQuenMatKhau = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -41,6 +40,7 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnDangNhap = new System.Windows.Forms.Panel();
+            this.txtMatKhau = new Guna.UI.WinForms.GunaLineTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtTaiKhoan = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -48,10 +48,8 @@
             this.pnQuenMatKhau = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnQuayLai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTimKiem = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtQuenTaiKhoan = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtEmail = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -77,32 +75,11 @@
             this.pnQuenMatKhau.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnQuayLaiDangNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMatKhau.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.ForeColor = System.Drawing.Color.White;
-            this.txtMatKhau.HintForeColor = System.Drawing.Color.White;
-            this.txtMatKhau.HintText = "Nhập mật khẩu";
-            this.txtMatKhau.isPassword = true;
-            this.txtMatKhau.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtMatKhau.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtMatKhau.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtMatKhau.LineThickness = 5;
-            this.txtMatKhau.Location = new System.Drawing.Point(64, 315);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(300, 35);
-            this.txtMatKhau.TabIndex = 2;
-            this.txtMatKhau.Text = "123";
-            this.txtMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnDangNhap
             // 
@@ -191,7 +168,7 @@
             this.pnTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnTitle.Location = new System.Drawing.Point(0, 0);
             this.pnTitle.Name = "pnTitle";
-            this.pnTitle.Size = new System.Drawing.Size(377, 61);
+            this.pnTitle.Size = new System.Drawing.Size(373, 61);
             this.pnTitle.TabIndex = 32;
             // 
             // bunifuImageButton2
@@ -225,7 +202,7 @@
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(321, 0);
+            this.btnClose.Location = new System.Drawing.Point(317, 0);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(56, 61);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -237,9 +214,9 @@
             // pnDangNhap
             // 
             this.pnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.pnDangNhap.Controls.Add(this.txtMatKhau);
             this.pnDangNhap.Controls.Add(this.pictureBox1);
             this.pnDangNhap.Controls.Add(this.txtTaiKhoan);
-            this.pnDangNhap.Controls.Add(this.txtMatKhau);
             this.pnDangNhap.Controls.Add(this.btnDangNhap);
             this.pnDangNhap.Controls.Add(this.pictureBox5);
             this.pnDangNhap.Controls.Add(this.pictureBox2);
@@ -250,6 +227,21 @@
             this.pnDangNhap.Size = new System.Drawing.Size(370, 478);
             this.pnDangNhap.TabIndex = 34;
             this.pnDangNhap.Paint += new System.Windows.Forms.PaintEventHandler(this.pnDangNhap_Paint);
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtMatKhau.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtMatKhau.Location = new System.Drawing.Point(64, 311);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(300, 42);
+            this.txtMatKhau.TabIndex = 21;
+            this.txtMatKhau.Text = "123";
             // 
             // pictureBox1
             // 
@@ -304,10 +296,8 @@
             // 
             this.pnQuenMatKhau.Controls.Add(this.pictureBox8);
             this.pnQuenMatKhau.Controls.Add(this.pictureBox4);
-            this.pnQuenMatKhau.Controls.Add(this.pictureBox3);
             this.pnQuenMatKhau.Controls.Add(this.btnQuayLai);
             this.pnQuenMatKhau.Controls.Add(this.btnTimKiem);
-            this.pnQuenMatKhau.Controls.Add(this.txtQuenTaiKhoan);
             this.pnQuenMatKhau.Controls.Add(this.txtEmail);
             this.pnQuenMatKhau.Location = new System.Drawing.Point(376, 65);
             this.pnQuenMatKhau.Name = "pnQuenMatKhau";
@@ -326,22 +316,12 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(15, 309);
+            this.pictureBox4.Location = new System.Drawing.Point(15, 252);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(40, 41);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 210);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 41);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 16;
-            this.pictureBox3.TabStop = false;
             // 
             // btnQuayLai
             // 
@@ -417,25 +397,6 @@
             this.btnTimKiem.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // txtQuenTaiKhoan
-            // 
-            this.txtQuenTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtQuenTaiKhoan.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuenTaiKhoan.ForeColor = System.Drawing.Color.White;
-            this.txtQuenTaiKhoan.HintForeColor = System.Drawing.Color.White;
-            this.txtQuenTaiKhoan.HintText = "Nhập tài khoản";
-            this.txtQuenTaiKhoan.isPassword = false;
-            this.txtQuenTaiKhoan.LineFocusedColor = System.Drawing.Color.Blue;
-            this.txtQuenTaiKhoan.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtQuenTaiKhoan.LineMouseHoverColor = System.Drawing.Color.Blue;
-            this.txtQuenTaiKhoan.LineThickness = 5;
-            this.txtQuenTaiKhoan.Location = new System.Drawing.Point(64, 218);
-            this.txtQuenTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtQuenTaiKhoan.Name = "txtQuenTaiKhoan";
-            this.txtQuenTaiKhoan.Size = new System.Drawing.Size(300, 35);
-            this.txtQuenTaiKhoan.TabIndex = 5;
-            this.txtQuenTaiKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // txtEmail
             // 
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -448,7 +409,7 @@
             this.txtEmail.LineIdleColor = System.Drawing.Color.Gray;
             this.txtEmail.LineMouseHoverColor = System.Drawing.Color.Blue;
             this.txtEmail.LineThickness = 5;
-            this.txtEmail.Location = new System.Drawing.Point(64, 315);
+            this.txtEmail.Location = new System.Drawing.Point(64, 255);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 35);
@@ -646,7 +607,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.ClientSize = new System.Drawing.Size(377, 550);
+            this.ClientSize = new System.Drawing.Size(373, 550);
             this.Controls.Add(this.pnDangNhap);
             this.Controls.Add(this.pnQuayLaiDangNhap);
             this.Controls.Add(this.pnQuenMatKhau);
@@ -669,7 +630,6 @@
             this.pnQuenMatKhau.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnQuayLaiDangNhap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -679,7 +639,6 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMatKhau;
         private Bunifu.Framework.UI.BunifuFlatButton btnDangNhap;
         private System.Windows.Forms.Label lbQuenMatKhau;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
@@ -694,10 +653,8 @@
         private System.Windows.Forms.Panel pnQuayLaiDangNhap;
         private Bunifu.Framework.UI.BunifuFlatButton btnDoiMatKhau;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtMaXacMinh;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMatKhauMoi;
         private Bunifu.Framework.UI.BunifuFlatButton btnQuayLai;
         private Bunifu.Framework.UI.BunifuFlatButton btnTimKiem;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtQuenTaiKhoan;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtEmail;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
@@ -710,11 +667,12 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI.WinForms.GunaLineTextBox txtMatKhau;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMatKhauMoi;
     }
 }

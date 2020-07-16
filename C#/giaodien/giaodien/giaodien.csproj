@@ -156,11 +156,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ChucVu_FormDuLieuNV.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ChucVu_FormTTNV.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ChucVu_FormTTNV.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -451,17 +446,6 @@
     </None>
     <None Include="ChucVu_FormDuLieuNV.xss">
       <DependentUpon>ChucVu_FormDuLieuNV.xsd</DependentUpon>
-    </None>
-    <None Include="ChucVu_FormTTNV.xsc">
-      <DependentUpon>ChucVu_FormTTNV.xsd</DependentUpon>
-    </None>
-    <None Include="ChucVu_FormTTNV.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ChucVu_FormTTNV.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ChucVu_FormTTNV.xss">
-      <DependentUpon>ChucVu_FormTTNV.xsd</DependentUpon>
     </None>
     <None Include="DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>

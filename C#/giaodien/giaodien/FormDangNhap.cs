@@ -54,11 +54,10 @@ namespace giaodien
             pnDangNhap.Focus();
             txtTaiKhoan.Focus();
         }
-
+        int manv = 0;
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             NhanVien nv =  dt.NhanViens.Where(s=>s.taikhoan == txtTaiKhoan.Text.Trim()).Where(s=>s.matkhau == MaHoa(txtMatKhau.Text.Trim())).FirstOrDefault();
-            
             if (nv== null)
             {
                 MessageBox.Show("Tài khoản hoặc mật khẩu không đúng\nVui lòng kiểm tra lại");
@@ -87,9 +86,8 @@ namespace giaodien
 
         private void lbQuenMatKhau_Click(object sender, EventArgs e)
         {
-            txtQuenTaiKhoan.ResetText();
             txtEmail.ResetText();
-            txtQuenTaiKhoan.Focus();
+      //      txtQuenTaiKhoan.Focus();
             if (pnQuenMatKhau.Left == 376)
             {
                 pnDangNhap.Visible = false;
@@ -135,21 +133,24 @@ namespace giaodien
         {
             txtMaXacMinh.ResetText();
             txtMatKhauMoi.ResetText();
-            txtMaXacMinh.Focus();
+            txtEmail.Focus();
             var Email = dt.Emails.Where(s=>s.Ma ==1).FirstOrDefault();
            
-            NhanVien nv = dt.NhanViens.Where(s => s.taikhoan == txtQuenTaiKhoan.Text.Trim()).Where(s => s.Email == txtEmail.Text.Trim()).FirstOrDefault();
+            NhanVien nv = dt.NhanViens.Where(s => s.Email == txtEmail.Text.Trim()).FirstOrDefault();
+            
             if (nv==null)
             {
                 MessageBox.Show("Tài khoản hoặc email chưa đúng !!!\nVui lòng kiểm tra lại", "Lỗi");
             }
             else
             {
-                TKdoimk = txtQuenTaiKhoan.Text.Trim();
+                manv = nv.Ma;
+                TKdoimk = nv.Ten;
                 string bodyemail = "Xin Chào " + nv.Ten + " Chúng Tôi Đã Nhận Được Yêu Cầu Cần Hỗ Trợ Của Bạn: \n\n"
                                     + "\tChúng Tôi Sẽ Hướng Dẫn Bạn Cách Đổi Mật Khẩu\n"
                                     + "Bước 1: Tại Phần Đổi Mật Khẩu, Bạn Nhập Tên Tài Khoản Của Bạn\n"
                                     + "Bước 2: Tiếp Theo Bạn Cần Nhập Mã Xác Minh \n"
+                                    + "\t\t Tài khoản đăng nhập của bạn là: "+ nv.taikhoan+"\n"
                                     + "\t\t=> Mã Xác Minh Của Bạn Là: " + nv.matkhau.Remove(6, 26)
                                     + "\nBước 3: Nhập Mật Khẩu Mới Của Bạn, Xong Bạn Click Vào Đổi Mật Khẩu\n"
                                     + "Chúc bạn thành công";
@@ -189,8 +190,7 @@ namespace giaodien
 
         private void btnDoiMatKhau_Click(object sender, EventArgs e)
         {
-            
-            NhanVien nv = dt.NhanViens.Where(s => s.taikhoan == TKdoimk.Trim()).Where(s => s.matkhau.Remove(6, 26) == txtMaXacMinh.Text.Trim()).FirstOrDefault();
+            NhanVien nv = dt.NhanViens.Where(s => s.matkhau.Remove(6, 26) == txtMaXacMinh.Text.Trim()).Where(s=>s.Ma == manv).FirstOrDefault();
             if (nv == null)
             {
                 MessageBox.Show("Bạn Đã Nhập Sai Mã Xác Minh Vui Lòng Check Mail Hoặc Kiểm Tra Lại!", "Thông Báo", MessageBoxButtons.OK);

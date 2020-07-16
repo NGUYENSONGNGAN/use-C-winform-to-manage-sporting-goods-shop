@@ -49,7 +49,6 @@
             this.cbbChucVu = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dtpNgaySinh = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnChonAnh = new Guna.UI.WinForms.GunaGradientButton();
@@ -75,7 +74,6 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -317,10 +315,6 @@
             this.label1.TabIndex = 59;
             this.label1.Text = "Email";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // chucVuBindingSource
-            // 
-            this.chucVuBindingSource.DataMember = "ChucVu";
             // 
             // dtpNgaySinh
             // 
@@ -738,7 +732,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).EndInit();
             this.panel3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -767,8 +760,6 @@
         private System.Windows.Forms.RadioButton rbtNam;
         private System.Windows.Forms.ComboBox cbbChucVu;
         private System.Windows.Forms.Label label1;
-   //     private hehuDataSet hehuDataSet;
-        private System.Windows.Forms.BindingSource chucVuBindingSource;
      //   private hehuDataSetTableAdapters.ChucVuTableAdapter chucVuTableAdapter;
         private Bunifu.Framework.UI.BunifuDatepicker dtpNgaySinh;
         private System.Windows.Forms.Panel panel3;

@@ -12,8 +12,7 @@ SoDienThoai nchar (1000) not null
 go
 create table ChucVu(
 Ma int primary key,
-Ten nvarchar (1000),
-LuongCoBan int
+Ten nvarchar (1000)
 )
 go
 create table NhanVien(
@@ -2360,21 +2359,7 @@ create proc selectchucvu
 as
 select * from ChucVu
 go
-
-create proc insertchucvu(@ma int, @ten nvarchar (1000), @luongcb int)
-as
-insert into ChucVu values (@ma, @ten, @luongcb)
-go
-
-create proc updatechucvu(@ma int, @ten nvarchar (1000), @luongcb int)
-as
-update ChucVu set Ten = @ten, LuongCoBan = @luongcb
-go
-
-create proc deletechucvu (@ma int)
-as
-delete from ChucVu where Ma = @ma
-go
+select * from NhanVien
 
 ----NhanVien
 create proc selectnv

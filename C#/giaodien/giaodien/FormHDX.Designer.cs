@@ -32,25 +32,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHDX));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHDX));
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.lbTitle = new System.Windows.Forms.Label();
             this.dgvHDX = new Guna.UI.WinForms.GunaDataGridView();
-            this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KhachHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khachHang_FormHDX = new giaodien.KhachHang_FormHDX();
-            this.Ma_NV = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.nhanVien_FormHDX = new giaodien.NhanVien_FormHDX();
-            this.NgayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThai = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ThayDoiTrangThai = new System.Windows.Forms.DataGridViewButtonColumn();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnTitle = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnBack = new Guna.UI.WinForms.GunaGradientButton();
@@ -60,6 +51,15 @@
             this.btnTikKiemNangCao = new Guna.UI.WinForms.GunaGradientButton();
             this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KhachHang = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Ma_NV = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.NgayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThai = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ThayDoiTrangThai = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHang_FormHDX)).BeginInit();
@@ -162,23 +162,6 @@
             this.dgvHDX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvHDX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDX_CellContentClick);
             // 
-            // Ma
-            // 
-            this.Ma.DataPropertyName = "Ma";
-            this.Ma.HeaderText = "Mã hóa đơn";
-            this.Ma.Name = "Ma";
-            this.Ma.ReadOnly = true;
-            // 
-            // KhachHang
-            // 
-            this.KhachHang.DataPropertyName = "Ma_KH";
-            this.KhachHang.DataSource = this.khachHangBindingSource;
-            this.KhachHang.DisplayMember = "Ten";
-            this.KhachHang.HeaderText = "Khách hàng";
-            this.KhachHang.Name = "KhachHang";
-            this.KhachHang.ReadOnly = true;
-            this.KhachHang.ValueMember = "Ma";
-            // 
             // khachHangBindingSource
             // 
             this.khachHangBindingSource.DataMember = "KhachHang";
@@ -189,16 +172,6 @@
             this.khachHang_FormHDX.DataSetName = "KhachHang_FormHDX";
             this.khachHang_FormHDX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // Ma_NV
-            // 
-            this.Ma_NV.DataPropertyName = "Ma_NV";
-            this.Ma_NV.DataSource = this.nhanVienBindingSource;
-            this.Ma_NV.DisplayMember = "Ten";
-            this.Ma_NV.HeaderText = "Nhân viên";
-            this.Ma_NV.Name = "Ma_NV";
-            this.Ma_NV.ReadOnly = true;
-            this.Ma_NV.ValueMember = "Ma";
-            // 
             // nhanVienBindingSource
             // 
             this.nhanVienBindingSource.DataMember = "NhanVien";
@@ -208,61 +181,6 @@
             // 
             this.nhanVien_FormHDX.DataSetName = "NhanVien_FormHDX";
             this.nhanVien_FormHDX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // NgayXuat
-            // 
-            this.NgayXuat.DataPropertyName = "NgayXuat";
-            this.NgayXuat.HeaderText = "Ngày xuất";
-            this.NgayXuat.Name = "NgayXuat";
-            this.NgayXuat.ReadOnly = true;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            dataGridViewCellStyle3.Format = "N0";
-            dataGridViewCellStyle3.NullValue = null;
-            this.TongTien.DefaultCellStyle = dataGridViewCellStyle3;
-            this.TongTien.HeaderText = "Tổng tiền";
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Hoạt Động";
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // GhiChu
-            // 
-            this.GhiChu.DataPropertyName = "GhiChu";
-            this.GhiChu.HeaderText = "Ghi chú";
-            this.GhiChu.Name = "GhiChu";
-            this.GhiChu.ReadOnly = true;
-            // 
-            // Xem
-            // 
-            this.Xem.DataPropertyName = "Xem";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
-            this.Xem.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Xem.HeaderText = "Xem Chi tiết";
-            this.Xem.Name = "Xem";
-            this.Xem.ReadOnly = true;
-            this.Xem.Text = "Xem";
-            this.Xem.UseColumnTextForButtonValue = true;
-            // 
-            // ThayDoiTrangThai
-            // 
-            this.ThayDoiTrangThai.HeaderText = "Thay đổi trang thái";
-            this.ThayDoiTrangThai.Name = "ThayDoiTrangThai";
-            this.ThayDoiTrangThai.ReadOnly = true;
-            this.ThayDoiTrangThai.Text = "Thay đổi";
-            this.ThayDoiTrangThai.UseColumnTextForButtonValue = true;
             // 
             // bunifuDragControl1
             // 
@@ -385,6 +303,88 @@
             this.pictureBox1.TabIndex = 84;
             this.pictureBox1.TabStop = false;
             // 
+            // Ma
+            // 
+            this.Ma.DataPropertyName = "Ma";
+            this.Ma.HeaderText = "Mã hóa đơn";
+            this.Ma.Name = "Ma";
+            this.Ma.ReadOnly = true;
+            // 
+            // KhachHang
+            // 
+            this.KhachHang.DataPropertyName = "Ma_KH";
+            this.KhachHang.DataSource = this.khachHangBindingSource;
+            this.KhachHang.DisplayMember = "Ten";
+            this.KhachHang.HeaderText = "Khách hàng";
+            this.KhachHang.Name = "KhachHang";
+            this.KhachHang.ReadOnly = true;
+            this.KhachHang.ValueMember = "Ma";
+            // 
+            // Ma_NV
+            // 
+            this.Ma_NV.DataPropertyName = "Ma_NV";
+            this.Ma_NV.DataSource = this.nhanVienBindingSource;
+            this.Ma_NV.DisplayMember = "Ten";
+            this.Ma_NV.HeaderText = "Nhân viên";
+            this.Ma_NV.Name = "Ma_NV";
+            this.Ma_NV.ReadOnly = true;
+            this.Ma_NV.ValueMember = "Ma";
+            // 
+            // NgayXuat
+            // 
+            this.NgayXuat.DataPropertyName = "NgayXuat";
+            this.NgayXuat.HeaderText = "Ngày xuất";
+            this.NgayXuat.Name = "NgayXuat";
+            this.NgayXuat.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            dataGridViewCellStyle3.Format = "N0";
+            dataGridViewCellStyle3.NullValue = null;
+            this.TongTien.DefaultCellStyle = dataGridViewCellStyle3;
+            this.TongTien.HeaderText = "Tổng tiền";
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Đã thanh toán";
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // GhiChu
+            // 
+            this.GhiChu.DataPropertyName = "GhiChu";
+            this.GhiChu.HeaderText = "Ghi chú";
+            this.GhiChu.Name = "GhiChu";
+            this.GhiChu.ReadOnly = true;
+            // 
+            // Xem
+            // 
+            this.Xem.DataPropertyName = "Xem";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LimeGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Red;
+            this.Xem.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Xem.HeaderText = "Xem Chi tiết";
+            this.Xem.Name = "Xem";
+            this.Xem.ReadOnly = true;
+            this.Xem.Text = "Xem";
+            this.Xem.UseColumnTextForButtonValue = true;
+            // 
+            // ThayDoiTrangThai
+            // 
+            this.ThayDoiTrangThai.HeaderText = "Hủy";
+            this.ThayDoiTrangThai.Name = "ThayDoiTrangThai";
+            this.ThayDoiTrangThai.ReadOnly = true;
+            this.ThayDoiTrangThai.Text = "Hủy";
+            this.ThayDoiTrangThai.UseColumnTextForButtonValue = true;
+            // 
             // FormHDX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,6 +427,10 @@
         private NhanVien_FormHDX nhanVien_FormHDX;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
         private NhanVien_FormHDXTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI.WinForms.GunaTextBox txtTimKiem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI.WinForms.GunaGradientButton btnTikKiemNangCao;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ma;
         private System.Windows.Forms.DataGridViewComboBoxColumn KhachHang;
         private System.Windows.Forms.DataGridViewComboBoxColumn Ma_NV;
@@ -436,9 +440,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.DataGridViewButtonColumn Xem;
         private System.Windows.Forms.DataGridViewButtonColumn ThayDoiTrangThai;
-        private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaTextBox txtTimKiem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI.WinForms.GunaGradientButton btnTikKiemNangCao;
     }
 }

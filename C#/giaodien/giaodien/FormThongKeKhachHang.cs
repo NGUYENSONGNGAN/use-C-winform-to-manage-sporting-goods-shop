@@ -43,7 +43,7 @@ namespace giaodien
             worksheet = workbook.ActiveSheet;
             app.Visible = true;
             // Dua du lieu vao excel
-            worksheet.Cells[1, 4] = "Bảng Thống Kê Khách Hàng Đã Mượn Gì " ;
+            worksheet.Cells[1, 4] = "Bảng Thống Kê Khách Hàng Đã Mua Gì " ;
             worksheet.Cells[2, 3] = "";
             worksheet.Cells[3, 1] = "STT";
             worksheet.Cells[3, 2] = "Mã Hóa Đơn";

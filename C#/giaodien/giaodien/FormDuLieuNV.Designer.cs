@@ -39,30 +39,30 @@
             this.btnThem = new Guna.UI.WinForms.GunaGradientButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.chucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.chucVu_FormDuLieuNV = new giaodien.ChucVu_FormDuLieuNV();
-            this.chucVuTableAdapter = new giaodien.ChucVu_FormDuLieuNVTableAdapters.ChucVuTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TDHD = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.HoatDong = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChucVu = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvNhanVien = new Guna.UI.WinForms.GunaDataGridView();
+            this.chucVu_FormDuLieuNV = new giaodien.ChucVu_FormDuLieuNV();
+            this.chucVuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chucVuTableAdapter = new giaodien.ChucVu_FormDuLieuNVTableAdapters.ChucVuTableAdapter();
+            this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChucVu = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoatDong = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TDHD = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chucVu_FormDuLieuNV)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucVu_FormDuLieuNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,20 +153,6 @@
             this.bunifuDragControl2.TargetControl = null;
             this.bunifuDragControl2.Vertical = true;
             // 
-            // chucVuBindingSource
-            // 
-            this.chucVuBindingSource.DataMember = "ChucVu";
-            this.chucVuBindingSource.DataSource = this.chucVu_FormDuLieuNV;
-            // 
-            // chucVu_FormDuLieuNV
-            // 
-            this.chucVu_FormDuLieuNV.DataSetName = "ChucVu_FormDuLieuNV";
-            this.chucVu_FormDuLieuNV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // chucVuTableAdapter
-            // 
-            this.chucVuTableAdapter.ClearBeforeFill = true;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtTimKiem);
@@ -204,88 +190,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 79;
             this.pictureBox1.TabStop = false;
-            // 
-            // TDHD
-            // 
-            this.TDHD.HeaderText = "Thay đổi";
-            this.TDHD.Name = "TDHD";
-            this.TDHD.ReadOnly = true;
-            this.TDHD.Text = "Thay đổi hoạt động";
-            this.TDHD.UseColumnTextForButtonValue = true;
-            // 
-            // Xem
-            // 
-            this.Xem.HeaderText = "Xem";
-            this.Xem.Name = "Xem";
-            this.Xem.ReadOnly = true;
-            this.Xem.Text = "Xem chi tiết";
-            this.Xem.UseColumnTextForButtonValue = true;
-            // 
-            // HoatDong
-            // 
-            this.HoatDong.DataPropertyName = "HoatDong";
-            this.HoatDong.HeaderText = "Hoạt động";
-            this.HoatDong.Name = "HoatDong";
-            this.HoatDong.ReadOnly = true;
-            // 
-            // TaiKhoan
-            // 
-            this.TaiKhoan.DataPropertyName = "TaiKhoan";
-            this.TaiKhoan.HeaderText = "Tài khoản";
-            this.TaiKhoan.Name = "TaiKhoan";
-            this.TaiKhoan.ReadOnly = true;
-            // 
-            // NgaySinh
-            // 
-            this.NgaySinh.DataPropertyName = "NgaySinh";
-            this.NgaySinh.HeaderText = "Ngày sinh";
-            this.NgaySinh.Name = "NgaySinh";
-            this.NgaySinh.ReadOnly = true;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            // 
-            // GioiTinh
-            // 
-            this.GioiTinh.DataPropertyName = "GioiTinh";
-            this.GioiTinh.HeaderText = "Giới tính";
-            this.GioiTinh.Name = "GioiTinh";
-            this.GioiTinh.ReadOnly = true;
-            // 
-            // ChucVu
-            // 
-            this.ChucVu.DataPropertyName = "Ma_CV";
-            this.ChucVu.DataSource = this.chucVuBindingSource;
-            this.ChucVu.DisplayMember = "Ten";
-            this.ChucVu.HeaderText = "Chức vụ";
-            this.ChucVu.Name = "ChucVu";
-            this.ChucVu.ReadOnly = true;
-            this.ChucVu.ValueMember = "Ma";
-            // 
-            // Ten
-            // 
-            this.Ten.DataPropertyName = "Ten";
-            this.Ten.HeaderText = "Tên";
-            this.Ten.Name = "Ten";
-            this.Ten.ReadOnly = true;
-            // 
-            // Ma
-            // 
-            this.Ma.DataPropertyName = "Ma";
-            this.Ma.HeaderText = "Mã";
-            this.Ma.Name = "Ma";
-            this.Ma.ReadOnly = true;
             // 
             // dgvNhanVien
             // 
@@ -361,6 +265,102 @@
             this.dgvNhanVien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // chucVu_FormDuLieuNV
+            // 
+            this.chucVu_FormDuLieuNV.DataSetName = "ChucVu_FormDuLieuNV";
+            this.chucVu_FormDuLieuNV.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // chucVuBindingSource
+            // 
+            this.chucVuBindingSource.DataMember = "ChucVu";
+            this.chucVuBindingSource.DataSource = this.chucVu_FormDuLieuNV;
+            // 
+            // chucVuTableAdapter
+            // 
+            this.chucVuTableAdapter.ClearBeforeFill = true;
+            // 
+            // Ma
+            // 
+            this.Ma.DataPropertyName = "Ma";
+            this.Ma.HeaderText = "Mã";
+            this.Ma.Name = "Ma";
+            this.Ma.ReadOnly = true;
+            // 
+            // Ten
+            // 
+            this.Ten.DataPropertyName = "Ten";
+            this.Ten.HeaderText = "Tên";
+            this.Ten.Name = "Ten";
+            this.Ten.ReadOnly = true;
+            // 
+            // ChucVu
+            // 
+            this.ChucVu.DataPropertyName = "Ma_CV";
+            this.ChucVu.DataSource = this.chucVuBindingSource;
+            this.ChucVu.DisplayMember = "Ten";
+            this.ChucVu.HeaderText = "Chức vụ";
+            this.ChucVu.Name = "ChucVu";
+            this.ChucVu.ReadOnly = true;
+            this.ChucVu.ValueMember = "Ma";
+            // 
+            // GioiTinh
+            // 
+            this.GioiTinh.DataPropertyName = "GioiTinh";
+            this.GioiTinh.HeaderText = "Giới tính";
+            this.GioiTinh.Name = "GioiTinh";
+            this.GioiTinh.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            // 
+            // NgaySinh
+            // 
+            this.NgaySinh.DataPropertyName = "NgaySinh";
+            this.NgaySinh.HeaderText = "Ngày sinh";
+            this.NgaySinh.Name = "NgaySinh";
+            this.NgaySinh.ReadOnly = true;
+            // 
+            // TaiKhoan
+            // 
+            this.TaiKhoan.DataPropertyName = "TaiKhoan";
+            this.TaiKhoan.HeaderText = "Tài khoản";
+            this.TaiKhoan.Name = "TaiKhoan";
+            this.TaiKhoan.ReadOnly = true;
+            // 
+            // HoatDong
+            // 
+            this.HoatDong.DataPropertyName = "HoatDong";
+            this.HoatDong.HeaderText = "Hoạt động";
+            this.HoatDong.Name = "HoatDong";
+            this.HoatDong.ReadOnly = true;
+            // 
+            // Xem
+            // 
+            this.Xem.HeaderText = "Xem";
+            this.Xem.Name = "Xem";
+            this.Xem.ReadOnly = true;
+            this.Xem.Text = "Xem chi tiết";
+            this.Xem.UseColumnTextForButtonValue = true;
+            // 
+            // TDHD
+            // 
+            this.TDHD.HeaderText = "Thay đổi";
+            this.TDHD.Name = "TDHD";
+            this.TDHD.ReadOnly = true;
+            this.TDHD.Text = "Thay đổi hoạt động";
+            this.TDHD.UseColumnTextForButtonValue = true;
+            // 
             // FormDuLieuNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -377,11 +377,11 @@
             this.Load += new System.EventHandler(this.FormDuLieuNV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chucVu_FormDuLieuNV)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucVu_FormDuLieuNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucVuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,25 +392,25 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradientButton btnQuayLai;
-        private ChucVu_FormDuLieuNV chucVu_FormDuLieuNV;
-        private System.Windows.Forms.BindingSource chucVuBindingSource;
-        private ChucVu_FormDuLieuNVTableAdapters.ChucVuTableAdapter chucVuTableAdapter;
         private Guna.UI.WinForms.GunaGradientButton btnThem;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI.WinForms.GunaTextBox txtTimKiem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.DataGridViewButtonColumn TDHD;
-        private System.Windows.Forms.DataGridViewButtonColumn Xem;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn HoatDong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
-        private System.Windows.Forms.DataGridViewComboBoxColumn ChucVu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Ma;
         private Guna.UI.WinForms.GunaDataGridView dgvNhanVien;
+        private ChucVu_FormDuLieuNV chucVu_FormDuLieuNV;
+        private System.Windows.Forms.BindingSource chucVuBindingSource;
+        private ChucVu_FormDuLieuNVTableAdapters.ChucVuTableAdapter chucVuTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ten;
+        private System.Windows.Forms.DataGridViewComboBoxColumn ChucVu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TaiKhoan;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn HoatDong;
+        private System.Windows.Forms.DataGridViewButtonColumn Xem;
+        private System.Windows.Forms.DataGridViewButtonColumn TDHD;
         //   private ttcmDataSetTableAdapters.ChucVuTableAdapter chucVuTableAdapter;
     }
 }

@@ -32,6 +32,8 @@ namespace giaodien
         {
             // TODO: This line of code loads data into the 'chucVu_FormDuLieuNV.ChucVu' table. You can move, or remove it, as needed.
             this.chucVuTableAdapter.Fill(this.chucVu_FormDuLieuNV.ChucVu);
+            // TODO: This line of code loads data into the 'chucVu_FormDuLieuNV.ChucVu' table. You can move, or remove it, as needed.
+            this.chucVuTableAdapter.Fill(this.chucVu_FormDuLieuNV.ChucVu);
 
            
             // thêm column
