@@ -1,0 +1,12 @@
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\bin\Release\Client.exe.config
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\bin\Release\Client.exe
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\bin\Release\Client.pdb
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\bin\Release\Guna.UI.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.FormChatClient.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.FormDangNhapClient.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.Properties.Resources.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.csproj.GenerateResource.cache
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.csproj.CoreCompileInputs.cache
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.csproj.CopyComplete
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.exe
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\Client\obj\Release\Client.pdb

@@ -43,16 +43,12 @@
             this.cbbLoai = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvSanPham = new Guna.UI.WinForms.GunaDataGridView();
             this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ma_LoaiSP = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.loaiSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.loaiSP_FormThongTinSP = new giaodien.LoaiSP_FormThongTinSP();
-            this.loaiSPTableAdapter = new giaodien.LoaiSP_FormThongTinSPTableAdapters.LoaiSPTableAdapter();
             this.txtTen = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtDonGia = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtTimKiem = new Guna.UI.WinForms.GunaLineTextBox();
@@ -63,13 +59,16 @@
             this.btnHuy = new Guna.UI.WinForms.GunaGradientButton();
             this.btnLuu = new Guna.UI.WinForms.GunaGradientButton();
             this.pic_SanPham = new System.Windows.Forms.PictureBox();
+            this.loaiSPBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.loaiSP_FormThongTinSP = new giaodien.LoaiSP_FormThongTinSP();
+            this.loaiSPTableAdapter = new giaodien.LoaiSP_FormThongTinSPTableAdapters.LoaiSPTableAdapter();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiSPBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiSP_FormThongTinSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_SanPham)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiSPBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiSP_FormThongTinSP)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -179,13 +178,6 @@
             this.treeView1.Size = new System.Drawing.Size(281, 263);
             this.treeView1.TabIndex = 57;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.panel1;
-            this.bunifuDragControl1.Vertical = true;
             // 
             // groupBox1
             // 
@@ -299,20 +291,6 @@
             this.Ma_LoaiSP.Name = "Ma_LoaiSP";
             this.Ma_LoaiSP.ReadOnly = true;
             this.Ma_LoaiSP.ValueMember = "Ma";
-            // 
-            // loaiSPBindingSource
-            // 
-            this.loaiSPBindingSource.DataMember = "LoaiSP";
-            this.loaiSPBindingSource.DataSource = this.loaiSP_FormThongTinSP;
-            // 
-            // loaiSP_FormThongTinSP
-            // 
-            this.loaiSP_FormThongTinSP.DataSetName = "LoaiSP_FormThongTinSP";
-            this.loaiSP_FormThongTinSP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // loaiSPTableAdapter
-            // 
-            this.loaiSPTableAdapter.ClearBeforeFill = true;
             // 
             // txtTen
             // 
@@ -519,6 +497,20 @@
             this.pic_SanPham.TabIndex = 32;
             this.pic_SanPham.TabStop = false;
             // 
+            // loaiSPBindingSource
+            // 
+            this.loaiSPBindingSource.DataMember = "LoaiSP";
+            this.loaiSPBindingSource.DataSource = this.loaiSP_FormThongTinSP;
+            // 
+            // loaiSP_FormThongTinSP
+            // 
+            this.loaiSP_FormThongTinSP.DataSetName = "LoaiSP_FormThongTinSP";
+            this.loaiSP_FormThongTinSP.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // loaiSPTableAdapter
+            // 
+            this.loaiSPTableAdapter.ClearBeforeFill = true;
+            // 
             // FormThongTinSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,10 +544,10 @@
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiSPBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.loaiSP_FormThongTinSP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_SanPham)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiSPBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.loaiSP_FormThongTinSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,7 +565,6 @@
         private System.Windows.Forms.Label label1;
 
         private System.Windows.Forms.TreeView treeView1;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI.WinForms.GunaGradientButton btnQuayLai;
         private Guna.UI.WinForms.GunaDataGridView dgvSanPham;

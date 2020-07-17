@@ -556,3 +556,5 @@ D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\gia
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.csprojAssemblyReference.cache
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormCTHDN.resources
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Debug\giaodien.FormThongKeTonKho.resources
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Debug\Guna.UI.dll

@@ -9,14 +9,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csp
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F447451D-93AB-4FD2-B97C-65433A231339}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{F447451D-93AB-4FD2-B97C-65433A231339}.All|Any CPU.Build.0 = Release|Any CPU
 		{F447451D-93AB-4FD2-B97C-65433A231339}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F447451D-93AB-4FD2-B97C-65433A231339}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F447451D-93AB-4FD2-B97C-65433A231339}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F447451D-93AB-4FD2-B97C-65433A231339}.Release|Any CPU.Build.0 = Release|Any CPU
+		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.All|Any CPU.Build.0 = Release|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Release|Any CPU.ActiveCfg = Release|Any CPU

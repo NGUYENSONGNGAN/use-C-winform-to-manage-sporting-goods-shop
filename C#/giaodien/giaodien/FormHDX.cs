@@ -23,6 +23,18 @@ namespace giaodien
             public static int MoFormRP;
             public static int MoFormGhiChuHuy;
         }
+        private void lbTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            FormQuetQRTimKiemHDX FQQRTK = new FormQuetQRTimKiemHDX();
+            FQQRTK.Show();
+            this.Close();
+        }
+
         private void FormHDX_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'nhanVien_FormHDX.NhanVien' table. You can move, or remove it, as needed.
@@ -35,23 +47,23 @@ namespace giaodien
             dgvHDX.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
+        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTimKiem.Text.Trim() == null || txtTimKiem.Text.Trim() == "")
+            {
+                dgvHDX.DataSource = dt.HDXuats;
+            }
+            else if (txtTimKiem.Text.Trim() != null)
+            {
+                dgvHDX.DataSource = dt.TKHDX(txtTimKiem.Text);
+            }
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             FormTrangChu FTC = new FormTrangChu();
             FTC.Show();
             this.Close();
-        }
-
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
-        {
-            if (txtTimKiem.Text.Trim()==null||txtTimKiem.Text.Trim()=="")
-            {
-                dgvHDX.DataSource = dt.HDXuats;
-            }    
-            else if (txtTimKiem.Text.Trim()!=null)
-            {
-                dgvHDX.DataSource = dt.TKHDX(txtTimKiem.Text);
-            }    
         }
 
         private void dgvHDX_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -72,44 +84,44 @@ namespace giaodien
                 {
                     MessageBox.Show("Hóa đơn đã hủy");
                 }
+
                 else if (tthdx.TrangThai == Convert.ToBoolean("True"))
                 {
-
-                    TTHDX.MaHDX = Ma;
-                    TTHDX.MoFormGhiChuHuy = 1;
-                    FormGhiChuHuyHDX FGCHHDX = new FormGhiChuHuyHDX();
-                    FGCHHDX.ShowDialog();
-                    if (FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX == 1)
+                    if (DateTime.Now.DayOfYear - Convert.ToDateTime(tthdx.NgayXuat).DayOfYear <= 2)
                     {
-                        var HDX = dt.selectTTHDX(Ma).FirstOrDefault();
-                        var KH = dt.selectTTKH(HDX.Ma_KH).FirstOrDefault();
-                        var LKH = dt.LoaiKHs.Where(s => s.Ma == KH.Ma_LoaiKH).FirstOrDefault();
-                        if (HDX.TongTien >= 200000)
+                        TTHDX.MaHDX = Ma;
+                        TTHDX.MoFormGhiChuHuy = 1;
+                        FormGhiChuHuyHDX FGCHHDX = new FormGhiChuHuyHDX();
+                        FGCHHDX.ShowDialog();
+                        if (FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX == 1)
                         {
-                            int DiemTL = Convert.ToInt32(KH.DiemTichLuy) - 10;
-                            dt.updatediemtichluy(KH.Ma, DiemTL);
-                            if (DiemTL < 200)
+                            var HDX = dt.selectTTHDX(Ma).FirstOrDefault();
+                            var KH = dt.selectTTKH(HDX.Ma_KH).FirstOrDefault();
+                            var LKH = dt.LoaiKHs.Where(s => s.Ma == KH.Ma_LoaiKH).FirstOrDefault();
+                            if (HDX.TongTien >= 200000)
                             {
-                                dt.updateKH_LoaiKH(KH.Ma, 1);
+                                int DiemTL = Convert.ToInt32(KH.DiemTichLuy) - 10;
+                                dt.updatediemtichluy(KH.Ma, DiemTL);
+                                if (DiemTL < 200)
+                                {
+                                    dt.updateKH_LoaiKH(KH.Ma, 1);
+                                }
+                                else if (DiemTL >= 200 && DiemTL < 400)
+                                {
+                                    dt.updateKH_LoaiKH(KH.Ma, 2);
+                                }
                             }
-                            else if (DiemTL >= 200 && DiemTL < 400)
-                            {
-                                dt.updateKH_LoaiKH(KH.Ma, 2);
-                            }
+                            dgvHDX.DataSource = dt.selectHDX();
+                            FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX = 0;
+                            FGCHHDX.Close();
                         }
-                        dgvHDX.DataSource = dt.selectHDX();
-                        FormGhiChuHuyHDX.TTDongForm.ThayDoiTrangThaiHDX = 0;
-                        FGCHHDX.Close();
+                    }
+                    else if (DateTime.Now.DayOfYear - Convert.ToDateTime(tthdx.NgayXuat).DayOfYear > 2)
+                    {
+                        MessageBox.Show("Hóa đơn đã thanh toán trên 2 ngày\nKhông thể hủy", "Thất bại");
                     }
                 }
             }
-        }
-
-        private void btnTikKiemNangCao_Click(object sender, EventArgs e)
-        {
-            FormQuetQRTimKiemHDX FQQRTK = new FormQuetQRTimKiemHDX();
-            FQQRTK.Show();
-            this.Close();
         }
     }
 }

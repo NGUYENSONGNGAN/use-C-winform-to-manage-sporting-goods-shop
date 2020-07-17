@@ -764,6 +764,13 @@ namespace giaodien
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ma, tongtien);
 			return ((int)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.HuyHDX")]
+		public ISingleResult<HuyHDXResult> HuyHDX([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Date")] System.Nullable<System.DateTime> ngay)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), ngay);
+			return ((ISingleResult<HuyHDXResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ad")]
@@ -9272,6 +9279,32 @@ namespace giaodien
 				if ((this._SoDienThoai != value))
 				{
 					this._SoDienThoai = value;
+				}
+			}
+		}
+	}
+	
+	public partial class HuyHDXResult
+	{
+		
+		private System.Nullable<int> _Column1;
+		
+		public HuyHDXResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="", Storage="_Column1", DbType="Int")]
+		public System.Nullable<int> Column1
+		{
+			get
+			{
+				return this._Column1;
+			}
+			set
+			{
+				if ((this._Column1 != value))
+				{
+					this._Column1 = value;
 				}
 			}
 		}

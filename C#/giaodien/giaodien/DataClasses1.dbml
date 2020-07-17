@@ -865,4 +865,10 @@
     <Parameter Name="tongtien" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
+  <Function Name="dbo.HuyHDX" Method="HuyHDX">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="HuyHDXResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

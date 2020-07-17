@@ -1,8 +1,7 @@
-﻿create database ttcm
+﻿create database hihi
 go
-use ttcm
+use hihi
 go
-
 create table NhaCungCap (
 Ma int primary key,
 Ten  nvarchar (1000) not null,
@@ -116,7 +115,7 @@ create table CTHDXuat(
 Ma_HDX int ,
 Ma_SP int,
 Ma_Size int,
-Ma_MauSac int,k	
+Ma_MauSac int,
 SoLuong int,
 ThanhTien int
 primary key (Ma_HDX, Ma_SP, Ma_Size, Ma_MauSac)
@@ -223,26 +222,26 @@ insert into MauSac values (5, N'Xanh')
 insert into MauSac values (6, N'Hồng')
 go
 
-insert into ChucVu values (1,N'Quản Lý', 5000000)
-insert into ChucVu values (2,N'Nhân viên bán hàng', 3500000)
-insert into ChucVu values (3,N'Kế toán', 3500000)
+insert into ChucVu values (1,N'Quản Lý')
+insert into ChucVu values (2,N'Nhân viên bán hàng')
+insert into ChucVu values (3,N'Kế toán')
 go
 
 insert into LoaiKH values (1, N'Bạc', 0)
-insert into LoaiKH values (2, N'Vàng', 0.03)
-insert into LoaiKH values (3, N'Bạch Kim', 0.05)
+insert into LoaiKH values (2, N'Vàng', 3)
+insert into LoaiKH values (3, N'Bạch Kim', 5)
 go
 
-insert into NhanVien values (1, N'Nam', N'Nam', N'Quận 9',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '1',  N'admin', N'202cb962ac59075b964b07152d234b70', Null, 1)
-insert into NhanVien values (2, N'Linh', N'Nữ', N'Quận 8',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '2',  N'admin1', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (3, N'Bi', N'Nữ', N'Quận 7',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '2',  N'admin2', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (4, N'Tèo', N'Nam', N'Quận 6',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '2',  N'admin3', N'202cb962ac59075b964b07152d234b70',NULL,1)
-insert into NhanVien values (5, N'Tòe', N'Nam', N'Quận 5',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '3',  N'admin4', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (6, N'Trang', N'Nữ', N'Quận 4',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '3',  N'admin5', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (7, N'Nhung', N'Nữ', N'Quận 3',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '2',  N'admin6', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (8, N'Quang', N'Nam', N'Quận 2',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '3',  N'admin7', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (9, N'Như', N'Nữ', N'Quận 1',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '1',  N'admin8', N'202cb962ac59075b964b07152d234b70', NULL,1)
-insert into NhanVien values (10 , N'Nữ', N'Nữ', N'Quận 0',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', '1',  N'admin9', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (1, N'Nam', N'Nam', N'Quận 9',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 1,  N'admin', N'202cb962ac59075b964b07152d234b70', Null, 1)
+insert into NhanVien values (2, N'Linh', N'Nữ', N'Quận 8',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 2,  N'admin1', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (3, N'Bi', N'Nữ', N'Quận 7',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 2,  N'admin2', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (4, N'Tèo', N'Nam', N'Quận 6',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 2,  N'admin3', N'202cb962ac59075b964b07152d234b70',NULL,1)
+insert into NhanVien values (5, N'Tòe', N'Nam', N'Quận 5',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 3,  N'admin4', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (6, N'Trang', N'Nữ', N'Quận 4',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 3,  N'admin5', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (7, N'Nhung', N'Nữ', N'Quận 3',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 2,  N'admin6', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (8, N'Quang', N'Nam', N'Quận 2',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 3,  N'admin7', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (9, N'Như', N'Nữ', N'Quận 1',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 1,  N'admin8', N'202cb962ac59075b964b07152d234b70', NULL,1)
+insert into NhanVien values (10 , N'Nữ', N'Nữ', N'Quận 0',N'dhv0612@gmail.com', '1990-02-02', '2019-02-10', 1,  N'admin9', N'202cb962ac59075b964b07152d234b70', NULL,1)
 go
 
 insert into SanPham values (1, 1, N'Áo thể thao trơn', 57000, NULL)
@@ -2319,6 +2318,10 @@ insert into HDNhap values (1, 1,1,'05-20-2019', 0)
 insert into HDNhap values (2, 1,1,'05-20-2019', 0)
 go
 
+
+--Khach hang
+insert into KhachHang values (1, N'Nam', N'hehe', N'hehe', N'0123', 0, 1 )
+go
 --Hóa đơn xuất
 insert into HDXuat values (1, 1, 1, '2020-05-13', 0, 1, N'Khách hàng lấy muộn', null)
 
@@ -2359,7 +2362,7 @@ create proc selectchucvu
 as
 select * from ChucVu
 go
-select * from NhanVien
+
 
 ----NhanVien
 create proc selectnv
@@ -2374,7 +2377,7 @@ insert into NhanVien (Ma, Ten, Ma_CV, GioiTinh,DiaChi,Email, NgaySinh, NgayVaoLa
 values (@ma, @ten, @chucvu, @gioitinh, @diachi, @email, @ngaysinh, @ngayvl, @taikhoan, @matkhau, @hinhanh, 1)
 go
 
-alter proc updatenv (@ma int, @ten nvarchar (1000), @chucvu int, @gioitinh nvarchar (1000), @diachi nvarchar (1000), @email nvarchar (1000), @ngaysinh date, @ngayvl date, @hinhanh image)
+create proc updatenv (@ma int, @ten nvarchar (1000), @chucvu int, @gioitinh nvarchar (1000), @diachi nvarchar (1000), @email nvarchar (1000), @ngaysinh date, @ngayvl date, @hinhanh image)
 as
 update NhanVien set  Ten = @ten, Ma_CV = @chucvu, GioiTinh = @gioitinh, DiaChi = @diachi, Email = @email, NgaySinh = @ngaysinh, NgayVaoLam= @ngayvl, Hinhanh = @hinhanh where Ma = @ma
 go
@@ -2530,7 +2533,7 @@ as
 update SanPham set Ten = @ten, DonGia = @gia, HinhAnh = @hinhanh, Ma_LoaiSP = @loai where Ma = @ma
 go
 
-alter proc TKSP (@text nvarchar (1000))
+create proc TKSP (@text nvarchar (1000))
 as 
 select SP.Ma, Sp.Ten, SP.DonGia, SP.Ma_LoaiSP from SanPham SP, LoaiSP L where CONCAT(SP.Ma, SP.Ten, SP.DonGia, L.Ten ) like '%' +@text+ '%' and SP.Ma_LoaiSP = L.Ma
 go
@@ -2538,7 +2541,7 @@ go
 create proc TKSPTrongHD (@tk nvarchar (1000))
 as
 select Ma, Ten, HinhAnh from SanPham where CONCAT(Ma, Ten) like '%' + @tk + '%'
-
+go
 ---CTSP
 create proc insertCTSP (@maSP int, @maSize int, @maMau int, @soluong int)
 as
@@ -2643,6 +2646,13 @@ as
 select * from HDXuat 
 go
 
+	create proc HuyHDX (@ngay date)
+	as
+	declare @ngaytrongnam int
+	set @ngaytrongnam = DATEPART(dy, @ngay)
+	select @ngaytrongnam
+	go
+
 --CTHDX
 create proc insertCTHDX (@mahdx int,@masp int, @masize int, @mamau int, @soluong int, @thanhtien int)
 as
@@ -2685,15 +2695,14 @@ go
 select * from CTHDXuat where Ma_HDX =2
 go
 ---Report
-alter proc selectRePortHDX(@mahdx int)
+create proc selectRePortHDX(@mahdx int)
 as
 select *
 from SanPham SP, Size SZ, MauSac MS,  CTHDXuat CTHDX, NhanVien NV, KhachHang KH, HDXuat HDX, LoaiKH LKH
 where HDX.Ma=@mahdx and HDX.Ma_NV = NV.Ma and HDX.Ma_KH = KH.Ma  and KH.Ma_LoaiKH = LKH.Ma and CTHDX.Ma_HDX = HDX.Ma and CTHDX.Ma_SP = SP.Ma and CTHDX.Ma_Size= SZ.Ma and CTHDX.Ma_MauSac = MS.Ma
 
-
 go
-exec selectRePortHDX 30
+
 go
 
 create proc TTHDXReport (@mahdx int)
@@ -2703,7 +2712,7 @@ where HDX.Ma = @mahdx and HDX.Ma_NV = NV.Ma and HDX.Ma_KH = KH.Ma
 
 --Thống kê
 
-
+go
 
 --Năm bán hàng
 create proc NamBanHang
@@ -2728,7 +2737,7 @@ as
 select Count (Ma ) as 'SoLuong' From HDXuat where DATEPART(YY, NgayXuat) = DATEPART(YY, getdate()) and TrangThai = 'True'
 go
 
-alter proc TienNhapTheoThangCuaNam (@nam int)
+create proc TienNhapTheoThangCuaNam (@nam int)
 as
 begin
 declare @sothang int =0;
@@ -2750,7 +2759,7 @@ Delete from TempChi
 	select * from TempChi 
 end
 go
-alter proc TienBanTheoThangCuaNam (@nam int)
+create proc TienBanTheoThangCuaNam (@nam int)
 as
 begin
 declare @sothang int =0;
@@ -2774,34 +2783,22 @@ end
 go
 
 --Danh sach HDN trong nam
-alter proc DanhSachHDNTrongNam  (@nam int)
+create proc DanhSachHDNTrongNam  (@nam int)
 as
 select HDN.Ma, NV.Ten, NCC.Ten as N'TenNCC', HDN.NgayNhap, HDN.TongTien from HDNhap HDN, NhanVien NV, NhaCungCap NCC 
 where DATEPART (YY, NgayNhap) = @nam and HDN.Ma_NCC = NCC.Ma and HDN.Ma_NV =NV.Ma
 go
 
 --Danh Sách HDX trong nam
-alter proc DanhSachHDXtTrongNam (@nam int)
+create proc DanhSachHDXtTrongNam (@nam int)
 as
-
 select HDX.Ma , NV.Ten,  KH.Ten as N'TenKH', HDX.NgayXuat, HDX.GhiChu, HDX.TongTien  from HDXuat HDX, KhachHang KH, NhanVien NV 
 where DATEPART (YY, NgayXuat ) = @nam and HDX.Ma_KH = KH.Ma and HDX.Ma_NV = NV.Ma and TrangThai = 'True'
 go
 
 
---Tiền nhập theo tháng của năm ...
-select CONCAT(N'Tháng ', Datepart (MM, NgayNhap)) as 'Thang', Sum(TongTien) as 'TongTien' From HDNhap
-where DATEPART (YY, NgayNhap) = 2020
-group by Datepart (MM, NgayNhap)
-go
----Doanh thu theo thang của năm
-select CONCAT(N'Tháng ', Datepart (MM, NgayXuat)) as 'Thang', Sum(TongTien) as 'TongTien' From HDXuat
-where DATEPART (YY, NgayXuat) = 2020 and TrangThai = 'true' 
-group by Datepart (MM, NgayXuat)
-go
-
 --Thống kê kh đã mua gì
-alter proc TKKHmuagi 
+create proc TKKHmuagi 
 as
 select HDX.Ma, KH.Ten as N'TKH',  SP.Ten as N'SP' , MS.TenMau, SZ.TenSize, CTHDX.SoLuong
 from HDXuat HDX, CTHDXuat CTHDX, KhachHang KH, SanPham SP, MauSac MS, Size SZ
@@ -2809,15 +2806,14 @@ where HDX.Ma = CTHDX.Ma_HDX and HDX.Ma_KH = KH.Ma  and CTHDX.Ma_SP = SP.Ma and C
 go
 
 -- Thống kê số lương tồn của từng loại sản phẩm
-alter proc ThongKeSLTLoaiSP (@maloai int)
+create proc ThongKeSLTLoaiSP (@maloai int)
 as
 select SP.Ten,LSP.Ten as N'Loai' , SZ.TenSize, MS.TenMau, CTSP.Soluong  from CTSanPham CTSP, SanPham SP, MauSac MS, Size SZ, LoaiSP LSP 
 where LSP.Ma = @maloai and SP.Ma_LoaiSP = LSP.Ma and CTSP.Ma_SP = SP.Ma and CTSP.Ma_MauSac = MS.Ma and CTSP.Ma_Size = SZ.Ma
 order by CTSP.Soluong, SP.Ten asc 
-exec ThongKeSLTLoaiSP 1
+
 --
 --select * from CTHDNhap
 --select * from ThongTinCTHDN
 --select * from CTSanPham
 --select * from MauSac
-select * from CTHDXuat where Ma_HDX =50
