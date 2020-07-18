@@ -32,5 +32,17 @@ namespace Client.Properties {
                 return ((string)(this["ttcmConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"D:\\Learn\\CNTT\\nam 3\\Ky 2\\ttc" +
+            "m\\use-C-winform-to-manage-sporting-goods-shop\\C#\\giaodien\\giaodien\\Database1.mdf" +
+            "\";Integrated Security=True")]
+        public string Database1ConnectionString {
+            get {
+                return ((string)(this["Database1ConnectionString"]));
+            }
+        }
     }
 }

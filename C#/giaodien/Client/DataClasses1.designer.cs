@@ -22,7 +22,7 @@ namespace Client
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="ttcm")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Database1")]
 	public partial class DataClasses1DataContext : System.Data.Linq.DataContext
 	{
 		
@@ -36,7 +36,7 @@ namespace Client
     #endregion
 		
 		public DataClasses1DataContext() : 
-				base(global::Client.Properties.Settings.Default.ttcmConnectionString, mappingSource)
+				base(global::Client.Properties.Settings.Default.Database1ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}

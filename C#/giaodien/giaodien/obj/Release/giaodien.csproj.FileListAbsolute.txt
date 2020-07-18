@@ -309,8 +309,8 @@ D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\gia
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\System.Xml.Linq.dll
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\UIAutomationClient.dll
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\WindowsBase.dll
-D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Release\giaodien.csprojAssemblyReference.cache
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\KhachHang_FormHDX.Designer.cs
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\KhachHang_FormHDX.xsc
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\KhachHang_FormHDX.xsd
 D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\bin\Release\KhachHang_FormHDX.xss
+D:\Learn\CNTT\nam 3\Ky 2\ttcm\use-C-winform-to-manage-sporting-goods-shop\C#\giaodien\giaodien\obj\Release\giaodien.csprojAssemblyReference.cache

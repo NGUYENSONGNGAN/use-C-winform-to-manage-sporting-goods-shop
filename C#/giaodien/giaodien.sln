@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "giaodien", "giaodien\giaodi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{464EA2A5-BFC6-4BF1-A612-75673736B55E}"
 EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "SportShopManagament", "SportShopManagament\SportShopManagament.aiproj", "{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}"
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Sport Shop Management", "Sport Shop Management\Sport Shop Management.aiproj", "{B337CCAE-D5FB-44D4-8A37-337DA64F5219}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,15 +25,14 @@ Global
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.All|Any CPU.ActiveCfg = Release|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.All|Any CPU.Build.0 = Release|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{464EA2A5-BFC6-4BF1-A612-75673736B55E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}.All|Any CPU.ActiveCfg = DefaultBuild
-		{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}.All|Any CPU.Build.0 = DefaultBuild
-		{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}.Debug|Any CPU.ActiveCfg = DefaultBuild
-		{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}.Debug|Any CPU.Build.0 = DefaultBuild
-		{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}.Release|Any CPU.ActiveCfg = DefaultBuild
-		{AA0C9959-1ED9-43EA-BBB1-5CC9463241B7}.Release|Any CPU.Build.0 = DefaultBuild
+		{B337CCAE-D5FB-44D4-8A37-337DA64F5219}.All|Any CPU.ActiveCfg = DefaultBuild
+		{B337CCAE-D5FB-44D4-8A37-337DA64F5219}.All|Any CPU.Build.0 = DefaultBuild
+		{B337CCAE-D5FB-44D4-8A37-337DA64F5219}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{B337CCAE-D5FB-44D4-8A37-337DA64F5219}.Debug|Any CPU.Build.0 = DefaultBuild
+		{B337CCAE-D5FB-44D4-8A37-337DA64F5219}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{B337CCAE-D5FB-44D4-8A37-337DA64F5219}.Release|Any CPU.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

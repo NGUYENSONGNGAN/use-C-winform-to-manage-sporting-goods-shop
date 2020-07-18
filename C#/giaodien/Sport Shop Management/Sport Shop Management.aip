@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="17.2" version="17.2" Modules="simple" RootPath="." Language="en" Id="{389785FB-E5F8-4A07-81FA-A7EBBEDAB9A8}">
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_SQLEXPRESS_VERSION"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_DISPLAY" MultiBuildValue="DefaultBuild:SQL Server Express 2014" ValueLocId="-"/>
+    <ROW Property="AI_REQUIRED_SQLEXPRESS_VERSION" MultiBuildValue="DefaultBuild:2014" ValueLocId="-"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="Manufacturer" Value="DHV Sport"/>
+    <ROW Property="ProductCode" Value="1033:{E87E6114-3CF4-4BD2-8FC1-CF7904B2004B} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="Sport Shop Management"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Type="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
+    <ROW Property="UpgradeCode" Value="{83E1E25A-E6C2-401E-AC9C-BDC7C03A3099}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="DefaultBuild:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="DefaultBuild:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="DefaultBuild:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="AForge.Video.DirectShow.dll" ComponentId="{272480D5-9F9D-4310-9F15-E996A4234D14}" Directory_="APPDIR" Attributes="0" KeyPath="AForge.Video.DirectShow.dll"/>
+    <ROW Component="AForge.Video.dll" ComponentId="{73F03848-74DC-4F93-B38A-5ADEAA531152}" Directory_="APPDIR" Attributes="0" KeyPath="AForge.Video.dll"/>
+    <ROW Component="AForge.dll" ComponentId="{718855AC-0240-4FF0-8351-EF4DDDDD0AD4}" Directory_="APPDIR" Attributes="0" KeyPath="AForge.dll"/>
+    <ROW Component="AForge.xml" ComponentId="{D5D7F3CF-B3EE-4261-9178-238CDDE03108}" Directory_="APPDIR" Attributes="0" KeyPath="AForge.xml" Type="0"/>
+    <ROW Component="APPDIR" ComponentId="{424850BF-626C-4FFC-A9B3-88168EAFDFE5}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="Bunifu_UI_v1.52.dll" ComponentId="{18258F55-0171-42EB-BF43-2C8F3B4B7B37}" Directory_="APPDIR" Attributes="0" KeyPath="Bunifu_UI_v1.52.dll"/>
+    <ROW Component="DevExpress.Charts.v19.1.Core.dll" ComponentId="{ECE0032C-9052-44FF-9F74-F9915974E488}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Charts.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.CodeParser.v19.1.dll" ComponentId="{023F2BE9-4DD2-4D7F-A798-FE701923BDE2}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.CodeParser.v19.1.dll"/>
+    <ROW Component="DevExpress.Data.v19.1.dll" ComponentId="{4B47E925-C547-46E8-9C3F-704308AC3E15}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Data.v19.1.dll"/>
+    <ROW Component="DevExpress.DataAccess.v19.1.UI.dll" ComponentId="{671CA449-F670-4827-B11D-15572C5AB270}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.DataAccess.v19.1.UI.dll"/>
+    <ROW Component="DevExpress.DataAccess.v19.1.dll" ComponentId="{ECF9584C-BA98-42FD-A506-1AB52EA1FFB2}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.DataAccess.v19.1.dll"/>
+    <ROW Component="DevExpress.Diagram.v19.1.Core.dll" ComponentId="{0E240C26-5708-4BA7-94B9-2860E3E46DBE}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Diagram.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.Images.v19.1.dll" ComponentId="{3CCB3F80-FE50-46D9-883B-50C31AD666B5}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Images.v19.1.dll"/>
+    <ROW Component="DevExpress.Office.v19.1.Core.dll" ComponentId="{3184A246-6857-4CF0-924E-D1B2001F4E56}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Office.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.Pdf.v19.1.Core.dll" ComponentId="{9849272A-D2D5-4D3C-9641-3A293D17B50F}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Pdf.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.PivotGrid.v19.1.Core.dll" ComponentId="{46BAA9F8-A04B-4730-A888-4880DC23A4ED}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.PivotGrid.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.Printing.v19.1.Core.dll" ComponentId="{08EB7288-EA8D-4510-A694-DF7FD7963456}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Printing.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.RichEdit.v19.1.Core.dll" ComponentId="{D3CBECD2-31C2-45B4-881F-309334CAD0E0}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.RichEdit.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.Sparkline.v19.1.Core.dll" ComponentId="{78FDE737-304B-4B15-B70D-4144377A3341}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Sparkline.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.Utils.v19.1.UI.dll" ComponentId="{6964B9B6-2136-45E8-B696-0244F5BA0E08}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v19.1.UI.dll"/>
+    <ROW Component="DevExpress.Utils.v19.1.dll" ComponentId="{8B841D7F-3B9D-4843-917B-B00AFB6AB166}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Utils.v19.1.dll"/>
+    <ROW Component="DevExpress.Xpo.v19.1.dll" ComponentId="{9F20C712-CD7E-4ED1-ABC6-6637CA98D6C9}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.Xpo.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraBars.v19.1.dll" ComponentId="{C3346164-8E9F-476D-8F89-3531B0B855DA}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraBars.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.1.Extensions.dll" ComponentId="{3D96ACB9-09B3-4B16-9ED6-DF4EDCAC5796}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.1.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.1.UI.dll" ComponentId="{A3907926-96DD-404B-87B3-0164233F5F65}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.1.UI.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.1.Wizard.dll" ComponentId="{4A237C14-5C4D-463A-BD02-4F057A490EDD}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.1.Wizard.dll"/>
+    <ROW Component="DevExpress.XtraCharts.v19.1.dll" ComponentId="{02E2F6FB-B3FB-420D-8F99-2CD7592B0BE0}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraCharts.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraDiagram.v19.1.dll" ComponentId="{EB192ABF-1A85-44A6-9032-D9B8B9617B22}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraDiagram.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraEditors.v19.1.dll" ComponentId="{6EBE1C1F-A8B4-4444-B794-C349E94E6440}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraEditors.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraGauges.v19.1.Core.dll" ComponentId="{CEDA6720-CA15-42D8-8271-71046ACB70EC}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraGauges.v19.1.Core.dll"/>
+    <ROW Component="DevExpress.XtraGrid.v19.1.dll" ComponentId="{4FC1B331-9B6E-4B16-AD15-306582F3E364}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraGrid.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraLayout.v19.1.dll" ComponentId="{DF724A18-B0B4-430A-A7CD-AD2CDD4B123B}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraLayout.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraNavBar.v19.1.dll" ComponentId="{CF9A9915-3304-40C2-8D28-D7C3E331FD98}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraNavBar.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraPivotGrid.v19.1.dll" ComponentId="{1632F846-7F67-41C8-8171-23D17C63C278}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraPivotGrid.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraPrinting.v19.1.dll" ComponentId="{E78635E7-06BC-4C8B-9B1D-B31AC6D509D1}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraPrinting.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraReports.v19.1.Extensions.dll" ComponentId="{1F5A7235-E9DB-447B-AE8E-8D231420095D}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraReports.v19.1.Extensions.dll"/>
+    <ROW Component="DevExpress.XtraReports.v19.1.dll" ComponentId="{21DA87B4-A475-453C-BADC-E79D39B3BD11}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraReports.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraRichEdit.v19.1.dll" ComponentId="{6CCEF7D6-8B67-42F4-ADED-A8ECDF144D8E}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraRichEdit.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraTreeList.v19.1.dll" ComponentId="{07A74619-096F-460C-9EFC-752517509C1A}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraTreeList.v19.1.dll"/>
+    <ROW Component="DevExpress.XtraVerticalGrid.v19.1.dll" ComponentId="{33EF4F8F-47FA-433A-A7C4-308DB7FE8300}" Directory_="APPDIR" Attributes="0" KeyPath="DevExpress.XtraVerticalGrid.v19.1.dll"/>
+    <ROW Component="EnvDTE.dll" ComponentId="{46461E46-D44A-4163-BB3F-77057ABF2038}" Directory_="APPDIR" Attributes="0" KeyPath="EnvDTE.dll"/>
+    <ROW Component="Guna.UI.dll" ComponentId="{3997735B-B6AE-4155-AE8A-90F8C149DC7C}" Directory_="APPDIR" Attributes="0" KeyPath="Guna.UI.dll"/>
+    <ROW Component="Microsoft.CSharp.dll" ComponentId="{9B08EC71-55DE-4D64-82C2-1476F4B719B3}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.CSharp.dll"/>
+    <ROW Component="Microsoft.MSXML.dll" ComponentId="{3380F829-AE3C-4C74-BB0A-A11004D7B5BB}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.MSXML.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Common.dll" ComponentId="{F36B85FA-FAB5-4AB0-B2B1-6EE189EF4C9D}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Component="Microsoft.ReportViewer.DataVisualization.dll" ComponentId="{28A7B99C-C2E8-4A2F-A710-FFC8F6377022}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.ReportViewer.DataVisualization.dll"/>
+    <ROW Component="Microsoft.ReportViewer.Design.dll" ComponentId="{8E46CC3E-3F9D-4D94-9541-91FF8D8361F2}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.ReportViewer.Design.dll"/>
+    <ROW Component="Microsoft.ReportViewer.ProcessingObjectModel.dll" ComponentId="{42282FF7-41B3-488A-A100-BDA953CFB55C}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Component="Microsoft.ReportViewer.WinForms.dll" ComponentId="{93274D9B-54CA-4747-92E7-32076B4AA0D4}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.ReportViewer.WinForms.dll"/>
+    <ROW Component="Microsoft.SqlServer.Types.dll" ComponentId="{F85FD173-4FBF-4FC8-97BD-346D32960D7A}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.SqlServer.Types.dll"/>
+    <ROW Component="Microsoft.VisualBasic.dll" ComponentId="{9FDFCF4C-AFF6-4FE2-9A9A-E623F1DAB8BC}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.VisualBasic.dll"/>
+    <ROW Component="Microsoft.VisualStudio.OLE.Interop.dll" ComponentId="{41266C1D-D5C8-4DB2-8EED-459AA04125EB}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.VisualStudio.OLE.Interop.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.8.0.dll" ComponentId="{F0601503-3C32-4316-A2C5-D8C3491536BE}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.8.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.Shell.Interop.dll" ComponentId="{5FEC417C-1CEF-4A5C-921B-A557CC846656}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.VisualStudio.Shell.Interop.dll"/>
+    <ROW Component="Microsoft.VisualStudio.TextManager.Interop.8.0.dll" ComponentId="{85457663-6994-46C5-8992-293548DE1042}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.VisualStudio.TextManager.Interop.8.0.dll"/>
+    <ROW Component="Microsoft.VisualStudio.TextManager.Interop.dll" ComponentId="{B8D55A6A-2170-4899-8815-8278FC23A2A2}" Directory_="APPDIR" Attributes="0" KeyPath="Microsoft.VisualStudio.TextManager.Interop.dll"/>
+    <ROW Component="PresentationCore.dll" ComponentId="{DB9BD501-2933-451B-A372-04D1116C79A1}" Directory_="APPDIR" Attributes="0" KeyPath="PresentationCore.dll"/>
+    <ROW Component="ProductInformation" ComponentId="{50B7C9E6-4115-440D-9298-4883E75051A1}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="System.ComponentModel.DataAnnotations.dll" ComponentId="{D58E600B-440E-4AF6-8982-6B2B3703CADC}" Directory_="APPDIR" Attributes="0" KeyPath="System.ComponentModel.DataAnnotations.dll"/>
+    <ROW Component="System.Configuration.dll" ComponentId="{96D2BAD5-6913-493E-9E77-980426DC45EA}" Directory_="APPDIR" Attributes="0" KeyPath="System.Configuration.dll"/>
+    <ROW Component="System.Data.DataSetExtensions.dll" ComponentId="{D32B1590-EB3A-40F4-8F83-5EE9EAB73430}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.DataSetExtensions.dll"/>
+    <ROW Component="System.Data.Linq.dll" ComponentId="{00B03E12-3E07-41CD-A11E-428FB373D8B5}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.Linq.dll"/>
+    <ROW Component="System.Data.OracleClient.dll" ComponentId="{17891CAC-4456-487B-B8EE-E93F6719543D}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.OracleClient.dll"/>
+    <ROW Component="System.Data.dll" ComponentId="{A1DDF2C6-DDAF-4073-9A5A-EFD818869E8E}" Directory_="APPDIR" Attributes="0" KeyPath="System.Data.dll"/>
+    <ROW Component="System.Deployment.dll" ComponentId="{3C2685D6-743D-4CC4-9A7F-AC46C6FE935A}" Directory_="APPDIR" Attributes="0" KeyPath="System.Deployment.dll"/>
+    <ROW Component="System.Design.dll" ComponentId="{2D02C6BB-8F01-491A-9F76-0F3C1BD48032}" Directory_="APPDIR" Attributes="0" KeyPath="System.Design.dll"/>
+    <ROW Component="System.Drawing.Design.dll" ComponentId="{72B8C54E-59F8-4B27-AE88-A866F29D80CE}" Directory_="APPDIR" Attributes="0" KeyPath="System.Drawing.Design.dll"/>
+    <ROW Component="System.Drawing.dll" ComponentId="{F58F6338-9992-4AF2-9508-98E0B65B4D50}" Directory_="APPDIR" Attributes="0" KeyPath="System.Drawing.dll"/>
+    <ROW Component="System.Management.dll" ComponentId="{8B62872C-24DE-4ACC-97FF-E5F437E6AFFA}" Directory_="APPDIR" Attributes="0" KeyPath="System.Management.dll"/>
+    <ROW Component="System.Net.Http.dll" ComponentId="{D7331A07-E2D9-4317-9F27-CAB59C48913C}" Directory_="APPDIR" Attributes="0" KeyPath="System.Net.Http.dll"/>
+    <ROW Component="System.Runtime.Remoting.dll" ComponentId="{7AE7EA3C-219F-495D-B993-D5B926671943}" Directory_="APPDIR" Attributes="0" KeyPath="System.Runtime.Remoting.dll"/>
+    <ROW Component="System.Windows.Forms.DataVisualization.dll" ComponentId="{4EA62643-D091-439B-AEB6-40119A7EBD73}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.DataVisualization.dll"/>
+    <ROW Component="System.Windows.Forms.dll" ComponentId="{7FCEC2F4-C4D9-47D3-8F99-F648BCA36EB5}" Directory_="APPDIR" Attributes="0" KeyPath="System.Windows.Forms.dll"/>
+    <ROW Component="System.Xml.Linq.dll" ComponentId="{0DBF2328-5960-48E5-92B3-18D4AE8A95D6}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.Linq.dll"/>
+    <ROW Component="System.Xml.dll" ComponentId="{1B161A9B-FD03-4D4F-9E28-9114EEB83FBA}" Directory_="APPDIR" Attributes="0" KeyPath="System.Xml.dll"/>
+    <ROW Component="System.dll" ComponentId="{7F26FF32-9E04-4733-BF2E-2CCE72CAA5C3}" Directory_="APPDIR" Attributes="0" KeyPath="System.dll"/>
+    <ROW Component="UIAutomationClient.dll" ComponentId="{045B3397-A331-47B3-8147-222CD01F6B80}" Directory_="APPDIR" Attributes="0" KeyPath="UIAutomationClient.dll"/>
+    <ROW Component="WindowsBase.dll" ComponentId="{408B2350-222C-4637-87AC-E8C73E2C5CF3}" Directory_="APPDIR" Attributes="0" KeyPath="WindowsBase.dll"/>
+    <ROW Component="Zen.Barcode.Core.dll" ComponentId="{87440609-094D-418E-AA3C-280224741BE1}" Directory_="APPDIR" Attributes="0" KeyPath="Zen.Barcode.Core.dll"/>
+    <ROW Component="giaodien.exe" ComponentId="{D5A28018-3416-4DBA-963B-5D75D5599542}" Directory_="APPDIR" Attributes="0" KeyPath="giaodien.exe"/>
+    <ROW Component="stdole.dll" ComponentId="{1F809C10-8078-4C6C-85AC-8AB3AB96D7C7}" Directory_="APPDIR" Attributes="0" KeyPath="stdole.dll"/>
+    <ROW Component="zxing.dll" ComponentId="{340DA041-3A05-46FE-B375-CD66A41EECD1}" Directory_="APPDIR" Attributes="0" KeyPath="zxing.dll"/>
+    <ROW Component="zxing.presentation.dll" ComponentId="{6725B2F8-033E-4F5D-91EA-8B2EE9C0ED9D}" Directory_="APPDIR" Attributes="0" KeyPath="zxing.presentation.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="AForge.xml" Component_="AForge.xml" FileName="AForge.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\AForge.xml" SelfReg="false"/>
+    <ROW File="Bunifu_UI_v1.52.dll" Component_="Bunifu_UI_v1.52.dll" FileName="BUNIFU~1.DLL|Bunifu_UI_v1.52.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Bunifu_UI_v1.52.dll" SelfReg="false"/>
+    <ROW File="Database1.mdf" Component_="AForge.xml" FileName="DATABA~1.MDF|Database1.mdf" Attributes="0" SourcePath="..\giaodien\bin\Release\Database1.mdf" SelfReg="false"/>
+    <ROW File="Database1_log.ldf" Component_="AForge.xml" FileName="DATABA~1.LDF|Database1_log.ldf" Attributes="0" SourcePath="..\giaodien\bin\Release\Database1_log.ldf" SelfReg="false"/>
+    <ROW File="DevExpress.Charts.v19.1.Core.dll" Component_="DevExpress.Charts.v19.1.Core.dll" FileName="DEVEXP~1.DLL|DevExpress.Charts.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Charts.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.CodeParser.v19.1.dll" Component_="DevExpress.CodeParser.v19.1.dll" FileName="DEVEXP~2.DLL|DevExpress.CodeParser.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.CodeParser.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v19.1.dll" Component_="DevExpress.Data.v19.1.dll" FileName="DEVEXP~3.DLL|DevExpress.Data.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Data.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Data.v19.1.xml" Component_="AForge.xml" FileName="DEVEXP~1.XML|DevExpress.Data.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Data.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.1.dll" Component_="DevExpress.DataAccess.v19.1.dll" FileName="DEVEXP~4.DLL|DevExpress.DataAccess.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.DataAccess.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.1.UI.dll" Component_="DevExpress.DataAccess.v19.1.UI.dll" FileName="DEVEXP~5.DLL|DevExpress.DataAccess.v19.1.UI.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.DataAccess.v19.1.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.1.UI.xml" Component_="AForge.xml" FileName="DEVEXP~2.XML|DevExpress.DataAccess.v19.1.UI.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.DataAccess.v19.1.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.DataAccess.v19.1.xml" Component_="AForge.xml" FileName="DEVEXP~3.XML|DevExpress.DataAccess.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.DataAccess.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v19.1.Core.dll" Component_="DevExpress.Diagram.v19.1.Core.dll" FileName="DEVEXP~6.DLL|DevExpress.Diagram.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Diagram.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Diagram.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEXP~4.XML|DevExpress.Diagram.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Diagram.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Images.v19.1.dll" Component_="DevExpress.Images.v19.1.dll" FileName="DEVEXP~7.DLL|DevExpress.Images.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Images.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v19.1.Core.dll" Component_="DevExpress.Office.v19.1.Core.dll" FileName="DEVEXP~8.DLL|DevExpress.Office.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Office.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Office.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEXP~5.XML|DevExpress.Office.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Office.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.1.Core.dll" Component_="DevExpress.Pdf.v19.1.Core.dll" FileName="DEVEXP~9.DLL|DevExpress.Pdf.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Pdf.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Pdf.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEXP~6.XML|DevExpress.Pdf.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Pdf.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v19.1.Core.dll" Component_="DevExpress.PivotGrid.v19.1.Core.dll" FileName="DEVEX~10.DLL|DevExpress.PivotGrid.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.PivotGrid.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.PivotGrid.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEXP~7.XML|DevExpress.PivotGrid.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.PivotGrid.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v19.1.Core.dll" Component_="DevExpress.Printing.v19.1.Core.dll" FileName="DEVEX~11.DLL|DevExpress.Printing.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Printing.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Printing.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEXP~8.XML|DevExpress.Printing.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Printing.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v19.1.Core.dll" Component_="DevExpress.RichEdit.v19.1.Core.dll" FileName="DEVEX~12.DLL|DevExpress.RichEdit.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.RichEdit.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.RichEdit.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEXP~9.XML|DevExpress.RichEdit.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.RichEdit.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v19.1.Core.dll" Component_="DevExpress.Sparkline.v19.1.Core.dll" FileName="DEVEX~13.DLL|DevExpress.Sparkline.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Sparkline.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Sparkline.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEX~10.XML|DevExpress.Sparkline.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Sparkline.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.1.dll" Component_="DevExpress.Utils.v19.1.dll" FileName="DEVEX~14.DLL|DevExpress.Utils.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Utils.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.1.UI.dll" Component_="DevExpress.Utils.v19.1.UI.dll" FileName="DEVEX~15.DLL|DevExpress.Utils.v19.1.UI.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Utils.v19.1.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.1.UI.xml" Component_="AForge.xml" FileName="DEVEX~11.XML|DevExpress.Utils.v19.1.UI.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Utils.v19.1.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Utils.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~12.XML|DevExpress.Utils.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Utils.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v19.1.dll" Component_="DevExpress.Xpo.v19.1.dll" FileName="DEVEX~16.DLL|DevExpress.Xpo.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Xpo.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.Xpo.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~13.XML|DevExpress.Xpo.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.Xpo.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v19.1.dll" Component_="DevExpress.XtraBars.v19.1.dll" FileName="DEVEX~17.DLL|DevExpress.XtraBars.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraBars.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraBars.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~14.XML|DevExpress.XtraBars.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraBars.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.dll" Component_="DevExpress.XtraCharts.v19.1.dll" FileName="DEVEX~18.DLL|DevExpress.XtraCharts.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.Extensions.dll" Component_="DevExpress.XtraCharts.v19.1.Extensions.dll" FileName="DEVEX~19.DLL|DevExpress.XtraCharts.v19.1.Extensions.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.Extensions.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.UI.dll" Component_="DevExpress.XtraCharts.v19.1.UI.dll" FileName="DEVEX~20.DLL|DevExpress.XtraCharts.v19.1.UI.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.UI.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.UI.xml" Component_="AForge.xml" FileName="DEVEX~15.XML|DevExpress.XtraCharts.v19.1.UI.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.UI.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.Wizard.dll" Component_="DevExpress.XtraCharts.v19.1.Wizard.dll" FileName="DEVEX~21.DLL|DevExpress.XtraCharts.v19.1.Wizard.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.Wizard.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.Wizard.xml" Component_="AForge.xml" FileName="DEVEX~16.XML|DevExpress.XtraCharts.v19.1.Wizard.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.Wizard.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraCharts.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~17.XML|DevExpress.XtraCharts.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraCharts.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v19.1.dll" Component_="DevExpress.XtraDiagram.v19.1.dll" FileName="DEVEX~22.DLL|DevExpress.XtraDiagram.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraDiagram.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraDiagram.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~18.XML|DevExpress.XtraDiagram.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraDiagram.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v19.1.dll" Component_="DevExpress.XtraEditors.v19.1.dll" FileName="DEVEX~23.DLL|DevExpress.XtraEditors.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraEditors.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraEditors.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~19.XML|DevExpress.XtraEditors.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraEditors.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.1.Core.dll" Component_="DevExpress.XtraGauges.v19.1.Core.dll" FileName="DEVEX~24.DLL|DevExpress.XtraGauges.v19.1.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraGauges.v19.1.Core.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGauges.v19.1.Core.xml" Component_="AForge.xml" FileName="DEVEX~20.XML|DevExpress.XtraGauges.v19.1.Core.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraGauges.v19.1.Core.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v19.1.dll" Component_="DevExpress.XtraGrid.v19.1.dll" FileName="DEVEX~25.DLL|DevExpress.XtraGrid.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraGrid.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraGrid.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~21.XML|DevExpress.XtraGrid.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraGrid.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v19.1.dll" Component_="DevExpress.XtraLayout.v19.1.dll" FileName="DEVEX~26.DLL|DevExpress.XtraLayout.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraLayout.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraLayout.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~22.XML|DevExpress.XtraLayout.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraLayout.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v19.1.dll" Component_="DevExpress.XtraNavBar.v19.1.dll" FileName="DEVEX~27.DLL|DevExpress.XtraNavBar.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraNavBar.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraNavBar.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~23.XML|DevExpress.XtraNavBar.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraNavBar.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v19.1.dll" Component_="DevExpress.XtraPivotGrid.v19.1.dll" FileName="DEVEX~28.DLL|DevExpress.XtraPivotGrid.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraPivotGrid.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPivotGrid.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~24.XML|DevExpress.XtraPivotGrid.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraPivotGrid.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v19.1.dll" Component_="DevExpress.XtraPrinting.v19.1.dll" FileName="DEVEX~29.DLL|DevExpress.XtraPrinting.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraPrinting.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraPrinting.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~25.XML|DevExpress.XtraPrinting.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraPrinting.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.1.dll" Component_="DevExpress.XtraReports.v19.1.dll" FileName="DEVEX~30.DLL|DevExpress.XtraReports.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraReports.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.1.Extensions.dll" Component_="DevExpress.XtraReports.v19.1.Extensions.dll" FileName="DEVEX~31.DLL|DevExpress.XtraReports.v19.1.Extensions.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraReports.v19.1.Extensions.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.1.Extensions.xml" Component_="AForge.xml" FileName="DEVEX~26.XML|DevExpress.XtraReports.v19.1.Extensions.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraReports.v19.1.Extensions.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraReports.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~27.XML|DevExpress.XtraReports.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraReports.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v19.1.dll" Component_="DevExpress.XtraRichEdit.v19.1.dll" FileName="DEVEX~32.DLL|DevExpress.XtraRichEdit.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraRichEdit.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraRichEdit.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~28.XML|DevExpress.XtraRichEdit.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraRichEdit.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v19.1.dll" Component_="DevExpress.XtraTreeList.v19.1.dll" FileName="DEVEX~33.DLL|DevExpress.XtraTreeList.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraTreeList.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraTreeList.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~29.XML|DevExpress.XtraTreeList.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraTreeList.v19.1.xml" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v19.1.dll" Component_="DevExpress.XtraVerticalGrid.v19.1.dll" FileName="DEVEX~34.DLL|DevExpress.XtraVerticalGrid.v19.1.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraVerticalGrid.v19.1.dll" SelfReg="false"/>
+    <ROW File="DevExpress.XtraVerticalGrid.v19.1.xml" Component_="AForge.xml" FileName="DEVEX~30.XML|DevExpress.XtraVerticalGrid.v19.1.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\DevExpress.XtraVerticalGrid.v19.1.xml" SelfReg="false"/>
+    <ROW File="EnvDTE.dll" Component_="EnvDTE.dll" FileName="EnvDTE.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\EnvDTE.dll" SelfReg="false"/>
+    <ROW File="giaodien.exe" Component_="giaodien.exe" FileName="giaodien.exe" Attributes="0" SourcePath="..\giaodien\bin\Release\giaodien.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="giaodien.exe.config" Component_="AForge.xml" FileName="GIAODI~1.CON|giaodien.exe.config" Attributes="0" SourcePath="..\giaodien\bin\Release\giaodien.exe.config" SelfReg="false"/>
+    <ROW File="giaodien.pdb" Component_="giaodien.exe" FileName="giaodien.pdb" Attributes="0" SourcePath="..\giaodien\bin\Release\giaodien.pdb" SelfReg="false"/>
+    <ROW File="Guna.UI.dll" Component_="Guna.UI.dll" FileName="GUNAUI~1.DLL|Guna.UI.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Guna.UI.dll" SelfReg="false"/>
+    <ROW File="KhachHang_FormHDX.Designer.cs" Component_="AForge.xml" FileName="KHACHH~1.CS|KhachHang_FormHDX.Designer.cs" Attributes="0" SourcePath="..\giaodien\bin\Release\KhachHang_FormHDX.Designer.cs" SelfReg="false"/>
+    <ROW File="KhachHang_FormHDX.xsc" Component_="AForge.xml" FileName="KHACHH~1.XSC|KhachHang_FormHDX.xsc" Attributes="0" SourcePath="..\giaodien\bin\Release\KhachHang_FormHDX.xsc" SelfReg="false"/>
+    <ROW File="KhachHang_FormHDX.xsd" Component_="AForge.xml" FileName="KHACHH~1.XSD|KhachHang_FormHDX.xsd" Attributes="0" SourcePath="..\giaodien\bin\Release\KhachHang_FormHDX.xsd" SelfReg="false"/>
+    <ROW File="KhachHang_FormHDX.xss" Component_="AForge.xml" FileName="KHACHH~1.XSS|KhachHang_FormHDX.xss" Attributes="0" SourcePath="..\giaodien\bin\Release\KhachHang_FormHDX.xss" SelfReg="false"/>
+    <ROW File="Microsoft.CSharp.dll" Component_="Microsoft.CSharp.dll" FileName="MICROS~1.DLL|Microsoft.CSharp.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.CSharp.dll" SelfReg="false"/>
+    <ROW File="Microsoft.MSXML.dll" Component_="Microsoft.MSXML.dll" FileName="MICROS~2.DLL|Microsoft.MSXML.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.MSXML.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Common.dll" Component_="Microsoft.ReportViewer.Common.dll" FileName="MICROS~3.DLL|Microsoft.ReportViewer.Common.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.ReportViewer.Common.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.DataVisualization.dll" Component_="Microsoft.ReportViewer.DataVisualization.dll" FileName="MICROS~4.DLL|Microsoft.ReportViewer.DataVisualization.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.ReportViewer.DataVisualization.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.Design.dll" Component_="Microsoft.ReportViewer.Design.dll" FileName="MICROS~5.DLL|Microsoft.ReportViewer.Design.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.ReportViewer.Design.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.ProcessingObjectModel.dll" Component_="Microsoft.ReportViewer.ProcessingObjectModel.dll" FileName="MICROS~6.DLL|Microsoft.ReportViewer.ProcessingObjectModel.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.ReportViewer.ProcessingObjectModel.dll" SelfReg="false"/>
+    <ROW File="Microsoft.ReportViewer.WinForms.dll" Component_="Microsoft.ReportViewer.WinForms.dll" FileName="MICROS~7.DLL|Microsoft.ReportViewer.WinForms.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.ReportViewer.WinForms.dll" SelfReg="false"/>
+    <ROW File="Microsoft.SqlServer.Types.dll" Component_="Microsoft.SqlServer.Types.dll" FileName="MICROS~8.DLL|Microsoft.SqlServer.Types.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.SqlServer.Types.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualBasic.dll" Component_="Microsoft.VisualBasic.dll" FileName="MICROS~9.DLL|Microsoft.VisualBasic.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.VisualBasic.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.OLE.Interop.dll" Component_="Microsoft.VisualStudio.OLE.Interop.dll" FileName="MICRO~10.DLL|Microsoft.VisualStudio.OLE.Interop.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.VisualStudio.OLE.Interop.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.8.0.dll" Component_="Microsoft.VisualStudio.Shell.Interop.8.0.dll" FileName="MICRO~11.DLL|Microsoft.VisualStudio.Shell.Interop.8.0.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.VisualStudio.Shell.Interop.8.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.Shell.Interop.dll" Component_="Microsoft.VisualStudio.Shell.Interop.dll" FileName="MICRO~12.DLL|Microsoft.VisualStudio.Shell.Interop.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.VisualStudio.Shell.Interop.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TextManager.Interop.8.0.dll" Component_="Microsoft.VisualStudio.TextManager.Interop.8.0.dll" FileName="MICRO~13.DLL|Microsoft.VisualStudio.TextManager.Interop.8.0.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.VisualStudio.TextManager.Interop.8.0.dll" SelfReg="false"/>
+    <ROW File="Microsoft.VisualStudio.TextManager.Interop.dll" Component_="Microsoft.VisualStudio.TextManager.Interop.dll" FileName="MICRO~14.DLL|Microsoft.VisualStudio.TextManager.Interop.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Microsoft.VisualStudio.TextManager.Interop.dll" SelfReg="false"/>
+    <ROW File="PresentationCore.dll" Component_="PresentationCore.dll" FileName="PRESEN~1.DLL|PresentationCore.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\PresentationCore.dll" SelfReg="false"/>
+    <ROW File="stdole.dll" Component_="stdole.dll" FileName="stdole.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\stdole.dll" SelfReg="false"/>
+    <ROW File="System.ComponentModel.DataAnnotations.dll" Component_="System.ComponentModel.DataAnnotations.dll" FileName="SYSTEM~1.DLL|System.ComponentModel.DataAnnotations.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.ComponentModel.DataAnnotations.dll" SelfReg="false"/>
+    <ROW File="System.Configuration.dll" Component_="System.Configuration.dll" FileName="SYSTEM~2.DLL|System.Configuration.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Configuration.dll" SelfReg="false"/>
+    <ROW File="System.Data.DataSetExtensions.dll" Component_="System.Data.DataSetExtensions.dll" FileName="SYSTEM~3.DLL|System.Data.DataSetExtensions.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Data.DataSetExtensions.dll" SelfReg="false"/>
+    <ROW File="System.Data.dll" Component_="System.Data.dll" FileName="SYSTEM~4.DLL|System.Data.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Data.dll" SelfReg="false"/>
+    <ROW File="System.Data.Linq.dll" Component_="System.Data.Linq.dll" FileName="SYSTEM~5.DLL|System.Data.Linq.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Data.Linq.dll" SelfReg="false"/>
+    <ROW File="System.Data.OracleClient.dll" Component_="System.Data.OracleClient.dll" FileName="SYSTEM~6.DLL|System.Data.OracleClient.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Data.OracleClient.dll" SelfReg="false"/>
+    <ROW File="System.Deployment.dll" Component_="System.Deployment.dll" FileName="SYSTEM~7.DLL|System.Deployment.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Deployment.dll" SelfReg="false"/>
+    <ROW File="System.Design.dll" Component_="System.Design.dll" FileName="SYSTEM~8.DLL|System.Design.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Design.dll" SelfReg="false"/>
+    <ROW File="System.dll" Component_="System.dll" FileName="System.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.dll" SelfReg="false"/>
+    <ROW File="System.Drawing.Design.dll" Component_="System.Drawing.Design.dll" FileName="SYSTEM~9.DLL|System.Drawing.Design.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Drawing.Design.dll" SelfReg="false"/>
+    <ROW File="System.Drawing.dll" Component_="System.Drawing.dll" FileName="SYSTE~10.DLL|System.Drawing.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Drawing.dll" SelfReg="false"/>
+    <ROW File="System.Management.dll" Component_="System.Management.dll" FileName="SYSTE~11.DLL|System.Management.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Management.dll" SelfReg="false"/>
+    <ROW File="System.Net.Http.dll" Component_="System.Net.Http.dll" FileName="SYSTE~12.DLL|System.Net.Http.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Net.Http.dll" SelfReg="false"/>
+    <ROW File="System.Runtime.Remoting.dll" Component_="System.Runtime.Remoting.dll" FileName="SYSTE~13.DLL|System.Runtime.Remoting.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Runtime.Remoting.dll" SelfReg="false"/>
+    <ROW File="System.Windows.Forms.DataVisualization.dll" Component_="System.Windows.Forms.DataVisualization.dll" FileName="SYSTE~14.DLL|System.Windows.Forms.DataVisualization.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Windows.Forms.DataVisualization.dll" SelfReg="false"/>
+    <ROW File="System.Windows.Forms.dll" Component_="System.Windows.Forms.dll" FileName="SYSTE~15.DLL|System.Windows.Forms.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Windows.Forms.dll" SelfReg="false"/>
+    <ROW File="System.Xml.dll" Component_="System.Xml.dll" FileName="SYSTE~16.DLL|System.Xml.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Xml.dll" SelfReg="false"/>
+    <ROW File="System.Xml.Linq.dll" Component_="System.Xml.Linq.dll" FileName="SYSTE~17.DLL|System.Xml.Linq.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\System.Xml.Linq.dll" SelfReg="false"/>
+    <ROW File="UIAutomationClient.dll" Component_="UIAutomationClient.dll" FileName="UIAUTO~1.DLL|UIAutomationClient.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\UIAutomationClient.dll" SelfReg="false"/>
+    <ROW File="WindowsBase.dll" Component_="WindowsBase.dll" FileName="WINDOW~1.DLL|WindowsBase.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\WindowsBase.dll" SelfReg="false"/>
+    <ROW File="Zen.Barcode.Core.dll" Component_="Zen.Barcode.Core.dll" FileName="ZENBAR~1.DLL|Zen.Barcode.Core.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\Zen.Barcode.Core.dll" SelfReg="false"/>
+    <ROW File="zxing.dll" Component_="zxing.dll" FileName="zxing.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\zxing.dll" SelfReg="false"/>
+    <ROW File="zxing.pdb" Component_="zxing.dll" FileName="zxing.pdb" Attributes="0" SourcePath="..\giaodien\bin\Release\zxing.pdb" SelfReg="false"/>
+    <ROW File="zxing.presentation.dll" Component_="zxing.presentation.dll" FileName="ZXINGP~1.DLL|zxing.presentation.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\zxing.presentation.dll" SelfReg="false"/>
+    <ROW File="zxing.presentation.pdb" Component_="zxing.presentation.dll" FileName="ZXINGP~1.PDB|zxing.presentation.pdb" Attributes="0" SourcePath="..\giaodien\bin\Release\zxing.presentation.pdb" SelfReg="false"/>
+    <ROW File="zxing.presentation.xml" Component_="AForge.xml" FileName="ZXINGP~1.XML|zxing.presentation.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\zxing.presentation.xml" SelfReg="false"/>
+    <ROW File="zxing.xml" Component_="AForge.xml" FileName="zxing.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\zxing.xml" SelfReg="false"/>
+    <ROW File="AForge.dll" Component_="AForge.dll" FileName="AForge.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\AForge.dll" SelfReg="false"/>
+    <ROW File="AForge.Video.DirectShow.dll" Component_="AForge.Video.DirectShow.dll" FileName="AFORGE~1.DLL|AForge.Video.DirectShow.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\AForge.Video.DirectShow.dll" SelfReg="false"/>
+    <ROW File="AForge.Video.DirectShow.xml" Component_="AForge.xml" FileName="AFORGE~1.XML|AForge.Video.DirectShow.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\AForge.Video.DirectShow.xml" SelfReg="false"/>
+    <ROW File="AForge.Video.dll" Component_="AForge.Video.dll" FileName="AFORGE~2.DLL|AForge.Video.dll" Attributes="0" SourcePath="..\giaodien\bin\Release\AForge.Video.dll" SelfReg="false"/>
+    <ROW File="AForge.Video.xml" Component_="AForge.xml" FileName="AFORGE~2.XML|AForge.Video.xml" Attributes="0" SourcePath="..\giaodien\bin\Release\AForge.Video.xml" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DetectSoftware" Sequence="151"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="DefaultBuild" BuildName="DefaultBuild" BuildOrder="1" BuildType="0" Languages="en" InstallationType="4" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_en.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="AForge.xml"/>
+    <ROW Feature_="MainFeature" Component_="Bunifu_UI_v1.52.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Charts.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.CodeParser.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Data.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.DataAccess.v19.1.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Diagram.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Images.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Office.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Pdf.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.PivotGrid.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Printing.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.RichEdit.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Sparkline.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Utils.v19.1.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.Xpo.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraBars.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.1.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.1.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraCharts.v19.1.Wizard.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraDiagram.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraEditors.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGauges.v19.1.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraGrid.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraLayout.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraNavBar.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPivotGrid.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraPrinting.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraReports.v19.1.Extensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraRichEdit.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraTreeList.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="DevExpress.XtraVerticalGrid.v19.1.dll"/>
+    <ROW Feature_="MainFeature" Component_="EnvDTE.dll"/>
+    <ROW Feature_="MainFeature" Component_="giaodien.exe"/>
+    <ROW Feature_="MainFeature" Component_="Guna.UI.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.CSharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.MSXML.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Common.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.DataVisualization.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.Design.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.ProcessingObjectModel.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.ReportViewer.WinForms.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.SqlServer.Types.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualBasic.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.OLE.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.8.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.Shell.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.TextManager.Interop.8.0.dll"/>
+    <ROW Feature_="MainFeature" Component_="Microsoft.VisualStudio.TextManager.Interop.dll"/>
+    <ROW Feature_="MainFeature" Component_="PresentationCore.dll"/>
+    <ROW Feature_="MainFeature" Component_="stdole.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.ComponentModel.DataAnnotations.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Configuration.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.DataSetExtensions.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.Linq.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Data.OracleClient.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Deployment.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Design.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Drawing.Design.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Drawing.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Management.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Net.Http.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Runtime.Remoting.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Windows.Forms.DataVisualization.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Windows.Forms.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.dll"/>
+    <ROW Feature_="MainFeature" Component_="System.Xml.Linq.dll"/>
+    <ROW Feature_="MainFeature" Component_="UIAutomationClient.dll"/>
+    <ROW Feature_="MainFeature" Component_="WindowsBase.dll"/>
+    <ROW Feature_="MainFeature" Component_="Zen.Barcode.Core.dll"/>
+    <ROW Feature_="MainFeature" Component_="zxing.dll"/>
+    <ROW Feature_="MainFeature" Component_="zxing.presentation.dll"/>
+    <ROW Feature_="MainFeature" Component_="AForge.dll"/>
+    <ROW Feature_="MainFeature" Component_="AForge.Video.DirectShow.dll"/>
+    <ROW Feature_="MainFeature" Component_="AForge.Video.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1399"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_DpiContentScale" Sequence="52"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="51"/>
+    <ROW Action="AI_DetectSoftware" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] cannot be installed on [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] cannot be installed on [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] cannot be installed on [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="AI_DETECTED_SQLEXPRESS_VERSION &gt;= AI_REQUIRED_SQLEXPRESS_VERSION" Description="[ProductName] cannot be installed on systems without [AI_REQUIRED_SQLEXPRESS_DISPLAY] or higher." DescriptionLocId="AI.LaunchCondition.SQLExpress" IsPredefined="true" Builds="DefaultBuild"/>
+    <ROW Condition="VersionNT" Description="[ProductName] cannot be installed on [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="DefaultBuild"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+</DOCUMENT>
