@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ttcm" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-JCN90A4;Initial Catalog=ttcm;Integrated Security=True" SettingsObjectName="giaodien.Properties.Settings" SettingsPropertyName="ttcmConnectionString" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="giaodien.Properties.Settings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.ad" Member="ads">
     <Type Name="ad">
       <Column Name="Ma" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -249,6 +249,12 @@
   <Function Name="dbo.DoanhThuNamHienTai" Method="DoanhThuNamHienTai">
     <ElementType Name="DoanhThuNamHienTaiResult">
       <Column Name="TongTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.HuyHDX" Method="HuyHDX">
+    <Parameter Name="ngay" Type="System.DateTime" DbType="Date" />
+    <ElementType Name="HuyHDXResult">
+      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="dbo.insertCTHDN" Method="insertCTHDN">
@@ -864,11 +870,5 @@
     <Parameter Name="ma" Type="System.Int32" DbType="Int" />
     <Parameter Name="tongtien" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
-  </Function>
-  <Function Name="dbo.HuyHDX" Method="HuyHDX">
-    <Parameter Name="ngay" Type="System.DateTime" DbType="Date" />
-    <ElementType Name="HuyHDXResult">
-      <Column Name="" Member="Column1" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </ElementType>
   </Function>
 </Database>

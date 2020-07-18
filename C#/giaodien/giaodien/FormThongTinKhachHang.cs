@@ -149,9 +149,9 @@ namespace giaodien
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtTen.Text.Trim()==""|| txtTen.Text.Trim() == null|| txtEmail.Text.Trim() != ""|| txtEmail.Text.Trim() != null)
+            if (txtTen.Text ==""|| txtTen.Text == null|| txtEmail.Text == ""|| txtEmail.Text == null)
             {
-                MessageBox.Show("Bạn chưa nhập tên\nVui lòng kiểm tra lại", "Thiếu thông tin");
+                MessageBox.Show("Bạn chưa nhập đủ\nVui lòng kiểm tra lại", "Thiếu thông tin");
             }
             
             else 

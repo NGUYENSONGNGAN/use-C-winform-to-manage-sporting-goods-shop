@@ -518,7 +518,6 @@ namespace giaodien
 
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
-            
             try
             {
                 if (txtDonGia.Text.Trim() == "" || txtDonGia.Text == null|| Convert.ToInt32(txtDonGia.Text) ==0)

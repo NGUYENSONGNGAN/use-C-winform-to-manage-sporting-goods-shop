@@ -2,17 +2,18 @@
 <xs:schema id="NhanVien_FormHDN" targetNamespace="http://tempuri.org/NhanVien_FormHDN.xsd" xmlns:mstns="http://tempuri.org/NhanVien_FormHDN.xsd" xmlns="http://tempuri.org/NhanVien_FormHDN.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ttcmConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ttcmConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.giaodien.Properties.Settings.GlobalReference.Default.ttcmConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Database1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Database1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.giaodien.Properties.Settings.GlobalReference.Default.Database1ConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="NhanVienTableAdapter" GeneratorDataComponentClassName="NhanVienTableAdapter" Name="NhanVien" UserDataComponentName="NhanVienTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ttcmConnectionString (Settings)" DbObjectName="ttcm.dbo.NhanVien" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="Database1ConnectionString (Settings)" DbObjectName="dbo.NhanVien" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[NhanVien] WHERE (([Ma] = @Original_Ma) AND ((@IsNull_Ten = 1 AND [Ten] IS NULL) OR ([Ten] = @Original_Ten)) AND ((@IsNull_GioiTinh = 1 AND [GioiTinh] IS NULL) OR ([GioiTinh] = @Original_GioiTinh)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_NgaySinh = 1 AND [NgaySinh] IS NULL) OR ([NgaySinh] = @Original_NgaySinh)) AND ((@IsNull_NgayVaoLam = 1 AND [NgayVaoLam] IS NULL) OR ([NgayVaoLam] = @Original_NgayVaoLam)) AND ((@IsNull_Ma_CV = 1 AND [Ma_CV] IS NULL) OR ([Ma_CV] = @Original_Ma_CV)) AND ((@IsNull_taikhoan = 1 AND [taikhoan] IS NULL) OR ([taikhoan] = @Original_taikhoan)) AND ((@IsNull_matkhau = 1 AND [matkhau] IS NULL) OR ([matkhau] = @Original_matkhau)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[NhanVien] WHERE (([Ma] = @Original_Ma) AND ((@IsNull_Ten = 1 AND [Ten] IS NULL) OR ([Ten] = @Original_Ten)) AND ((@IsNull_GioiTinh = 1 AND [GioiTinh] IS NULL) OR ([GioiTinh] = @Original_GioiTinh)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_NgaySinh = 1 AND [NgaySinh] IS NULL) OR ([NgaySinh] = @Original_NgaySinh)) AND ((@IsNull_NgayVaoLam = 1 AND [NgayVaoLam] IS NULL) OR ([NgayVaoLam] = @Original_NgayVaoLam)) AND ((@IsNull_Ma_CV = 1 AND [Ma_CV] IS NULL) OR ([Ma_CV] = @Original_Ma_CV)) AND ((@IsNull_taikhoan = 1 AND [taikhoan] IS NULL) OR ([taikhoan] = @Original_taikhoan)) AND ((@IsNull_matkhau = 1 AND [matkhau] IS NULL) OR ([matkhau] = @Original_matkhau)) AND ((@IsNull_HoatDong = 1 AND [HoatDong] IS NULL) OR ([HoatDong] = @Original_HoatDong)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Ma" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ma" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Ten" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ten" SourceColumnNullMapping="true" SourceVersion="Original" />
@@ -33,13 +34,15 @@
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_taikhoan" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="taikhoan" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_matkhau" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="matkhau" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_matkhau" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="matkhau" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HoatDong" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HoatDong" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_HoatDong" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="HoatDong" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[NhanVien] ([Ma], [Ten], [GioiTinh], [DiaChi], [Email], [NgaySinh], [NgayVaoLam], [Ma_CV], [taikhoan], [matkhau], [Hinhanh]) VALUES (@Ma, @Ten, @GioiTinh, @DiaChi, @Email, @NgaySinh, @NgayVaoLam, @Ma_CV, @taikhoan, @matkhau, @Hinhanh);
-SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, matkhau, Hinhanh FROM NhanVien WHERE (Ma = @Ma)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[NhanVien] ([Ma], [Ten], [GioiTinh], [DiaChi], [Email], [NgaySinh], [NgayVaoLam], [Ma_CV], [taikhoan], [matkhau], [Hinhanh], [HoatDong]) VALUES (@Ma, @Ten, @GioiTinh, @DiaChi, @Email, @NgaySinh, @NgayVaoLam, @Ma_CV, @taikhoan, @matkhau, @Hinhanh, @HoatDong);
+SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, matkhau, Hinhanh, HoatDong FROM NhanVien WHERE (Ma = @Ma)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Ma" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ma" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ten" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -52,19 +55,20 @@ SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@taikhoan" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="taikhoan" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@matkhau" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="matkhau" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Hinhanh" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Hinhanh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@HoatDong" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="HoatDong" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, matkhau, Hinhanh FROM dbo.NhanVien</CommandText>
+                    <CommandText>SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, matkhau, Hinhanh, HoatDong FROM dbo.NhanVien</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[NhanVien] SET [Ma] = @Ma, [Ten] = @Ten, [GioiTinh] = @GioiTinh, [DiaChi] = @DiaChi, [Email] = @Email, [NgaySinh] = @NgaySinh, [NgayVaoLam] = @NgayVaoLam, [Ma_CV] = @Ma_CV, [taikhoan] = @taikhoan, [matkhau] = @matkhau, [Hinhanh] = @Hinhanh WHERE (([Ma] = @Original_Ma) AND ((@IsNull_Ten = 1 AND [Ten] IS NULL) OR ([Ten] = @Original_Ten)) AND ((@IsNull_GioiTinh = 1 AND [GioiTinh] IS NULL) OR ([GioiTinh] = @Original_GioiTinh)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_NgaySinh = 1 AND [NgaySinh] IS NULL) OR ([NgaySinh] = @Original_NgaySinh)) AND ((@IsNull_NgayVaoLam = 1 AND [NgayVaoLam] IS NULL) OR ([NgayVaoLam] = @Original_NgayVaoLam)) AND ((@IsNull_Ma_CV = 1 AND [Ma_CV] IS NULL) OR ([Ma_CV] = @Original_Ma_CV)) AND ((@IsNull_taikhoan = 1 AND [taikhoan] IS NULL) OR ([taikhoan] = @Original_taikhoan)) AND ((@IsNull_matkhau = 1 AND [matkhau] IS NULL) OR ([matkhau] = @Original_matkhau)));
-SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, matkhau, Hinhanh FROM NhanVien WHERE (Ma = @Ma)</CommandText>
+                    <CommandText>UPDATE [dbo].[NhanVien] SET [Ma] = @Ma, [Ten] = @Ten, [GioiTinh] = @GioiTinh, [DiaChi] = @DiaChi, [Email] = @Email, [NgaySinh] = @NgaySinh, [NgayVaoLam] = @NgayVaoLam, [Ma_CV] = @Ma_CV, [taikhoan] = @taikhoan, [matkhau] = @matkhau, [Hinhanh] = @Hinhanh, [HoatDong] = @HoatDong WHERE (([Ma] = @Original_Ma) AND ((@IsNull_Ten = 1 AND [Ten] IS NULL) OR ([Ten] = @Original_Ten)) AND ((@IsNull_GioiTinh = 1 AND [GioiTinh] IS NULL) OR ([GioiTinh] = @Original_GioiTinh)) AND ((@IsNull_DiaChi = 1 AND [DiaChi] IS NULL) OR ([DiaChi] = @Original_DiaChi)) AND ((@IsNull_Email = 1 AND [Email] IS NULL) OR ([Email] = @Original_Email)) AND ((@IsNull_NgaySinh = 1 AND [NgaySinh] IS NULL) OR ([NgaySinh] = @Original_NgaySinh)) AND ((@IsNull_NgayVaoLam = 1 AND [NgayVaoLam] IS NULL) OR ([NgayVaoLam] = @Original_NgayVaoLam)) AND ((@IsNull_Ma_CV = 1 AND [Ma_CV] IS NULL) OR ([Ma_CV] = @Original_Ma_CV)) AND ((@IsNull_taikhoan = 1 AND [taikhoan] IS NULL) OR ([taikhoan] = @Original_taikhoan)) AND ((@IsNull_matkhau = 1 AND [matkhau] IS NULL) OR ([matkhau] = @Original_matkhau)) AND ((@IsNull_HoatDong = 1 AND [HoatDong] IS NULL) OR ([HoatDong] = @Original_HoatDong)));
+SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, matkhau, Hinhanh, HoatDong FROM NhanVien WHERE (Ma = @Ma)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Ma" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ma" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Ten" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -77,6 +81,7 @@ SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@taikhoan" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="taikhoan" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@matkhau" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="matkhau" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@Hinhanh" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="Hinhanh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@HoatDong" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="HoatDong" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Ma" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ma" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Ten" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Ten" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Ten" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Ten" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -96,6 +101,8 @@ SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, 
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_taikhoan" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="taikhoan" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_matkhau" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="matkhau" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@Original_matkhau" Precision="0" ProviderType="NChar" Scale="0" Size="0" SourceColumn="matkhau" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_HoatDong" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="HoatDong" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Boolean" Direction="Input" ParameterName="@Original_HoatDong" Precision="0" ProviderType="Bit" Scale="0" Size="0" SourceColumn="HoatDong" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -113,6 +120,7 @@ SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, 
               <Mapping SourceColumn="taikhoan" DataSetColumn="taikhoan" />
               <Mapping SourceColumn="matkhau" DataSetColumn="matkhau" />
               <Mapping SourceColumn="Hinhanh" DataSetColumn="Hinhanh" />
+              <Mapping SourceColumn="HoatDong" DataSetColumn="HoatDong" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -174,6 +182,7 @@ SELECT Ma, Ten, GioiTinh, DiaChi, Email, NgaySinh, NgayVaoLam, Ma_CV, taikhoan, 
                 </xs:simpleType>
               </xs:element>
               <xs:element name="Hinhanh" msprop:Generator_ColumnVarNameInTable="columnHinhanh" msprop:Generator_ColumnPropNameInRow="Hinhanh" msprop:Generator_ColumnPropNameInTable="HinhanhColumn" msprop:Generator_UserColumnName="Hinhanh" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="HoatDong" msprop:Generator_ColumnVarNameInTable="columnHoatDong" msprop:Generator_ColumnPropNameInRow="HoatDong" msprop:Generator_ColumnPropNameInTable="HoatDongColumn" msprop:Generator_UserColumnName="HoatDong" type="xs:boolean" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

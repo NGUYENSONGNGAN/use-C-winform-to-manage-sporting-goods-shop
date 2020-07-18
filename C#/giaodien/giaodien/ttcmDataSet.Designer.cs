@@ -1138,7 +1138,6 @@ namespace giaodien {
                 this.columnTen.MaxLength = 1000;
                 this.columnDonGia.AllowDBNull = false;
                 this.columnMa1.AllowDBNull = false;
-                this.columnTenSize.AllowDBNull = false;
                 this.columnTenSize.MaxLength = 1000;
                 this.columnMa2.AllowDBNull = false;
                 this.columnTenMau.AllowDBNull = false;
@@ -2048,7 +2047,12 @@ namespace giaodien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string TenSize {
                 get {
-                    return ((string)(this[this.tableselectRePortHDX.TenSizeColumn]));
+                    try {
+                        return ((string)(this[this.tableselectRePortHDX.TenSizeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenSize\' in table \'selectRePortHDX\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableselectRePortHDX.TenSizeColumn] = value;
@@ -2651,6 +2655,18 @@ namespace giaodien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetHinhAnhNull() {
                 this[this.tableselectRePortHDX.HinhAnhColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTenSizeNull() {
+                return this.IsNull(this.tableselectRePortHDX.TenSizeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTenSizeNull() {
+                this[this.tableselectRePortHDX.TenSizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3968,7 +3984,7 @@ namespace giaodien.ttcmDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.ttcmConnectionString;
+            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.Database1ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4175,7 +4191,7 @@ namespace giaodien.ttcmDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.ttcmConnectionString;
+            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.Database1ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -2324,7 +2324,7 @@ insert into KhachHang values (1, N'Nam', N'hehe', N'hehe', N'0123', 0, 1 )
 go
 --Hóa đơn xuất
 insert into HDXuat values (1, 1, 1, '2020-05-13', 0, 1, N'Khách hàng lấy muộn', null)
-
+go
 ---CTHDN
 insert into CTHDNhap values (1, 1, 1, 1, 10, 50000, 500000)
 go
@@ -2703,8 +2703,6 @@ where HDX.Ma=@mahdx and HDX.Ma_NV = NV.Ma and HDX.Ma_KH = KH.Ma  and KH.Ma_LoaiK
 
 go
 
-go
-
 create proc TTHDXReport (@mahdx int)
 as
 select * from HDXuat HDX, NhanVien NV, KhachHang KH
@@ -2811,7 +2809,7 @@ as
 select SP.Ten,LSP.Ten as N'Loai' , SZ.TenSize, MS.TenMau, CTSP.Soluong  from CTSanPham CTSP, SanPham SP, MauSac MS, Size SZ, LoaiSP LSP 
 where LSP.Ma = @maloai and SP.Ma_LoaiSP = LSP.Ma and CTSP.Ma_SP = SP.Ma and CTSP.Ma_MauSac = MS.Ma and CTSP.Ma_Size = SZ.Ma
 order by CTSP.Soluong, SP.Ten asc 
-
+go
 --
 --select * from CTHDNhap
 --select * from ThongTinCTHDN

@@ -901,7 +901,7 @@ SELECT Ma, Ma_LoaiSP, Ten, DonGia, HinhAnh FROM SanPham WHERE (Ma = @Ma)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.ttcmConnectionString;
+            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.Database1ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

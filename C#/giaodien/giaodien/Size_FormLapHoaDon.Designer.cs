@@ -432,7 +432,6 @@ namespace giaodien {
                                 this.columnMa}, true));
                 this.columnMa.AllowDBNull = false;
                 this.columnMa.Unique = true;
-                this.columnTenSize.AllowDBNull = false;
                 this.columnTenSize.MaxLength = 1000;
             }
             
@@ -589,7 +588,12 @@ namespace giaodien {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string TenSize {
                 get {
-                    return ((string)(this[this.tableSize.TenSizeColumn]));
+                    try {
+                        return ((string)(this[this.tableSize.TenSizeColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'TenSize\' in table \'Size\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableSize.TenSizeColumn] = value;
@@ -610,6 +614,18 @@ namespace giaodien {
                 set {
                     this[this.tableSize.Ma_LoaiSPColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTenSizeNull() {
+                return this.IsNull(this.tableSize.TenSizeColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTenSizeNull() {
+                this[this.tableSize.TenSizeColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -790,12 +806,13 @@ namespace giaodien.Size_FormLapHoaDonTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Size] WHERE (([Ma] = @Original_Ma) AND ([TenSize] = @Original_" +
-                "TenSize) AND ((@IsNull_Ma_LoaiSP = 1 AND [Ma_LoaiSP] IS NULL) OR ([Ma_LoaiSP] = " +
-                "@Original_Ma_LoaiSP)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Size] WHERE (([Ma] = @Original_Ma) AND ((@IsNull_TenSize = 1 A" +
+                "ND [TenSize] IS NULL) OR ([TenSize] = @Original_TenSize)) AND ((@IsNull_Ma_LoaiS" +
+                "P = 1 AND [Ma_LoaiSP] IS NULL) OR ([Ma_LoaiSP] = @Original_Ma_LoaiSP)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenSize", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TenSize", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenSize", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ma_LoaiSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_LoaiSP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ma_LoaiSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_LoaiSP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
@@ -804,18 +821,19 @@ namespace giaodien.Size_FormLapHoaDonTableAdapters {
                 "a_LoaiSP);\r\nSELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenSize", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenSize", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ma_LoaiSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_LoaiSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Size] SET [Ma] = @Ma, [TenSize] = @TenSize, [Ma_LoaiSP] = @Ma_LoaiSP WHERE (([Ma] = @Original_Ma) AND ([TenSize] = @Original_TenSize) AND ((@IsNull_Ma_LoaiSP = 1 AND [Ma_LoaiSP] IS NULL) OR ([Ma_LoaiSP] = @Original_Ma_LoaiSP)));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Size] SET [Ma] = @Ma, [TenSize] = @TenSize, [Ma_LoaiSP] = @Ma_LoaiSP WHERE (([Ma] = @Original_Ma) AND ((@IsNull_TenSize = 1 AND [TenSize] IS NULL) OR ([TenSize] = @Original_TenSize)) AND ((@IsNull_Ma_LoaiSP = 1 AND [Ma_LoaiSP] IS NULL) OR ([Ma_LoaiSP] = @Original_Ma_LoaiSP)));
 SELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenSize", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenSize", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ma_LoaiSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_LoaiSP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ma", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenSize", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TenSize", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenSize", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenSize", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Ma_LoaiSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_LoaiSP", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ma_LoaiSP", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ma_LoaiSP", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -824,7 +842,7 @@ SELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.ttcmConnectionString;
+            this._connection.ConnectionString = global::giaodien.Properties.Settings.Default.Database1ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -897,18 +915,20 @@ SELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
         public virtual int Delete(int Original_Ma, string Original_TenSize, global::System.Nullable<int> Original_Ma_LoaiSP) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Ma));
             if ((Original_TenSize == null)) {
-                throw new global::System.ArgumentNullException("Original_TenSize");
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_TenSize));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_TenSize));
             }
             if ((Original_Ma_LoaiSP.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Ma_LoaiSP.Value));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Ma_LoaiSP.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -933,7 +953,7 @@ SELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
         public virtual int Insert(int Ma, string TenSize, global::System.Nullable<int> Ma_LoaiSP) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Ma));
             if ((TenSize == null)) {
-                throw new global::System.ArgumentNullException("TenSize");
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TenSize));
@@ -967,7 +987,7 @@ SELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
         public virtual int Update(int Ma, string TenSize, global::System.Nullable<int> Ma_LoaiSP, int Original_Ma, string Original_TenSize, global::System.Nullable<int> Original_Ma_LoaiSP) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Ma));
             if ((TenSize == null)) {
-                throw new global::System.ArgumentNullException("TenSize");
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(TenSize));
@@ -980,18 +1000,20 @@ SELECT Ma, TenSize, Ma_LoaiSP FROM Size WHERE (Ma = @Ma)";
             }
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Ma));
             if ((Original_TenSize == null)) {
-                throw new global::System.ArgumentNullException("Original_TenSize");
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_TenSize));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_TenSize));
             }
             if ((Original_Ma_LoaiSP.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Ma_LoaiSP.Value));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Ma_LoaiSP.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
