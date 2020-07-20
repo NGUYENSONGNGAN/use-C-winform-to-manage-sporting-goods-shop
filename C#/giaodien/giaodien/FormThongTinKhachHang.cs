@@ -172,7 +172,7 @@ namespace giaodien
                     }
                     else
                     {
-                        if (txtEmail.Text.Trim() == "" || txtDiaChi.Text.Trim() == "" || txtSoDienThoai.Text.Trim() == "")
+                        if ( txtDiaChi.Text.Trim() == "" || txtSoDienThoai.Text.Trim() == "")
                         {
                             DialogResult kiemtra = MessageBox.Show("Bạn chưa nhập đủ thông tin\nBạn có muốn tiếp tục không ?", "Thiếu thông tin", MessageBoxButtons.YesNo);
                             if (kiemtra == DialogResult.Yes)
@@ -204,6 +204,35 @@ namespace giaodien
                                 txtDiaChi.Enabled = false;
                                 txtEmail.Enabled = false;
                             }
+                        }
+                        else 
+                        {
+                            if (i == 1)
+                            {
+                                dt.insertKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
+                                MessageBox.Show("Bạn đã thêm thành công");
+                            }
+                            else if (i == 2)
+                            {
+                                dt.updateKH(Convert.ToInt32(lbMaKH.Text), txtTen.Text, txtEmail.Text, txtDiaChi.Text, txtSoDienThoai.Text);
+                                MessageBox.Show("Bạn đã sửa thành công");
+                            }
+                            dgvKhachHang.DataSource = dt.selectKH();
+                            btnThem.Enabled = true;
+                            btnSua.Enabled = false;
+                            btnLuu.Enabled = false;
+                            btnHuy.Enabled = true;
+                            txtTen.ResetText();
+                            txtEmail.ResetText();
+                            txtSoDienThoai.ResetText();
+                            txtDiaChi.ResetText();
+                            lbMaKH.Visible = false;
+                            lbDiemTichLuy.Visible = false;
+                            lbThanhVien.Visible = false;
+                            txtTen.Enabled = false;
+                            txtSoDienThoai.Enabled = false;
+                            txtDiaChi.Enabled = false;
+                            txtEmail.Enabled = false;
                         }
                     }
                 }            

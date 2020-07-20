@@ -229,5 +229,10 @@ namespace giaodien
                 }
             }
         }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

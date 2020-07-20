@@ -40,7 +40,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnDangNhap = new System.Windows.Forms.Panel();
-            this.txtMatKhau = new Guna.UI.WinForms.GunaLineTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtTaiKhoan = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -63,6 +62,7 @@
             this.txtMatKhauMoi = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.txtMatKhau = new Guna.UI.WinForms.GunaLineTextBox();
             this.pnTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -225,21 +225,6 @@
             this.pnDangNhap.Size = new System.Drawing.Size(370, 478);
             this.pnDangNhap.TabIndex = 34;
             this.pnDangNhap.Paint += new System.Windows.Forms.PaintEventHandler(this.pnDangNhap_Paint);
-            // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMatKhau.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.ForeColor = System.Drawing.Color.White;
-            this.txtMatKhau.LineColor = System.Drawing.Color.Gainsboro;
-            this.txtMatKhau.Location = new System.Drawing.Point(64, 312);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.PasswordChar = '*';
-            this.txtMatKhau.Size = new System.Drawing.Size(300, 46);
-            this.txtMatKhau.TabIndex = 21;
-            this.txtMatKhau.Text = "123";
             // 
             // pictureBox1
             // 
@@ -585,6 +570,21 @@
             // 
             this.bunifuElipse6.ElipseRadius = 20;
             this.bunifuElipse6.TargetControl = this.btnQuayLaiDangNhap;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.txtMatKhau.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMatKhau.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txtMatKhau.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.ForeColor = System.Drawing.Color.White;
+            this.txtMatKhau.LineColor = System.Drawing.Color.Gainsboro;
+            this.txtMatKhau.Location = new System.Drawing.Point(64, 312);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
+            this.txtMatKhau.Size = new System.Drawing.Size(300, 46);
+            this.txtMatKhau.TabIndex = 21;
+            this.txtMatKhau.Text = "123";
             // 
             // FormDangNhap
             // 
