@@ -34,6 +34,7 @@ Các chức năng đã hoàn thành bao gồm:
 - Chat với khách hàng
 - Xuất file cài đặt
 - Mã hóa mật khẩu
+- Tìm kiếm bằng giọng nói
 ## Phần 3: Các chức năng chưa hoàn thành
 - Chưa hoàn thiện tính năng chat với khách hàng
 - Chưa phát triển được việc quét QR để thêm sản phẩm vào hóa đơn
