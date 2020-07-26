@@ -135,6 +135,7 @@
             this.txtURL.PasswordChar = '\0';
             this.txtURL.Size = new System.Drawing.Size(245, 33);
             this.txtURL.TabIndex = 17;
+            this.txtURL.Text = "http://192.168.43.1:8080";
             this.txtURL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gunaLabel2
@@ -164,6 +165,7 @@
             this.Name = "FormQuetQRTimKiemHDX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQuetQRTimKiemHDX";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormQuetQRTimKiemHDX_FormClosing);
             this.Load += new System.EventHandler(this.FormQuetQRTimKiemHDX_Load);
             this.panel1.ResumeLayout(false);
             this.panelQuetQR.ResumeLayout(false);

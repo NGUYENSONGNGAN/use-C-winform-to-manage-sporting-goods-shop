@@ -1,10 +1,13 @@
-﻿using System;
+﻿using DevExpress.XtraRichEdit.Fields;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Speech.Recognition;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -12,6 +15,10 @@ namespace giaodien
 {
     public partial class FormHDX : Form
     {
+        public SpeechRecognitionEngine recognizer;
+        public Grammar grammar;
+        public Thread RecThead;
+        public Boolean RecognizerState = true;
         public FormHDX()
         {
             InitializeComponent();
@@ -37,6 +44,19 @@ namespace giaodien
 
         private void FormHDX_Load(object sender, EventArgs e)
         {
+            GrammarBuilder builde = new GrammarBuilder();
+            builde.AppendDictation();
+            grammar = new Grammar(builde);
+
+            recognizer = new SpeechRecognitionEngine();
+            recognizer.LoadGrammar(grammar);
+            recognizer.SetInputToDefaultAudioDevice();
+            recognizer.SpeechRecognized += new EventHandler<SpeechRecognizedEventArgs>(recognizer_SpeechRecognized);
+
+          
+            RecognizerState = false;
+            RecThead = new Thread(new ThreadStart(RecTheadFuntion));
+            RecThead.Start();
             // TODO: This line of code loads data into the 'nhanVien_FormHDX.NhanVien' table. You can move, or remove it, as needed.
             this.nhanVienTableAdapter.Fill(this.nhanVien_FormHDX.NhanVien);
             // TODO: This line of code loads data into the 'khachHang_FormHDX.KhachHang' table. You can move, or remove it, as needed.
@@ -45,6 +65,32 @@ namespace giaodien
             dgvHDX.AutoGenerateColumns = false;
             dgvHDX.DataSource = dt.HDXuats;
             dgvHDX.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        public void recognizer_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
+        {
+            //nhận diện âm thanh
+            if (!RecognizerState)
+                return;
+            this.Invoke((MethodInvoker)delegate
+            {
+                txtTimKiem.Text += ("" + e.Result.Text.ToUpper());
+            });
+        }
+        public void RecTheadFuntion()
+        {
+            //thực hiện nhận diện giọng nói
+            while (true)
+            {
+                try
+                {
+                    recognizer.Recognize();
+                }
+                catch
+                {
+
+                }
+            }
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
@@ -122,6 +168,30 @@ namespace giaodien
                     }
                 }
             }
+        }
+        int voice = 0;
+        private void btnMute_Click(object sender, EventArgs e)
+        {
+            voice++;
+            if (voice%2==0)
+            {
+                RecognizerState = false;
+                btnMute.Image = Image.FromFile("..//..//..//..//image//icons8-mute-unmute-100.png");
+            }
+            else if (voice%2 ==1)
+            {
+                btnMute.Image = Image.FromFile("..//..//..//..//image//icons8-microphone-100.png");
+                RecognizerState = true;
+            }
+        }
+
+        private void FormHDX_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RecThead.Abort();
+            RecThead = null;
+            recognizer.UnloadAllGrammars();
+            recognizer.Dispose();
+            grammar = null;
         }
     }
 }

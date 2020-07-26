@@ -30,33 +30,32 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHDX));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBack = new Guna.UI.WinForms.GunaGradientButton();
             this.pnTitle = new System.Windows.Forms.Panel();
             this.lbTitle = new System.Windows.Forms.Label();
             this.btnTimKiem = new Guna.UI.WinForms.GunaGradientButton();
             this.txtTimKiem = new Guna.UI.WinForms.GunaTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dgvHDX = new Guna.UI.WinForms.GunaDataGridView();
-            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.khachHang_FormHDX = new giaodien.KhachHang_FormHDX();
-            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.nhanVien_FormHDX = new giaodien.NhanVien_FormHDX();
-            this.khachHangTableAdapter = new giaodien.KhachHang_FormHDXTableAdapters.KhachHangTableAdapter();
-            this.nhanVienTableAdapter = new giaodien.NhanVien_FormHDXTableAdapters.NhanVienTableAdapter();
             this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ma_KH = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.khachHang_FormHDX = new giaodien.KhachHang_FormHDX();
             this.Ma_NV = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nhanVien_FormHDX = new giaodien.NhanVien_FormHDX();
             this.NgayXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.GhiChu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Xem = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ThayDoiTrangThai = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.khachHangTableAdapter = new giaodien.KhachHang_FormHDXTableAdapters.KhachHangTableAdapter();
+            this.nhanVienTableAdapter = new giaodien.NhanVien_FormHDXTableAdapters.NhanVienTableAdapter();
+            this.btnMute = new Guna.UI.WinForms.GunaImageButton();
             this.pnTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHang_FormHDX)).BeginInit();
@@ -155,35 +154,25 @@
             this.txtTimKiem.TabIndex = 85;
             this.txtTimKiem.TextChanged += new System.EventHandler(this.txtTimKiem_TextChanged);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(975, 56);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 84;
-            this.pictureBox1.TabStop = false;
-            // 
             // dgvHDX
             // 
             this.dgvHDX.AllowUserToAddRows = false;
             this.dgvHDX.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            this.dgvHDX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.dgvHDX.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHDX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvHDX.BackgroundColor = System.Drawing.Color.White;
             this.dgvHDX.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvHDX.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvHDX.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvHDX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvHDX.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvHDX.ColumnHeadersHeight = 45;
             this.dgvHDX.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Ma,
@@ -195,14 +184,14 @@
             this.GhiChu,
             this.Xem,
             this.ThayDoiTrangThai});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHDX.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHDX.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvHDX.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvHDX.EnableHeadersVisualStyles = false;
             this.dgvHDX.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
@@ -237,34 +226,6 @@
             this.dgvHDX.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             this.dgvHDX.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHDX_CellContentClick);
             // 
-            // khachHangBindingSource
-            // 
-            this.khachHangBindingSource.DataMember = "KhachHang";
-            this.khachHangBindingSource.DataSource = this.khachHang_FormHDX;
-            // 
-            // khachHang_FormHDX
-            // 
-            this.khachHang_FormHDX.DataSetName = "KhachHang_FormHDX";
-            this.khachHang_FormHDX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // nhanVienBindingSource
-            // 
-            this.nhanVienBindingSource.DataMember = "NhanVien";
-            this.nhanVienBindingSource.DataSource = this.nhanVien_FormHDX;
-            // 
-            // nhanVien_FormHDX
-            // 
-            this.nhanVien_FormHDX.DataSetName = "NhanVien_FormHDX";
-            this.nhanVien_FormHDX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // khachHangTableAdapter
-            // 
-            this.khachHangTableAdapter.ClearBeforeFill = true;
-            // 
-            // nhanVienTableAdapter
-            // 
-            this.nhanVienTableAdapter.ClearBeforeFill = true;
-            // 
             // Ma
             // 
             this.Ma.DataPropertyName = "Ma";
@@ -282,6 +243,16 @@
             this.Ma_KH.ReadOnly = true;
             this.Ma_KH.ValueMember = "Ma";
             // 
+            // khachHangBindingSource
+            // 
+            this.khachHangBindingSource.DataMember = "KhachHang";
+            this.khachHangBindingSource.DataSource = this.khachHang_FormHDX;
+            // 
+            // khachHang_FormHDX
+            // 
+            this.khachHang_FormHDX.DataSetName = "KhachHang_FormHDX";
+            this.khachHang_FormHDX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // Ma_NV
             // 
             this.Ma_NV.DataPropertyName = "Ma_NV";
@@ -291,6 +262,16 @@
             this.Ma_NV.Name = "Ma_NV";
             this.Ma_NV.ReadOnly = true;
             this.Ma_NV.ValueMember = "Ma";
+            // 
+            // nhanVienBindingSource
+            // 
+            this.nhanVienBindingSource.DataMember = "NhanVien";
+            this.nhanVienBindingSource.DataSource = this.nhanVien_FormHDX;
+            // 
+            // nhanVien_FormHDX
+            // 
+            this.nhanVien_FormHDX.DataSetName = "NhanVien_FormHDX";
+            this.nhanVien_FormHDX.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // NgayXuat
             // 
@@ -336,15 +317,35 @@
             this.ThayDoiTrangThai.Text = "Hủy";
             this.ThayDoiTrangThai.UseColumnTextForButtonValue = true;
             // 
+            // khachHangTableAdapter
+            // 
+            this.khachHangTableAdapter.ClearBeforeFill = true;
+            // 
+            // nhanVienTableAdapter
+            // 
+            this.nhanVienTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnMute
+            // 
+            this.btnMute.Image = ((System.Drawing.Image)(resources.GetObject("btnMute.Image")));
+            this.btnMute.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMute.Location = new System.Drawing.Point(975, 56);
+            this.btnMute.Name = "btnMute";
+            this.btnMute.OnHoverImage = null;
+            this.btnMute.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.btnMute.Size = new System.Drawing.Size(64, 63);
+            this.btnMute.TabIndex = 87;
+            this.btnMute.Click += new System.EventHandler(this.btnMute_Click);
+            // 
             // FormHDX
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1099, 584);
+            this.Controls.Add(this.btnMute);
             this.Controls.Add(this.dgvHDX);
             this.Controls.Add(this.txtTimKiem);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.pnTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -352,10 +353,10 @@
             this.Name = "FormHDX";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHDX";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormHDX_FormClosing);
             this.Load += new System.EventHandler(this.FormHDX_Load);
             this.pnTitle.ResumeLayout(false);
             this.pnTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHDX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khachHang_FormHDX)).EndInit();
@@ -372,7 +373,6 @@
         private System.Windows.Forms.Label lbTitle;
         private Guna.UI.WinForms.GunaGradientButton btnTimKiem;
         private Guna.UI.WinForms.GunaTextBox txtTimKiem;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI.WinForms.GunaDataGridView dgvHDX;
         private KhachHang_FormHDX khachHang_FormHDX;
         private System.Windows.Forms.BindingSource khachHangBindingSource;
@@ -389,5 +389,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn GhiChu;
         private System.Windows.Forms.DataGridViewButtonColumn Xem;
         private System.Windows.Forms.DataGridViewButtonColumn ThayDoiTrangThai;
+        private Guna.UI.WinForms.GunaImageButton btnMute;
     }
 }

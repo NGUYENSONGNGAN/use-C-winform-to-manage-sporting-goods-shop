@@ -17,7 +17,7 @@ namespace giaodien
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection(giaodien.Properties.Settings.Default.ttcmConnectionString);
+        SqlConnection con = new SqlConnection(giaodien.Properties.Settings.Default.Database1ConnectionString);
 
         private void btnThem_Click(object sender, EventArgs e)
         {
@@ -34,7 +34,7 @@ namespace giaodien
             string database = con.Database.ToString();
             if (txtPath.Text == string.Empty)
             {
-                MessageBox.Show("please enter backup file location");
+                MessageBox.Show("Chọn đường dẫn để lưu");
             }
             else
             {
@@ -85,12 +85,13 @@ namespace giaodien
             }
             catch (Exception)
             {
-                DialogResult b = MessageBox.Show("Bạn có chắc chắn backup dữ liệu không ?", "Back up", MessageBoxButtons.YesNo);
-                if (b == DialogResult.Yes)
-                {
-                    backup();
-                    this.Close();
-                }
+                btnBackUp_Click(sender, e);
+                //DialogResult b = MessageBox.Show("Bạn có chắc chắn backup dữ liệu không ?", "Back up", MessageBoxButtons.YesNo);
+                //if (b == DialogResult.Yes)
+                //{
+                //    backup();
+                //    this.Close();
+                //}
             }
         }
 

@@ -30,12 +30,11 @@ namespace giaodien
         MJPEGStream Stream;
         private void FormQuetQRTimKiemHDX_Load(object sender, EventArgs e)
         {
-            txtURL.ResetText();
+            //txtURL.ResetText();
         }
         DataClasses1DataContext dt = new DataClasses1DataContext();
         private void btnKetNoi_Click(object sender, EventArgs e)
-        {
-            
+        {            
             if (btnKetNoi.Text == "Kết nối ứng dụng")
             {
                 if (txtURL.Text.Trim() =="" ||txtURL.Text.Trim()== null)
@@ -131,6 +130,16 @@ namespace giaodien
             TTTK.MaHDX = 0;
             TTTK.MoFormRP = 0;
             this.Close();
+        }
+
+        private void FormQuetQRTimKiemHDX_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (timer1.Enabled == true)
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                Stream.Stop();
+            }
         }
     }
 }
