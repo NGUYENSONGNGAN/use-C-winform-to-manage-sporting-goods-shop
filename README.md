@@ -14,7 +14,7 @@ Các chức năng đã hoàn thành bao gồm:
 - Quản lý tài khoản: Cấp lại mật khẩu qua gmail, đổi mật khẩu
 - Quản lý dữ liệu: Thông tin khách hàng, thông tin nhân viên, thông tin nhà cung cấp, thông tin sản phẩm
 	+ Quản lý khách hàng: Thêm, sửa, tìm kiếm , phân loại khách hàng, giảm giá theo loại khách hàng
-	+ Quản lý nhân viên: Thêm , sửa, tìm kiếm, phân quyền nhân viên, khóa tìa khỏn nhân viên  
+	+ Quản lý nhân viên: Thêm , sửa, tìm kiếm, phân quyền nhân viên, khóa tài kh nhân viên  
 	+ Quản lý nhà cung cấp: Thêm, sửa, tìm kiếm thông tin nhà cung cấp
 	+ Quản lý sản phẩm: Thêm, sửa, tìm kiếm sản phẩm
 - Quản lý nhập hàng
