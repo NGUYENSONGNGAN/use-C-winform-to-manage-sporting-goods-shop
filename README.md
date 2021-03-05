@@ -1,8 +1,8 @@
 # TTCM
 # THỰC TẬP CHUYÊN MÔN NĂM HỌC 2019-2020
-Họ tên: Đinh Hoàng Vũ 
-Mã sinh viên: 5851071091
-Lớp: Công nghệ thông tin K58
++ Họ tên: Đinh Hoàng Vũ
++ Mã sinh viên: 5851071091
++ Lớp: Công nghệ thông tin K58
 ## Đề tài: 
 ## Phần 1: Công nghệ sử dụng
 - Sử dụng C# Winform để quản lý cửa hàng bán đồ thể thao.
